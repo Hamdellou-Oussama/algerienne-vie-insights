@@ -29,11 +29,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "L'Algérienne Vie — Plateforme de provisionnement technique" },
+      { name: "description", content: "Plateforme de pilotage actuariel et opérationnel pour L'Algérienne Vie. PPNA, PSAP, IBNR, PRC et synthèse technique." },
+      { name: "author", content: "L'Algérienne Vie" },
+      { property: "og:title", content: "L'Algérienne Vie — Plateforme technique" },
+      { property: "og:description", content: "Pilotage actuariel et opérationnel des branches Vie & Prévoyance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -52,9 +52,15 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <HeadContent />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         {children}
@@ -64,6 +70,12 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { RoleProvider } from "@/lib/roles";
+
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <RoleProvider>
+      <Outlet />
+    </RoleProvider>
+  );
 }
