@@ -1,9 +1,9 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
-  LayoutDashboard, Layers, Users, Upload, Grid3x3, Calculator,
-  TrendingUp, FileText, Scale, ShieldCheck, Download, Settings,
-  ChevronRight,
+  LayoutDashboard, TrendingUp, Scale, ChevronRight,
+  FileWarning, Shield, Coins, Award, BookOpen,
+  Settings, ShieldCheck, Download,
 } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useRole } from "@/lib/roles";
@@ -12,52 +12,123 @@ import type { Role } from "@/lib/roles";
 interface NavItem {
   to: string;
   label: string;
+  sublabel?: string;
   icon: typeof LayoutDashboard;
   roles?: Role[];
   group: string;
 }
 
 const NAV: NavItem[] = [
-  { to: "/app", label: "Tableau de bord global", icon: LayoutDashboard, group: "Pilotage" },
-  { to: "/app/produits", label: "Branches & Produits", icon: Layers, group: "Pilotage" },
-  { to: "/app/segments", label: "Segments clients", icon: Users, group: "Pilotage" },
+  {
+    to: "/app",
+    label: "Tableau de bord",
+    sublabel: "Vue globale",
+    icon: LayoutDashboard,
+    group: "Pilotage",
+  },
 
-  { to: "/app/import", label: "Import & validation", icon: Upload, roles: ["admin", "actuaire"], group: "Données" },
-  { to: "/app/triangles", label: "Triangulation", icon: Grid3x3, roles: ["admin", "actuaire"], group: "Données" },
+  {
+    to: "/app/ppna",
+    label: "PPNA",
+    sublabel: "Primes Non Acquises",
+    icon: Coins,
+    group: "Provisions techniques",
+  },
+  {
+    to: "/app/pe",
+    label: "PE",
+    sublabel: "Provision d'Égalisation",
+    icon: Shield,
+    group: "Provisions techniques",
+  },
+  {
+    to: "/app/sap",
+    label: "SAP",
+    sublabel: "Sinistres À Payer",
+    icon: FileWarning,
+    group: "Provisions techniques",
+  },
+  {
+    to: "/app/ibnr",
+    label: "IBNR",
+    sublabel: "Réservation IBNR",
+    icon: TrendingUp,
+    roles: ["admin", "actuaire", "auditeur"],
+    group: "Provisions techniques",
+  },
+  {
+    to: "/app/pb",
+    label: "PB",
+    sublabel: "Participation aux Bénéfices",
+    icon: Award,
+    group: "Provisions techniques",
+  },
 
-  { to: "/app/provisions", label: "Modules de provisionnement", icon: Calculator, group: "Actuariat" },
-  { to: "/app/ibnr", label: "Atelier IBNR", icon: TrendingUp, roles: ["admin", "actuaire", "auditeur"], group: "Actuariat" },
+  {
+    to: "/app/balance",
+    label: "Bilan des sinistres",
+    sublabel: "Archivage & impression",
+    icon: Scale,
+    group: "Bilan & Rapports",
+  },
 
-  { to: "/app/sinistres", label: "Sinistres & Dossiers", icon: FileText, group: "Opérations" },
-  { to: "/app/balance", label: "Synthèse technique", icon: Scale, group: "Opérations" },
-
-  { to: "/app/audit", label: "Audit & traçabilité", icon: ShieldCheck, roles: ["admin", "actuaire", "auditeur"], group: "Gouvernance" },
-  { to: "/app/exports", label: "Exports & rapports", icon: Download, group: "Gouvernance" },
-  { to: "/app/parametres", label: "Paramètres & hypothèses", icon: Settings, roles: ["admin", "actuaire"], group: "Gouvernance" },
+  {
+    to: "/app/audit",
+    label: "Audit & traçabilité",
+    icon: ShieldCheck,
+    roles: ["admin", "actuaire", "auditeur"],
+    group: "Gouvernance",
+  },
+  {
+    to: "/app/exports",
+    label: "Exports & rapports",
+    icon: Download,
+    group: "Gouvernance",
+  },
+  {
+    to: "/app/parametres",
+    label: "Paramètres",
+    icon: Settings,
+    roles: ["admin", "actuaire"],
+    group: "Gouvernance",
+  },
 ];
 
 export function Sidebar() {
   const { pathname } = useLocation();
-  const { role } = useRole();
+  const { role, info } = useRole();
   const visible = NAV.filter((n) => !n.roles || n.roles.includes(role));
   const groups = Array.from(new Set(visible.map((n) => n.group)));
 
   return (
     <aside className="hidden lg:flex flex-col w-64 bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
-      <Link to="/" className="flex items-center gap-3 px-5 h-20 border-b border-sidebar-border">
-        <img src={logo} alt="L'Algérienne Vie" className="h-10 w-auto bg-white/95 rounded-md p-1" />
-        <div className="leading-tight">
-          <div className="font-display text-base text-sidebar-foreground">L'Algérienne</div>
-          <div className="text-[11px] tracking-[0.2em] uppercase text-gold">Vie · Plateforme</div>
+
+      {/* ── Logo header ───────────────────────────────────── */}
+      <Link
+        to="/"
+        className="flex items-center justify-center h-[5rem] border-b border-sidebar-border relative overflow-hidden group"
+      >
+        {/* Radial gold glow */}
+        <div
+          className="absolute inset-0 opacity-[0.10] pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.18]"
+          style={{ background: "radial-gradient(ellipse at 50% 50%, var(--gold) 0%, transparent 70%)" }}
+        />
+        <div className="relative z-10 bg-white/96 rounded-xl p-2 shadow-md ring-1 ring-white/20 transition-transform duration-300 group-hover:scale-105">
+          <img src={logo} alt="L'Algérienne Vie" className="h-10 w-auto" />
         </div>
       </Link>
 
-      <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-6">
+      {/* Gold separator */}
+      <div className="h-[2px] opacity-70" style={{ background: "var(--gradient-gold)" }} />
+
+      {/* ── Navigation ────────────────────────────────────── */}
+      <nav className="flex-1 overflow-y-auto py-5 px-3 space-y-5">
         {groups.map((g) => (
           <div key={g}>
-            <div className="px-3 mb-2 text-[10px] font-semibold tracking-[0.18em] uppercase text-sidebar-foreground/40">
+            <div className="px-3 mb-1.5 text-[9px] font-bold tracking-[0.28em] uppercase text-sidebar-foreground/30 select-none">
               {g}
             </div>
+
             <div className="space-y-0.5">
               {visible.filter((n) => n.group === g).map((item) => {
                 const Icon = item.icon;
@@ -65,25 +136,53 @@ export function Sidebar() {
                   item.to === "/app"
                     ? pathname === "/app"
                     : pathname.startsWith(item.to);
+
                 return (
                   <Link
                     key={item.to}
                     to={item.to}
-                    className={`group flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-all relative ${
+                    className={`group/link relative flex items-center gap-3 px-3 py-[9px] rounded-lg text-sm transition-all duration-200
+                      ${active
+                        ? "text-sidebar-foreground"
+                        : "text-sidebar-foreground/50 hover:text-sidebar-foreground/85 hover:bg-sidebar-accent/30"
+                      }`}
+                    style={
                       active
-                        ? "bg-sidebar-accent text-sidebar-foreground"
-                        : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/40"
-                    }`}
+                        ? {
+                            background:
+                              "linear-gradient(90deg, var(--sidebar-accent) 0%, oklch(0.24 0.07 260 / 0.55) 100%)",
+                          }
+                        : undefined
+                    }
                   >
+                    {/* Active indicator — 4px gold bar */}
                     {active && (
                       <motion.span
                         layoutId="nav-indicator"
-                        className="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-gold rounded-r"
+                        className="absolute left-0 top-1.5 bottom-1.5 w-[4px] rounded-r-full"
+                        style={{ background: "var(--gradient-gold)" }}
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.45 }}
                       />
                     )}
-                    <Icon className={`h-4 w-4 flex-shrink-0 ${active ? "text-gold" : ""}`} />
-                    <span className="flex-1">{item.label}</span>
-                    {active && <ChevronRight className="h-3 w-3 text-gold" />}
+
+                    <Icon
+                      className={`h-[15px] w-[15px] flex-shrink-0 transition-colors ${
+                        active ? "text-gold" : "group-hover/link:text-sidebar-foreground/75"
+                      }`}
+                    />
+
+                    <div className="flex-1 min-w-0">
+                      <div className="truncate font-medium text-[13px] leading-tight">{item.label}</div>
+                      {item.sublabel && (
+                        <div className={`text-[10px] truncate leading-tight mt-0.5 ${active ? "text-sidebar-foreground/45" : "text-sidebar-foreground/25"}`}>
+                          {item.sublabel}
+                        </div>
+                      )}
+                    </div>
+
+                    {active && (
+                      <ChevronRight className="h-3 w-3 text-gold/60 flex-shrink-0" />
+                    )}
                   </Link>
                 );
               })}
@@ -92,12 +191,26 @@ export function Sidebar() {
         ))}
       </nav>
 
-      <div className="p-4 border-t border-sidebar-border">
-        <div className="text-[10px] tracking-[0.18em] uppercase text-sidebar-foreground/40 mb-1">
-          Inventaire
+      {/* ── Bottom status ─────────────────────────────────── */}
+      <div className="p-3 border-t border-sidebar-border">
+        <div className="bg-sidebar-accent/30 rounded-xl px-4 py-3">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+            </span>
+            <span className="text-[9.5px] tracking-[0.16em] uppercase text-sidebar-foreground/35 font-semibold">
+              Inventaire clôturé
+            </span>
+          </div>
+          <div className="text-sm text-sidebar-foreground font-semibold">31 décembre 2024</div>
+          <div className="flex items-center justify-between mt-1.5">
+            <div className="text-[9.5px] text-sidebar-foreground/30 font-medium">v2.4.1 · ACAPS conforme</div>
+            <div className="text-[9.5px] text-gold/55 font-semibold truncate max-w-[5.5rem] text-right">
+              {info.label}
+            </div>
+          </div>
         </div>
-        <div className="text-sm text-sidebar-foreground">31 décembre 2024</div>
-        <div className="text-[11px] text-sidebar-foreground/50 mt-2">v2.4.1 · ACAPS conforme</div>
       </div>
     </aside>
   );

@@ -15,8 +15,12 @@ import { Route as AppIndexRouteImport } from './routes/app.index'
 import { Route as AppTrianglesRouteImport } from './routes/app.triangles'
 import { Route as AppSinistresRouteImport } from './routes/app.sinistres'
 import { Route as AppSegmentsRouteImport } from './routes/app.segments'
+import { Route as AppSapRouteImport } from './routes/app.sap'
 import { Route as AppProvisionsRouteImport } from './routes/app.provisions'
 import { Route as AppProduitsRouteImport } from './routes/app.produits'
+import { Route as AppPpnaRouteImport } from './routes/app.ppna'
+import { Route as AppPeRouteImport } from './routes/app.pe'
+import { Route as AppPbRouteImport } from './routes/app.pb'
 import { Route as AppParametresRouteImport } from './routes/app.parametres'
 import { Route as AppImportRouteImport } from './routes/app.import'
 import { Route as AppIbnrRouteImport } from './routes/app.ibnr'
@@ -56,6 +60,11 @@ const AppSegmentsRoute = AppSegmentsRouteImport.update({
   path: '/segments',
   getParentRoute: () => AppRoute,
 } as any)
+const AppSapRoute = AppSapRouteImport.update({
+  id: '/sap',
+  path: '/sap',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppProvisionsRoute = AppProvisionsRouteImport.update({
   id: '/provisions',
   path: '/provisions',
@@ -64,6 +73,21 @@ const AppProvisionsRoute = AppProvisionsRouteImport.update({
 const AppProduitsRoute = AppProduitsRouteImport.update({
   id: '/produits',
   path: '/produits',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPpnaRoute = AppPpnaRouteImport.update({
+  id: '/ppna',
+  path: '/ppna',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPeRoute = AppPeRouteImport.update({
+  id: '/pe',
+  path: '/pe',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPbRoute = AppPbRouteImport.update({
+  id: '/pb',
+  path: '/pb',
   getParentRoute: () => AppRoute,
 } as any)
 const AppParametresRoute = AppParametresRouteImport.update({
@@ -116,8 +140,12 @@ export interface FileRoutesByFullPath {
   '/app/ibnr': typeof AppIbnrRoute
   '/app/import': typeof AppImportRoute
   '/app/parametres': typeof AppParametresRoute
+  '/app/pb': typeof AppPbRoute
+  '/app/pe': typeof AppPeRoute
+  '/app/ppna': typeof AppPpnaRoute
   '/app/produits': typeof AppProduitsRouteWithChildren
   '/app/provisions': typeof AppProvisionsRoute
+  '/app/sap': typeof AppSapRoute
   '/app/segments': typeof AppSegmentsRoute
   '/app/sinistres': typeof AppSinistresRoute
   '/app/triangles': typeof AppTrianglesRoute
@@ -133,7 +161,11 @@ export interface FileRoutesByTo {
   '/app/ibnr': typeof AppIbnrRoute
   '/app/import': typeof AppImportRoute
   '/app/parametres': typeof AppParametresRoute
+  '/app/pb': typeof AppPbRoute
+  '/app/pe': typeof AppPeRoute
+  '/app/ppna': typeof AppPpnaRoute
   '/app/provisions': typeof AppProvisionsRoute
+  '/app/sap': typeof AppSapRoute
   '/app/segments': typeof AppSegmentsRoute
   '/app/sinistres': typeof AppSinistresRoute
   '/app/triangles': typeof AppTrianglesRoute
@@ -151,8 +183,12 @@ export interface FileRoutesById {
   '/app/ibnr': typeof AppIbnrRoute
   '/app/import': typeof AppImportRoute
   '/app/parametres': typeof AppParametresRoute
+  '/app/pb': typeof AppPbRoute
+  '/app/pe': typeof AppPeRoute
+  '/app/ppna': typeof AppPpnaRoute
   '/app/produits': typeof AppProduitsRouteWithChildren
   '/app/provisions': typeof AppProvisionsRoute
+  '/app/sap': typeof AppSapRoute
   '/app/segments': typeof AppSegmentsRoute
   '/app/sinistres': typeof AppSinistresRoute
   '/app/triangles': typeof AppTrianglesRoute
@@ -171,8 +207,12 @@ export interface FileRouteTypes {
     | '/app/ibnr'
     | '/app/import'
     | '/app/parametres'
+    | '/app/pb'
+    | '/app/pe'
+    | '/app/ppna'
     | '/app/produits'
     | '/app/provisions'
+    | '/app/sap'
     | '/app/segments'
     | '/app/sinistres'
     | '/app/triangles'
@@ -188,7 +228,11 @@ export interface FileRouteTypes {
     | '/app/ibnr'
     | '/app/import'
     | '/app/parametres'
+    | '/app/pb'
+    | '/app/pe'
+    | '/app/ppna'
     | '/app/provisions'
+    | '/app/sap'
     | '/app/segments'
     | '/app/sinistres'
     | '/app/triangles'
@@ -205,8 +249,12 @@ export interface FileRouteTypes {
     | '/app/ibnr'
     | '/app/import'
     | '/app/parametres'
+    | '/app/pb'
+    | '/app/pe'
+    | '/app/ppna'
     | '/app/produits'
     | '/app/provisions'
+    | '/app/sap'
     | '/app/segments'
     | '/app/sinistres'
     | '/app/triangles'
@@ -264,6 +312,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppSegmentsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/sap': {
+      id: '/app/sap'
+      path: '/sap'
+      fullPath: '/app/sap'
+      preLoaderRoute: typeof AppSapRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/provisions': {
       id: '/app/provisions'
       path: '/provisions'
@@ -276,6 +331,27 @@ declare module '@tanstack/react-router' {
       path: '/produits'
       fullPath: '/app/produits'
       preLoaderRoute: typeof AppProduitsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/ppna': {
+      id: '/app/ppna'
+      path: '/ppna'
+      fullPath: '/app/ppna'
+      preLoaderRoute: typeof AppPpnaRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/pe': {
+      id: '/app/pe'
+      path: '/pe'
+      fullPath: '/app/pe'
+      preLoaderRoute: typeof AppPeRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/pb': {
+      id: '/app/pb'
+      path: '/pb'
+      fullPath: '/app/pb'
+      preLoaderRoute: typeof AppPbRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/parametres': {
@@ -358,8 +434,12 @@ interface AppRouteChildren {
   AppIbnrRoute: typeof AppIbnrRoute
   AppImportRoute: typeof AppImportRoute
   AppParametresRoute: typeof AppParametresRoute
+  AppPbRoute: typeof AppPbRoute
+  AppPeRoute: typeof AppPeRoute
+  AppPpnaRoute: typeof AppPpnaRoute
   AppProduitsRoute: typeof AppProduitsRouteWithChildren
   AppProvisionsRoute: typeof AppProvisionsRoute
+  AppSapRoute: typeof AppSapRoute
   AppSegmentsRoute: typeof AppSegmentsRoute
   AppSinistresRoute: typeof AppSinistresRoute
   AppTrianglesRoute: typeof AppTrianglesRoute
@@ -373,8 +453,12 @@ const AppRouteChildren: AppRouteChildren = {
   AppIbnrRoute: AppIbnrRoute,
   AppImportRoute: AppImportRoute,
   AppParametresRoute: AppParametresRoute,
+  AppPbRoute: AppPbRoute,
+  AppPeRoute: AppPeRoute,
+  AppPpnaRoute: AppPpnaRoute,
   AppProduitsRoute: AppProduitsRouteWithChildren,
   AppProvisionsRoute: AppProvisionsRoute,
+  AppSapRoute: AppSapRoute,
   AppSegmentsRoute: AppSegmentsRoute,
   AppSinistresRoute: AppSinistresRoute,
   AppTrianglesRoute: AppTrianglesRoute,
@@ -390,3 +474,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

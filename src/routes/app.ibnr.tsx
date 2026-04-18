@@ -2,8 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Topbar } from "@/components/layout/Topbar";
 import { KpiCard, SectionCard, Badge } from "@/components/ui/kpi-card";
 import { ibnrByMethod, triangleOriginYears, fmtMDA, developmentFactors } from "@/lib/mockData";
-import { useState } from "react";
-import { Calculator, Download, Info, GitCompare } from "lucide-react";
+import { useState, useCallback } from "react";
+import { Calculator, Download, Info, GitCompare, TrendingUp, RefreshCw } from "lucide-react";
+import * as XLSX from "xlsx";
+import { FileUploadZone, FileInfoBar } from "@/components/ui/file-upload-zone";
 import {
   ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid,
   LineChart, Line, Legend,
@@ -14,6 +16,123 @@ export const Route = createFileRoute("/app/ibnr")({
   component: IbnrWorkspace,
 });
 
+interface TriangleData {
+  originYears: number[];
+  devPeriods: number[];
+  triangle: (number | null)[][];
+  factors: number[];
+  ultimates: number[];
+  ibnrByYear: number[];
+  totalIbnr: number;
+  rowCount: number;
+  sheetName: string;
+}
+
+function computeChainLadder(triangle: (number | null)[][]): { factors: number[]; ultimates: number[]; ibnrByYear: number[] } {
+  const n = triangle.length;
+  const m = triangle[0]?.length ?? 0;
+  const factors: number[] = [];
+
+  for (let col = 0; col < m - 1; col++) {
+    let num = 0, den = 0;
+    for (let row = 0; row < n; row++) {
+      const curr = triangle[row][col];
+      const next = triangle[row][col + 1];
+      if (curr !== null && curr > 0 && next !== null && next > 0) {
+        num += next;
+        den += curr;
+      }
+    }
+    factors.push(den > 0 ? num / den : 1);
+  }
+
+  const completed = triangle.map((row) => [...row]);
+  for (let row = 0; row < n; row++) {
+    for (let col = 0; col < m; col++) {
+      if (completed[row][col] === null || completed[row][col] === 0) {
+        const prev = col > 0 ? completed[row][col - 1] : null;
+        if (prev !== null && prev > 0 && factors[col - 1] !== undefined) {
+          completed[row][col] = prev * factors[col - 1];
+        }
+      }
+    }
+  }
+
+  const paid = triangle.map((row) => {
+    let last = 0;
+    for (const v of row) if (v !== null && v > 0) last = v;
+    return last;
+  });
+
+  const ultimates = completed.map((row) => {
+    const last = row[m - 1];
+    return typeof last === "number" && last > 0 ? last : paid[row.indexOf(last)];
+  });
+
+  const ibnrByYear = ultimates.map((u, i) => Math.max(0, u - paid[i]));
+  return { factors, ultimates, ibnrByYear };
+}
+
+function parseTriangle(buffer: ArrayBuffer): TriangleData {
+  const wb = XLSX.read(buffer, { type: "array" });
+  const sheetName = wb.SheetNames[0];
+  const ws = wb.Sheets[sheetName];
+
+  const raw: unknown[][] = XLSX.utils.sheet_to_json(ws, { header: 1, defval: null }) as unknown[][];
+
+  // Find rows that look like triangle data (lots of numbers)
+  const numericRows = raw.filter((row) => {
+    const nums = row.filter((v) => typeof v === "number" && v > 0);
+    return nums.length >= 2;
+  });
+
+  if (numericRows.length === 0) {
+    return {
+      originYears: [], devPeriods: [], triangle: [],
+      factors: [], ultimates: [], ibnrByYear: [],
+      totalIbnr: 0, rowCount: 0, sheetName,
+    };
+  }
+
+  // Extract first column as years, rest as development values
+  const originYears: number[] = [];
+  const triangleRows: (number | null)[][] = [];
+
+  for (const row of numericRows) {
+    const first = row[0];
+    const year = typeof first === "number" && first > 1990 && first < 2100 ? first : undefined;
+    if (year) originYears.push(year);
+    const values = (year ? row.slice(1) : row).map((v) =>
+      typeof v === "number" && v > 0 ? v : null
+    );
+    if (values.some((v) => v !== null)) {
+      triangleRows.push(values);
+    }
+  }
+
+  const maxCols = Math.max(...triangleRows.map((r) => r.length));
+  const padded = triangleRows.map((r) => {
+    while (r.length < maxCols) r.push(null);
+    return r;
+  });
+
+  const devPeriods = Array.from({ length: maxCols }, (_, i) => i + 1);
+  const { factors, ultimates, ibnrByYear } = computeChainLadder(padded);
+  const totalIbnr = ibnrByYear.reduce((s, v) => s + v, 0);
+
+  return {
+    originYears,
+    devPeriods,
+    triangle: padded,
+    factors,
+    ultimates,
+    ibnrByYear,
+    totalIbnr,
+    rowCount: triangleRows.length,
+    sheetName,
+  };
+}
+
 const METHODS = [
   { key: "cl",   name: "Chain Ladder",         desc: "Méthode déterministe par facteurs de développement.", default: true },
   { key: "bf",   name: "Bornhuetter-Ferguson", desc: "Mélange ratio a priori et CL — adapté aux jeunes années." },
@@ -23,26 +142,118 @@ const METHODS = [
   { key: "boot", name: "Bootstrap",            desc: "Réservation par rééchantillonnage — distribution complète." },
 ];
 
+const fmtM = (v: number) =>
+  v === 0
+    ? "—"
+    : (v / 1_000_000).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " M DA";
+
 function IbnrWorkspace() {
   const [active, setActive] = useState("cl");
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [triangleData, setTriangleData] = useState<TriangleData | null>(null);
+  const [loadingFile, setLoadingFile] = useState(false);
+  const [fileError, setFileError] = useState<string | null>(null);
+
   const method = METHODS.find((m) => m.key === active)!;
   const result = ibnrByMethod[METHODS.findIndex((m) => m.key === active)];
 
-  // IBNR per origin year (synthetic)
-  const perYear = triangleOriginYears.slice(1).map((y, i) => ({
-    year: String(y),
-    ibnr: Math.round((50 + (i + 1) * (i + 1) * 60) * (1 + (METHODS.findIndex((m) => m.key === active)) * 0.01)),
-  }));
+  const handleFile = useCallback((buffer: ArrayBuffer, f: File) => {
+    setLoadingFile(true);
+    setFileError(null);
+    setTimeout(() => {
+      try {
+        const parsed = parseTriangle(buffer);
+        setTriangleData(parsed);
+        setUploadedFile(f);
+      } catch (e) {
+        setFileError("Impossible de lire ce fichier. Vérifiez le format Excel.");
+        console.error(e);
+      } finally {
+        setLoadingFile(false);
+      }
+    }, 100);
+  }, []);
+
+  const resetFile = () => { setUploadedFile(null); setTriangleData(null); setFileError(null); };
+
+  // Use uploaded triangle data if available, else use mock
+  const useUploadedData = triangleData !== null && triangleData.rowCount > 0;
+  const displayIbnr = useUploadedData ? triangleData!.totalIbnr : result.ibnr;
+  const displayUltimate = useUploadedData ? triangleData!.ultimates.reduce((s, v) => s + v, 0) : result.ultimate;
+  const displayEcart = useUploadedData ? 0 : result.ecart;
+
+  const perYear = useUploadedData
+    ? triangleData!.ibnrByYear.map((ibnr, i) => ({
+        year: String(triangleData!.originYears[i] ?? i + 2018),
+        ibnr: +(ibnr / 1_000_000).toFixed(2),
+      }))
+    : triangleOriginYears.slice(1).map((y, i) => ({
+        year: String(y),
+        ibnr: Math.round((50 + (i + 1) * (i + 1) * 60) * (1 + (METHODS.findIndex((m) => m.key === active)) * 0.01)),
+      }));
 
   return (
     <>
       <Topbar title="Atelier IBNR" subtitle="Six méthodes de réservation · comparaison · sortie validée" />
       <div className="p-6 lg:p-8 space-y-6">
+
+        {/* Upload zone */}
+        <div className="flex items-center gap-3 mb-2">
+          <div className="h-10 w-10 rounded-xl bg-gradient-hero flex items-center justify-center shadow-md">
+            <TrendingUp className="h-5 w-5 text-gold" />
+          </div>
+          <div>
+            <div className="font-semibold text-foreground">Réservation IBNR</div>
+            <div className="text-xs text-muted-foreground">
+              {useUploadedData ? "Triangle chargé depuis fichier Excel" : "Données de démonstration · chargez votre fichier pour l'analyse réelle"}
+            </div>
+          </div>
+          {useUploadedData && (
+            <button
+              onClick={resetFile}
+              className="ml-auto flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground border border-border rounded-lg px-3 py-1.5 transition-colors"
+            >
+              <RefreshCw className="h-3.5 w-3.5" /> Changer le fichier
+            </button>
+          )}
+        </div>
+
+        {!uploadedFile ? (
+          <FileUploadZone
+            onFile={handleFile}
+            title="Charger le triangle de développement"
+            description="Importez votre fichier Excel contenant le triangle des sinistres cumulés pour calculer l'IBNR"
+            loading={loadingFile}
+            error={fileError}
+          />
+        ) : (
+          <FileInfoBar
+            file={uploadedFile}
+            rowCount={triangleData?.rowCount ?? 0}
+            sheetName={triangleData?.sheetName}
+            onReset={resetFile}
+          />
+        )}
+
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <KpiCard label="IBNR retenu" value={fmtMDA(result.ibnr)} hint={method.name} icon={<Calculator className="h-4 w-4" />} accent="gold" />
-          <KpiCard label="Charge ultime" value={fmtMDA(result.ultimate)} icon={<Calculator className="h-4 w-4" />} />
+          <KpiCard
+            label="IBNR retenu"
+            value={useUploadedData ? fmtM(displayIbnr) : fmtMDA(result.ibnr)}
+            hint={method.name}
+            icon={<Calculator className="h-4 w-4" />}
+            accent="gold"
+          />
+          <KpiCard
+            label="Charge ultime"
+            value={useUploadedData ? fmtM(displayUltimate) : fmtMDA(result.ultimate)}
+            icon={<Calculator className="h-4 w-4" />}
+          />
           <KpiCard label="Méthodes testées" value="6" hint="Comparaison disponible" />
-          <KpiCard label="Écart vs CL" value={`${result.ecart >= 0 ? "+" : ""}${result.ecart.toFixed(1)}%`} accent="primary" />
+          <KpiCard
+            label="Écart vs CL"
+            value={`${displayEcart >= 0 ? "+" : ""}${displayEcart.toFixed(1)}%`}
+            accent="primary"
+          />
         </div>
 
         {/* Method tabs */}
@@ -86,7 +297,7 @@ function IbnrWorkspace() {
               <div className="bg-muted/40 rounded-md p-4">
                 <div className="text-[10px] tracking-wider uppercase text-muted-foreground mb-2">Facteurs de développement</div>
                 <div className="grid grid-cols-3 gap-1.5 text-xs font-mono">
-                  {developmentFactors.map((f, i) => (
+                  {(useUploadedData ? triangleData!.factors : developmentFactors).map((f, i) => (
                     <div key={i} className="bg-card rounded px-2 py-1 text-center">
                       <span className="text-muted-foreground">f{i}-{i+1}</span>{" "}
                       <span className="text-foreground font-semibold">{f.toFixed(3)}</span>
@@ -128,6 +339,140 @@ function IbnrWorkspace() {
             </div>
           </SectionCard>
         </div>
+
+        {/* ── Triangle table (shown only when file is uploaded) ── */}
+        {useUploadedData && triangleData!.triangle.length > 0 && (
+          <SectionCard
+            title="Triangle de développement"
+            description="Valeurs observées (fond blanc) · Valeurs projetées Chain Ladder (fond bleu) · Montants en M DA"
+            action={<Badge variant="info">Chain Ladder</Badge>}
+          >
+            <div className="overflow-x-auto -mx-6">
+              <table className="min-w-full text-xs font-mono border-collapse">
+                <thead>
+                  <tr>
+                    {/* Origin year header */}
+                    <th className="sticky left-0 z-10 bg-card px-4 py-2 text-left text-[10px] tracking-wider uppercase text-muted-foreground border-b border-r border-border font-semibold">
+                      Année \ Dev
+                    </th>
+                    {triangleData!.devPeriods.map((p) => (
+                      <th
+                        key={p}
+                        className="px-3 py-2 text-center text-[10px] tracking-wider uppercase text-muted-foreground border-b border-border min-w-[80px]"
+                      >
+                        {p}
+                      </th>
+                    ))}
+                    <th className="px-3 py-2 text-center text-[10px] tracking-wider uppercase text-gold-deep border-b border-border min-w-[90px] bg-gold/5">
+                      Ultime
+                    </th>
+                    <th className="px-3 py-2 text-center text-[10px] tracking-wider uppercase text-primary border-b border-border min-w-[90px] bg-primary/5">
+                      IBNR
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {triangleData!.triangle.map((row, ri) => {
+                    // Determine which cells are observed vs projected
+                    // The last observed cell per row is the last non-null in the original triangle
+                    let lastObserved = -1;
+                    for (let ci = 0; ci < row.length; ci++) {
+                      if (row[ci] !== null && row[ci]! > 0) lastObserved = ci;
+                    }
+
+                    return (
+                      <tr key={ri} className="border-b border-border/50 hover:bg-muted/20 transition-colors">
+                        {/* Origin year */}
+                        <td className="sticky left-0 z-10 bg-card px-4 py-1.5 font-semibold text-foreground border-r border-border text-[11px]">
+                          {triangleData!.originYears[ri] ?? `Année ${ri + 1}`}
+                        </td>
+
+                        {row.map((val, ci) => {
+                          const isObserved = ci <= lastObserved;
+                          const isProjected = ci > lastObserved && val !== null && val! > 0;
+                          const fmt = val === null || val === 0
+                            ? "—"
+                            : (val / 1_000_000).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+                          return (
+                            <td
+                              key={ci}
+                              className={`px-3 py-1.5 text-right tabular-nums text-[11px] transition-colors
+                                ${isObserved ? "text-foreground" : ""}
+                                ${isProjected ? "text-blue-700 italic bg-blue-50/60" : ""}
+                                ${!isObserved && !isProjected ? "text-muted-foreground/30" : ""}
+                              `}
+                            >
+                              {fmt}
+                            </td>
+                          );
+                        })}
+
+                        {/* Ultimate */}
+                        <td className="px-3 py-1.5 text-right tabular-nums text-[11px] font-semibold text-gold-deep bg-gold/5">
+                          {triangleData!.ultimates[ri]
+                            ? (triangleData!.ultimates[ri] / 1_000_000).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+                            : "—"}
+                        </td>
+
+                        {/* IBNR */}
+                        <td className="px-3 py-1.5 text-right tabular-nums text-[11px] font-bold text-primary bg-primary/5">
+                          {triangleData!.ibnrByYear[ri] > 0
+                            ? (triangleData!.ibnrByYear[ri] / 1_000_000).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+                            : "—"}
+                        </td>
+                      </tr>
+                    );
+                  })}
+
+                  {/* ── Development factors row ── */}
+                  <tr className="border-t-2 border-border bg-muted/30">
+                    <td className="sticky left-0 z-10 bg-muted/30 px-4 py-2 text-[10px] tracking-wider uppercase font-bold text-muted-foreground border-r border-border">
+                      Facteurs
+                    </td>
+                    {triangleData!.factors.map((f, i) => (
+                      <td key={i} className="px-3 py-2 text-center tabular-nums text-[11px] font-semibold text-foreground">
+                        {f.toFixed(4)}
+                      </td>
+                    ))}
+                    {/* Extra cell for last dev period (no factor after last col) */}
+                    {triangleData!.factors.length < triangleData!.devPeriods.length && (
+                      <td className="px-3 py-2 text-center text-muted-foreground text-[11px]">1.000</td>
+                    )}
+                    {/* Ultimate total */}
+                    <td className="px-3 py-2 text-right tabular-nums text-[11px] font-bold text-gold-deep bg-gold/5">
+                      {(triangleData!.ultimates.reduce((s, v) => s + v, 0) / 1_000_000).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </td>
+                    {/* IBNR total */}
+                    <td className="px-3 py-2 text-right tabular-nums text-[11px] font-bold text-primary bg-primary/5">
+                      {(triangleData!.ibnrByYear.reduce((s, v) => s + v, 0) / 1_000_000).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Legend */}
+            <div className="flex items-center gap-5 mt-4 text-[11px] text-muted-foreground">
+              <div className="flex items-center gap-1.5">
+                <div className="h-3 w-8 bg-card border border-border rounded-sm" />
+                Observé
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="h-3 w-8 bg-blue-50 border border-blue-200 rounded-sm" />
+                Projeté (Chain Ladder)
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="h-3 w-8 bg-gold/10 border border-gold/30 rounded-sm" />
+                Ultime estimé
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="h-3 w-8 bg-primary/10 border border-primary/20 rounded-sm" />
+                IBNR
+              </div>
+            </div>
+          </SectionCard>
+        )}
 
         {/* Comparison */}
         <SectionCard

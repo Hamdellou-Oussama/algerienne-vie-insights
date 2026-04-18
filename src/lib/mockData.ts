@@ -1,16 +1,21 @@
-// L'Algérienne Vie — mock data
+// L'Algérienne Vie — Données réelles (brutes, non traitées)
+// Sources:
+//   FILE 1 · level 01-DATA SAP groupe.xlsx            → sinistres SAP, prévoyance
+//   FILE 2 · level 01-level2-ÉCHANTILLON DATA PPNA.xlsx → production AVA/IA
+//   FILE 3 · level 01-ÉCHANTILLON DATA PE.xlsx          → bilan technique 2022
+//   FILE 4 · level 02-ÉCHANTILLON DATA IBNR.xlsx        → triangle ADE 2018-2025
 import {
-  HeartPulse, Plane, Activity, Shield, Wallet, Flower2,
+  HeartPulse, Wallet, Shield, Flower2, BarChart2, Activity,
   type LucideIcon,
 } from "lucide-react";
 
 export type ProductKey =
-  | "prevoyance-sante"
-  | "voyage-assistance"
-  | "accidents-corporels"
-  | "temporaire-deces"
-  | "emprunteur"
-  | "warda";
+  | "prevoyance"
+  | "ade-immo"
+  | "ade-conso"
+  | "ade-warda"
+  | "ava"
+  | "ia";
 
 export type SegmentKey = "particuliers" | "professionnels" | "entreprises";
 
@@ -21,177 +26,232 @@ export interface Product {
   family: "Vie & Prévoyance" | "Assistance" | "Protection" | "Crédit" | "Famille";
   icon: LucideIcon;
   contracts: number;
-  premiumsMDA: number;       // millions DZD
-  claimsMDA: number;
-  reservesMDA: number;
-  lossRatio: number;         // S/P
-  trend: number;             // YoY %
+  premiumsMDA: number;       // M DA
+  claimsMDA: number;         // M DA
+  reservesMDA: number;       // M DA (SAP ou PPNA)
+  lossRatio: number;         // S/P ratio
+  trend: number;             // placeholder — non calculé
   description: string;
+  dataSource: string;        // traceabilité
 }
 
+// ─────────────────────────────────────────────────────────────
+// PRODUITS — valeurs extraites des fichiers réels
+// ─────────────────────────────────────────────────────────────
 export const products: Product[] = [
   {
-    key: "prevoyance-sante",
-    name: "Assurance Prévoyance et Santé",
-    shortName: "Prévoyance & Santé",
+    // Source: FILE 3 (PE 2022) + FILE 1 (SAP 30/06/2025)
+    key: "prevoyance",
+    name: "Assurance Prévoyance",
+    shortName: "Prévoyance",
     family: "Vie & Prévoyance",
     icon: HeartPulse,
-    contracts: 48230,
-    premiumsMDA: 1842,
-    claimsMDA: 1156,
-    reservesMDA: 2187,
-    lossRatio: 0.628,
-    trend: 8.4,
-    description: "Couverture santé complémentaire et prévoyance longue durée.",
+    contracts: 234,                   // sinistres ouverts FILE 1
+    premiumsMDA: 1591.2,              // FILE 3 — primes émises 2022
+    claimsMDA: 893.9,                 // FILE 3 — sinistres payés 2022
+    reservesMDA: 33.6,                // FILE 1 — SAP au 30/06/2025
+    lossRatio: 0.562,                 // 893.9 / 1591.2
+    trend: 0,
+    description: "Couverture décès, invalidité et prévoyance collective.",
+    dataSource: "FILE 1 (SAP 2025) + FILE 3 (PE 2022)",
   },
   {
-    key: "voyage-assistance",
-    name: "Assurance Voyage et Assistance",
-    shortName: "Voyage & Assistance",
-    family: "Assistance",
-    icon: Plane,
-    contracts: 32104,
-    premiumsMDA: 412,
-    claimsMDA: 198,
-    reservesMDA: 154,
-    lossRatio: 0.481,
-    trend: 14.2,
-    description: "Assistance médicale et rapatriement à l'étranger.",
-  },
-  {
-    key: "accidents-corporels",
-    name: "Assurance Accidents Corporels",
-    shortName: "Accidents Corporels",
-    family: "Protection",
-    icon: Activity,
-    contracts: 19842,
-    premiumsMDA: 687,
-    claimsMDA: 421,
-    reservesMDA: 612,
-    lossRatio: 0.613,
-    trend: 3.1,
-    description: "Indemnisation en cas d'invalidité ou décès accidentel.",
-  },
-  {
-    key: "temporaire-deces",
-    name: "Assurance Temporaire au Décès",
-    shortName: "Temporaire Décès",
-    family: "Vie & Prévoyance",
-    icon: Shield,
-    contracts: 27518,
-    premiumsMDA: 956,
-    claimsMDA: 487,
-    reservesMDA: 3420,
-    lossRatio: 0.509,
-    trend: 5.7,
-    description: "Capital décès garanti pour la durée du contrat.",
-  },
-  {
-    key: "emprunteur",
-    name: "Assurance Emprunteur",
-    shortName: "Emprunteur",
+    // Source: FILE 4 IBNR base ADE — sous-produit IMMO
+    key: "ade-immo",
+    name: "ADE Immobilier",
+    shortName: "ADE — Immo",
     family: "Crédit",
     icon: Wallet,
-    contracts: 14267,
-    premiumsMDA: 1238,
-    claimsMDA: 542,
-    reservesMDA: 4185,
-    lossRatio: 0.438,
-    trend: 11.8,
-    description: "Garantie décès-invalidité associée aux crédits bancaires.",
+    contracts: 248,                   // nb sinistres IMMO dans FILE 4
+    premiumsMDA: 696.8,               // FILE 3 ADE total primes × part IMMO estimée
+    claimsMDA: 37.0,                  // FILE 3 ADE sinistres × part IMMO
+    reservesMDA: 4.8,                 // PE ADE × part IMMO
+    lossRatio: 0.053,                 // FILE 3 ADE global
+    trend: 0,
+    description: "Garantie décès-invalidité adossée aux crédits immobiliers.",
+    dataSource: "FILE 4 (triangle IBNR) + FILE 3 (PE 2022)",
   },
   {
-    key: "warda",
-    name: "Assurance Warda",
-    shortName: "Warda",
+    // Source: FILE 4 IBNR base ADE — sous-produit CONSO
+    key: "ade-conso",
+    name: "ADE Consommation",
+    shortName: "ADE — Conso",
+    family: "Crédit",
+    icon: Shield,
+    contracts: 342,                   // nb sinistres CONSO dans FILE 4 (normalisé)
+    premiumsMDA: 696.8,               // FILE 3 ADE total primes × part CONSO estimée
+    claimsMDA: 37.0,                  // idem
+    reservesMDA: 4.8,                 // idem
+    lossRatio: 0.053,
+    trend: 0,
+    description: "Garantie décès-invalidité adossée aux crédits à la consommation.",
+    dataSource: "FILE 4 (triangle IBNR) + FILE 3 (PE 2022)",
+  },
+  {
+    // Source: FILE 2 (PPNA 2025) — produit AVA
+    key: "ava",
+    name: "Assurance Vie Assistance (AVA)",
+    shortName: "AVA",
+    family: "Assistance",
+    icon: Activity,
+    contracts: 17285,                 // FILE 2 — nb polices AVA
+    premiumsMDA: 40.7,               // FILE 2 — primes nettes AVA (DZD → M DA)
+    claimsMDA: 0,                    // non disponible dans FILE 2
+    reservesMDA: 2.2,                // FILE 2 — PPNA AVA au 31/05/2025
+    lossRatio: 0,
+    trend: 0,
+    description: "Assurance vie avec assistance — réseau R1/R2 majoritaire.",
+    dataSource: "FILE 2 (PPNA 31/05/2025)",
+  },
+  {
+    // Source: FILE 2 (PPNA 2025) — produit IA
+    key: "ia",
+    name: "Invalidité Accident (IA)",
+    shortName: "IA",
+    family: "Protection",
+    icon: BarChart2,
+    contracts: 3981,                  // FILE 2 — nb polices IA
+    premiumsMDA: 28.1,               // FILE 2 — primes nettes IA
+    claimsMDA: 0,                    // non disponible dans FILE 2
+    reservesMDA: 1.7,                // FILE 2 — PPNA IA au 31/05/2025
+    lossRatio: 0,
+    trend: 0,
+    description: "Couverture invalidité et accident — toutes catégories.",
+    dataSource: "FILE 2 (PPNA 31/05/2025)",
+  },
+  {
+    // Source: FILE 4 IBNR base ADE — sous-produit WARDA + AC-ELITE
+    key: "ade-warda",
+    name: "ADE Warda / AC-Élite",
+    shortName: "Warda / AC-Élite",
     family: "Famille",
     icon: Flower2,
-    contracts: 8412,
-    premiumsMDA: 184,
-    claimsMDA: 71,
-    reservesMDA: 96,
-    lossRatio: 0.386,
-    trend: 22.5,
-    description: "Produit famille dédié à la protection des femmes.",
+    contracts: 5,                     // nb sinistres WARDA+AC-ELITE dans FILE 4
+    premiumsMDA: 0,                   // non disponible séparément
+    claimsMDA: 0,
+    reservesMDA: 0,
+    lossRatio: 0,
+    trend: 0,
+    description: "Produits spécifiques adossés à des financements dédiés.",
+    dataSource: "FILE 4 (triangle IBNR)",
   },
 ];
 
+// ─────────────────────────────────────────────────────────────
+// SEGMENTS — données non disponibles, conservées en l'état
+// ─────────────────────────────────────────────────────────────
 export const segments: { key: SegmentKey; name: string; share: number; contracts: number; premiumsMDA: number }[] = [
-  { key: "particuliers", name: "Particuliers", share: 0.62, contracts: 92840, premiumsMDA: 3214 },
-  { key: "professionnels", name: "Professionnels", share: 0.21, contracts: 31420, premiumsMDA: 1187 },
-  { key: "entreprises", name: "Entreprises", share: 0.17, contracts: 26113, premiumsMDA: 918 },
+  // Réseau R2 = 54 % des contrats PPNA, R1 = 35 %
+  { key: "particuliers",   name: "Réseau R2",        share: 0.54, contracts: 11537, premiumsMDA: 23.4 },
+  { key: "professionnels", name: "Réseau R1",        share: 0.35, contracts: 7395,  premiumsMDA: 39.1 },
+  { key: "entreprises",    name: "Réseaux R3–R6",   share: 0.11, contracts: 2334,  premiumsMDA: 6.1  },
 ];
 
-// Global KPIs (millions DZD)
+// ─────────────────────────────────────────────────────────────
+// KPIs GLOBAUX — valeurs réelles (M DA)
+// ─────────────────────────────────────────────────────────────
 export const kpis = {
-  totalReserves: 10654,
-  ppna: 2185,
-  psap: 4128,
-  ibnr: 2814,
-  prc: 1527,
-  primesAcquises: 5319,
-  sinistresPayes: 2875,
-  ratioCombine: 0.847,
-  fondsPropres: 3842,
-  contratsActifs: 150373,
-  claimsOpen: 4287,
-  validationStatus: 0.78,
+  // FILE 2 — PPNA AVA + IA au 31/05/2025
+  ppna: 3.9,
+
+  // FILE 1 — SAP prévoyance au 30/06/2025
+  psap: 33.6,
+
+  // FILE 3 — Provision d'égalisation 2022 (total R1+C1-C124)
+  prc: 93.6,
+
+  // Triangle IBNR FILE 4 — somme des montants déclarés 2018-2025 (non traité)
+  ibnr: 1136.0,
+
+  // Agrégé des provisions disponibles
+  totalReserves: 1267.1,              // ppna + psap + prc + ibnr
+
+  // FILE 3 — primes émises 2022 : prévoyance + ADE
+  primesAcquises: 2984.7,            // 1591.2 + 1393.6
+
+  // FILE 1 — montant réglé prévoyance + FILE 3 ADE sinistres
+  sinistresPayes: 1031.4,            // 137.5 (FILE1) + 893.9 (FILE3 prévo)
+
+  // FILE 3 — prévoyance uniquement
+  ratioCombine: 0.562,
+
+  // non disponible dans les fichiers sources actuels
+  fondsPropres: 0,
+
+  // FILE 2 — polices actives dans l'échantillon PPNA
+  contratsActifs: 21266,
+
+  // FILE 1 — sinistres en statut SAP (en cours)
+  claimsOpen: 174,
+
+  validationStatus: 0,
 };
 
-// Reserve composition over 8 quarters
+// ─────────────────────────────────────────────────────────────
+// RÉSERVES — données annuelles tirées des fichiers disponibles
+// Axes : PPNA (FILE 2), SAP (FILE 1), PE (FILE 3), IBNR (FILE 4 triangle)
+// ─────────────────────────────────────────────────────────────
 export const reserveTimeline = [
-  { period: "T1-23", PPNA: 1820, PSAP: 3450, IBNR: 2410, PRC: 1310 },
-  { period: "T2-23", PPNA: 1885, PSAP: 3580, IBNR: 2487, PRC: 1342 },
-  { period: "T3-23", PPNA: 1942, PSAP: 3712, IBNR: 2541, PRC: 1378 },
-  { period: "T4-23", PPNA: 2018, PSAP: 3845, IBNR: 2618, PRC: 1410 },
-  { period: "T1-24", PPNA: 2074, PSAP: 3938, IBNR: 2685, PRC: 1448 },
-  { period: "T2-24", PPNA: 2118, PSAP: 4012, IBNR: 2741, PRC: 1481 },
-  { period: "T3-24", PPNA: 2156, PSAP: 4081, IBNR: 2784, PRC: 1508 },
-  { period: "T4-24", PPNA: 2185, PSAP: 4128, IBNR: 2814, PRC: 1527 },
+  // Triangle FILE 4 — totaux cumulés par année de sinistre (M DA)
+  { period: "2018", PPNA: 0,   PSAP: 0,    IBNR: 18.1,  PRC: 0 },
+  { period: "2019", PPNA: 0,   PSAP: 0,    IBNR: 32.7,  PRC: 0 },
+  { period: "2020", PPNA: 0,   PSAP: 0,    IBNR: 87.2,  PRC: 0 },
+  { period: "2021", PPNA: 0,   PSAP: 0,    IBNR: 159.6, PRC: 0 },
+  { period: "2022", PPNA: 0,   PSAP: 0,    IBNR: 115.9, PRC: 93.6 },
+  { period: "2023", PPNA: 0,   PSAP: 0,    IBNR: 175.9, PRC: 93.6 },
+  { period: "2024", PPNA: 0,   PSAP: 0,    IBNR: 342.1, PRC: 93.6 },
+  { period: "2025", PPNA: 3.9, PSAP: 33.6, IBNR: 204.5, PRC: 93.6 },
 ];
 
-// Premiums vs Claims trend
-export const premiumsClaimsTrend = [
-  { month: "Jan", primes: 412, sinistres: 218 },
-  { month: "Fév", primes: 428, sinistres: 234 },
-  { month: "Mar", primes: 451, sinistres: 256 },
-  { month: "Avr", primes: 437, sinistres: 241 },
-  { month: "Mai", primes: 462, sinistres: 268 },
-  { month: "Juin", primes: 478, sinistres: 252 },
-  { month: "Juil", primes: 491, sinistres: 287 },
-  { month: "Août", primes: 472, sinistres: 264 },
-  { month: "Sep", primes: 485, sinistres: 271 },
-  { month: "Oct", primes: 498, sinistres: 289 },
-  { month: "Nov", primes: 512, sinistres: 295 },
-  { month: "Déc", primes: 524, sinistres: 312 },
-];
+// ─────────────────────────────────────────────────────────────
+// PRIMES vs SINISTRES — FILE 3, année 2022 (seules données dispo)
+// Représentées mensuellement par ventilation uniforme
+// ─────────────────────────────────────────────────────────────
+const moisCourts = ["Jan","Fév","Mar","Avr","Mai","Juin","Juil","Août","Sep","Oct","Nov","Déc"];
+const primesAnnuelles2022  = 2984.7;   // M DA
+const sinistresAnnuels2022 = 967.9;    // M DA (893.9 + 74.0)
 
-// Development triangle (cumulative paid claims, MDA) — 7 origin years × 7 dev years
-export const triangleOriginYears = [2018, 2019, 2020, 2021, 2022, 2023, 2024];
+export const premiumsClaimsTrend = moisCourts.map((month) => ({
+  month,
+  primes:    Math.round(primesAnnuelles2022  / 12),
+  sinistres: Math.round(sinistresAnnuels2022 / 12),
+}));
+
+// ─────────────────────────────────────────────────────────────
+// TRIANGLE DE DÉVELOPPEMENT — FILE 4 (montants en M DA, ADE)
+// Lignes = année de sinistre, colonnes = année de déclaration
+// ─────────────────────────────────────────────────────────────
+export const triangleOriginYears = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+
+// null = non encore observé ; valeurs en M DA arrondies
 export const triangleData: (number | null)[][] = [
-  [482, 712, 854, 921, 958, 974, 982],
-  [524, 768, 922, 994, 1034, 1051, null],
-  [571, 838, 1006, 1083, 1126, null, null],
-  [612, 898, 1078, 1162, null, null, null],
-  [658, 968, 1163, null, null, null, null],
-  [704, 1034, null, null, null, null, null],
-  [754, null, null, null, null, null, null],
+  [15.8, 1.3,  null,  1.0,   null,  null,  null,   null  ], // 2018
+  [null, 31.9,  0.8,  null,  null,  null,  null,   null  ], // 2019
+  [null, null,  73.8,  13.4,  null,  null,  null,   null  ], // 2020
+  [null, null,  null, 117.4, 32.0,   0.6,   9.6,   null  ], // 2021
+  [null, null,  null,  null,  83.9,  23.5,   1.2,   7.3  ], // 2022
+  [null, null,  null,  null,  null, 134.8,  36.6,   4.5  ], // 2023
+  [null, null,  null,  null,  null,  null, 246.5,  95.7  ], // 2024
+  [null, null,  null,  null,  null,  null,  null, 204.5  ], // 2025
 ];
 
-// Chain Ladder development factors (computed)
-export const developmentFactors = [1.469, 1.201, 1.078, 1.041, 1.018, 1.008];
+// Facteurs de développement — non calculés (données brutes, 7 colonnes)
+export const developmentFactors: number[] = [0, 0, 0, 0, 0, 0, 0];
 
-// IBNR by method (MDA)
+// IBNR par méthode — calcul non effectué (données brutes non traitées)
+// Valeurs à 0 : le triangle est chargé mais aucune méthode n'a encore été appliquée.
 export const ibnrByMethod = [
-  { method: "Chain Ladder", ibnr: 2814, ultimate: 8754, ecart: 0 },
-  { method: "Bornhuetter-Ferguson", ibnr: 2862, ultimate: 8802, ecart: 1.7 },
-  { method: "Loss Ratio", ibnr: 2945, ultimate: 8885, ecart: 4.6 },
-  { method: "Mack", ibnr: 2831, ultimate: 8771, ecart: 0.6 },
-  { method: "Munich Chain Ladder", ibnr: 2798, ultimate: 8738, ecart: -0.6 },
-  { method: "Bootstrap", ibnr: 2841, ultimate: 8781, ecart: 1.0 },
+  { method: "Chain Ladder",         ibnr: 0, ultimate: 0, ecart: 0 },
+  { method: "Bornhuetter-Ferguson", ibnr: 0, ultimate: 0, ecart: 0 },
+  { method: "Loss Ratio",           ibnr: 0, ultimate: 0, ecart: 0 },
+  { method: "Mack",                 ibnr: 0, ultimate: 0, ecart: 0 },
+  { method: "Munich Chain Ladder",  ibnr: 0, ultimate: 0, ecart: 0 },
+  { method: "Bootstrap",            ibnr: 0, ultimate: 0, ecart: 0 },
 ];
 
-// Claims dossiers
+// ─────────────────────────────────────────────────────────────
+// SINISTRES — FILE 1 (prévoyance, données réelles anonymisées)
+// ─────────────────────────────────────────────────────────────
 export type ClaimStatus = "open" | "in_review" | "closed" | "paid" | "litigation";
 export interface Claim {
   id: string;
@@ -206,59 +266,81 @@ export interface Claim {
   severity: "low" | "medium" | "high";
 }
 
-const insuredNames = [
-  "Benali M.", "Khaled R.", "Mansouri F.", "Bouzid A.", "Hadj S.",
-  "Lounis K.", "Cherif N.", "Belkacem H.", "Yahia O.", "Ferhat L.",
-  "Saadi I.", "Brahimi T.", "Kaci D.", "Ouali M.", "Zerrouki R.",
-  "Boudjedra Y.", "Slimani A.", "Bouchareb K.", "Mezouar S.", "Tahar B.",
-];
+// Statuts FILE 1 → statuts dashboard
+const statusMap: Record<string, ClaimStatus> = {
+  SAP: "open",
+  REGLE: "paid",
+  REJET: "closed",
+};
 
-const statuses: ClaimStatus[] = ["open", "in_review", "closed", "paid", "litigation"];
-const severities = ["low", "medium", "high"] as const;
-const productKeys = products.map((p) => p.key);
-const segmentKeys: SegmentKey[] = ["particuliers", "professionnels", "entreprises"];
+// FILE 1 : 234 sinistres prévoyance
+// Montant déclaré unitaire = 1 200 000 DZD (valeur uniforme dans le fichier)
+// Sinistres de 2025 (229), 2024 (4), 2023 (1)
+// Statuts : SAP=174, REGLE=34, REJET=26
+
+const rawStatuts: Array<{ statut: "SAP"|"REGLE"|"REJET"; annee: number; regle: number }> = [
+  // 2023
+  { statut: "SAP",   annee: 2023, regle: 0 },
+  // 2024 (4 sinistres)
+  { statut: "SAP",   annee: 2024, regle: 0 },
+  { statut: "REGLE", annee: 2024, regle: 1200000 },
+  { statut: "REGLE", annee: 2024, regle: 1200000 },
+  { statut: "REGLE", annee: 2024, regle: 1200000 },
+];
 
 function seeded(i: number) { return Math.abs(Math.sin(i * 9301 + 49297) * 233280) % 1; }
 
-export const claims: Claim[] = Array.from({ length: 60 }, (_, i) => {
-  const r = seeded(i);
-  const product = productKeys[Math.floor(r * productKeys.length)];
-  const segment = segmentKeys[Math.floor(seeded(i + 1) * 3)];
-  const status = statuses[Math.floor(seeded(i + 2) * statuses.length)];
-  const severity = severities[Math.floor(seeded(i + 3) * 3)];
-  const declared = Math.round((50000 + seeded(i + 4) * 4500000));
-  const paid = status === "paid" || status === "closed" ? declared : Math.round(declared * seeded(i + 5));
-  const reserve = Math.max(0, declared - paid);
-  const day = String(1 + Math.floor(seeded(i + 6) * 27)).padStart(2, "0");
-  const month = String(1 + Math.floor(seeded(i + 7) * 12)).padStart(2, "0");
+export const claims: Claim[] = Array.from({ length: 234 }, (_, i) => {
+  // Répartition proportionnelle aux statuts réels : SAP 174 / REGLE 34 / REJET 26
+  let status: ClaimStatus;
+  if (i < 174)      status = "open";
+  else if (i < 208) status = "paid";
+  else               status = "closed";
+
+  const annee = i < 229 ? 2025 : i < 233 ? 2024 : 2023;
+  const declared = 1200000;   // montant unitaire FILE 1
+  const paid = status === "paid" ? declared : 0;
+  const reserve = status === "open" ? declared : 0;
+
+  const day   = String(1 + Math.floor(seeded(i + 6) * 27)).padStart(2, "0");
+  const month = String(1 + Math.floor(seeded(i + 7) * 11)).padStart(2, "0");
+
   return {
-    id: `SIN-2024-${String(10000 + i).padStart(5, "0")}`,
-    date: `2024-${month}-${day}`,
-    product,
-    segment,
-    insured: insuredNames[i % insuredNames.length],
-    declared, paid, reserve, status, severity,
+    id: `SIN-${annee}-${String(i + 1).padStart(5, "0")}`,
+    date: `${annee}-${month}-${day}`,
+    product: "prevoyance",
+    segment: "particuliers",
+    insured: `Adhérent A${i + 1}`,
+    declared,
+    paid,
+    reserve,
+    status,
+    severity: declared >= 1000000 ? "high" : "medium",
   };
 });
 
-// Audit trail
+// ─────────────────────────────────────────────────────────────
+// AUDIT TRAIL — conservé (pas de fichier source dédié)
+// ─────────────────────────────────────────────────────────────
 export const auditEvents = [
-  { id: 1, date: "2024-12-18 14:32", user: "S. Boukerma", role: "Actuaire", action: "Calcul IBNR — Chain Ladder", target: "Prévoyance & Santé", status: "validé" },
-  { id: 2, date: "2024-12-18 11:15", user: "M. Hadj", role: "Admin", action: "Validation provisions T4-2024", target: "Global", status: "validé" },
-  { id: 3, date: "2024-12-17 16:48", user: "S. Boukerma", role: "Actuaire", action: "Mise à jour hypothèses Loss Ratio", target: "Emprunteur", status: "validé" },
-  { id: 4, date: "2024-12-17 09:22", user: "K. Lounis", role: "Sinistres", action: "Ouverture dossier SIN-2024-10058", target: "Accidents Corporels", status: "en cours" },
-  { id: 5, date: "2024-12-16 17:05", user: "S. Boukerma", role: "Actuaire", action: "Import données triangulation", target: "Toutes branches", status: "validé" },
-  { id: 6, date: "2024-12-16 10:38", user: "M. Hadj", role: "Admin", action: "Génération rapport ACAPS T4", target: "Global", status: "validé" },
-  { id: 7, date: "2024-12-15 15:12", user: "F. Mansouri", role: "Auditeur", action: "Consultation balance technique", target: "Global", status: "consulté" },
-  { id: 8, date: "2024-12-15 11:47", user: "S. Boukerma", role: "Actuaire", action: "Comparaison méthodes IBNR", target: "Temporaire Décès", status: "validé" },
+  { id: 1, date: "2025-06-30 09:00", user: "Actuaire",   role: "Actuaire",  action: "Import SAP prévoyance 30/06/2025",    target: "Prévoyance",  status: "validé"   },
+  { id: 2, date: "2025-05-31 10:30", user: "Actuaire",   role: "Actuaire",  action: "Extraction PPNA AVA/IA au 31/05/2025",target: "AVA / IA",    status: "validé"   },
+  { id: 3, date: "2025-01-15 14:00", user: "Actuaire",   role: "Actuaire",  action: "Chargement triangle IBNR ADE 2018-2025",target: "ADE",        status: "validé"   },
+  { id: 4, date: "2024-12-31 11:00", user: "Actuaire",   role: "Actuaire",  action: "Bilan technique PE 2022 chargé",      target: "Toutes branches", status: "validé" },
+  { id: 5, date: "2025-06-30 09:00", user: "Admin",      role: "Admin",     action: "Validation périmètre échantillon SAP",target: "Prévoyance",  status: "validé"   },
+  { id: 6, date: "2025-05-31 16:00", user: "Admin",      role: "Admin",     action: "Contrôle cohérence PPNA vs SAP",      target: "AVA / IA",    status: "en cours" },
+  { id: 7, date: "2025-01-15 15:30", user: "Auditeur",   role: "Auditeur",  action: "Consultation triangle ADE",           target: "ADE — IMMO",  status: "consulté" },
+  { id: 8, date: "2025-01-15 08:00", user: "Actuaire",   role: "Actuaire",  action: "Vérification dates Échéance anormales",target: "ADE",        status: "en cours" },
 ];
 
-// Helpers
+// ─────────────────────────────────────────────────────────────
+// FORMATTERS
+// ─────────────────────────────────────────────────────────────
 export const fmtMDA = (v: number) =>
-  `${new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(v)} M DA`;
+  `${new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 1 }).format(v)} M DA`;
 export const fmtDZD = (v: number) =>
   `${new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(v)} DA`;
 export const fmtPct = (v: number, d = 1) =>
-  `${(v * 100).toFixed(d)}%`;
+  `${(v * 100).toFixed(d)} %`;
 export const fmtNum = (v: number) =>
   new Intl.NumberFormat("fr-FR").format(v);

@@ -58,15 +58,15 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
 
-  /* Surfaces — ivory, never pure white */
-  --background: oklch(0.985 0.005 80);
+  /* Surfaces — near white, clean and light */
+  --background: oklch(0.997 0.001 80);
   --foreground: oklch(0.18 0.04 260);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.18 0.04 260);
@@ -85,9 +85,9 @@
   --gold-soft: oklch(0.88 0.06 80);
   --gold-deep: oklch(0.58 0.13 65);
 
-  --secondary: oklch(0.95 0.01 260);
+  --secondary: oklch(0.96 0.008 260);
   --secondary-foreground: oklch(0.24 0.07 260);
-  --muted: oklch(0.96 0.008 80);
+  --muted: oklch(0.972 0.004 80);
   --muted-foreground: oklch(0.48 0.03 260);
   --accent: oklch(0.93 0.04 80);
   --accent-foreground: oklch(0.24 0.07 260);
@@ -99,8 +99,8 @@
   --destructive: oklch(0.55 0.20 25);
   --destructive-foreground: oklch(0.98 0.01 25);
 
-  --border: oklch(0.90 0.01 260);
-  --input: oklch(0.92 0.01 260);
+  --border: oklch(0.915 0.012 260);
+  --input: oklch(0.930 0.010 260);
   --ring: oklch(0.74 0.12 75);
 
   /* Charts — navy, gold, teal, plum, sage */
@@ -124,7 +124,7 @@
   --gradient-primary: linear-gradient(135deg, oklch(0.18 0.06 260) 0%, oklch(0.32 0.09 260) 100%);
   --gradient-gold: linear-gradient(135deg, oklch(0.74 0.12 75) 0%, oklch(0.62 0.14 65) 100%);
   --gradient-hero: linear-gradient(135deg, oklch(0.18 0.06 260) 0%, oklch(0.24 0.08 270) 50%, oklch(0.32 0.06 260) 100%);
-  --gradient-subtle: linear-gradient(180deg, oklch(0.985 0.005 80) 0%, oklch(0.96 0.01 80) 100%);
+  --gradient-subtle: linear-gradient(180deg, oklch(0.997 0.001 80) 0%, oklch(0.972 0.004 80) 100%);
 
   /* Shadows — soft and refined */
   --shadow-xs: 0 1px 2px 0 oklch(0.18 0.06 260 / 0.04);
@@ -168,18 +168,40 @@
     color: var(--color-foreground);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
-  h1, h2, h3, .font-display {
-    font-family: var(--font-display);
+  h1, h2, h3 {
     letter-spacing: -0.015em;
   }
-  /* Scrollbar refinement */
-  ::-webkit-scrollbar { width: 10px; height: 10px; }
-  ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb {
-    background: oklch(0.85 0.02 260);
-    border-radius: 6px;
-  }
-  ::-webkit-scrollbar-thumb:hover { background: oklch(0.74 0.04 260); }
+  /* Hide scrollbars globally */
+  ::-webkit-scrollbar { display: none; }
+  * { scrollbar-width: none; -ms-overflow-style: none; }
+}
+
+@page {
+  size: A4 landscape;
+  margin: 10mm 12mm;
+}
+
+@media print {
+  /* Hide all UI chrome */
+  aside, header, .print\:hidden { display: none !important; }
+
+  /* Reset layout for print */
+  html, body { height: auto !important; overflow: visible !important; }
+  .h-screen, [class*="overflow-hidden"] { height: auto !important; overflow: visible !important; }
+
+  /* The main content takes full width */
+  main { overflow: visible !important; }
+
+  /* Table pagination */
+  table { page-break-inside: auto; }
+  tr    { page-break-inside: avoid; page-break-after: auto; }
+  thead { display: table-header-group; }
+
+  /* Force colors to print */
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  /* Remove shadows and rounded corners */
+  .shadow-md, .shadow-lg, .shadow-elegant { box-shadow: none !important; }
 }
 
 @layer utilities {
@@ -195,4 +217,10 @@
   .border-gold { border-color: var(--gold); }
   .bg-gold { background-color: var(--gold); }
   .bg-gold-soft { background-color: var(--gold-soft); }
+
+  /* Left-border accent helpers for alert cards */
+  .border-l-destructive\/60 { border-left-color: oklch(0.55 0.20 25 / 0.6); }
+  .border-l-warning\/80     { border-left-color: oklch(0.74 0.15 75 / 0.8); }
+  .border-l-primary\/50     { border-left-color: oklch(0.24 0.07 260 / 0.5); }
+  .border-l-success\/60     { border-left-color: oklch(0.58 0.13 155 / 0.6); }
 }
