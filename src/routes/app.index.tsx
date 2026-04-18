@@ -70,7 +70,7 @@ function GlobalDashboard() {
                 <YAxis stroke="var(--muted-foreground)" fontSize={11} tickLine={false} axisLine={false} />
                 <Tooltip
                   contentStyle={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, fontSize: 12 }}
-                  formatter={(v: number) => `${v.toLocaleString("fr-FR")} M DA`}
+                  formatter={(v) => `${Number(v).toLocaleString("fr-FR")} M DA`}
                 />
                 <Area type="monotone" dataKey="PPNA" stackId="1" stroke={COLORS[0]} fill="url(#g0)" strokeWidth={2} />
                 <Area type="monotone" dataKey="PSAP" stackId="1" stroke={COLORS[1]} fill="url(#g1)" strokeWidth={2} />
@@ -91,7 +91,7 @@ function GlobalDashboard() {
                 </Pie>
                 <Tooltip
                   contentStyle={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, fontSize: 12 }}
-                  formatter={(v: number) => `${v.toLocaleString("fr-FR")} M DA`}
+                  formatter={(v) => `${Number(v).toLocaleString("fr-FR")} M DA`}
                 />
               </PieChart>
             </ResponsiveContainer>
