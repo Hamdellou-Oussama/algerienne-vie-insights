@@ -9,38 +9,226 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as AppTrianglesRouteImport } from './routes/app.triangles'
+import { Route as AppSinistresRouteImport } from './routes/app.sinistres'
+import { Route as AppSegmentsRouteImport } from './routes/app.segments'
+import { Route as AppProvisionsRouteImport } from './routes/app.provisions'
+import { Route as AppProduitsRouteImport } from './routes/app.produits'
+import { Route as AppParametresRouteImport } from './routes/app.parametres'
+import { Route as AppImportRouteImport } from './routes/app.import'
+import { Route as AppIbnrRouteImport } from './routes/app.ibnr'
+import { Route as AppExportsRouteImport } from './routes/app.exports'
+import { Route as AppBalanceRouteImport } from './routes/app.balance'
+import { Route as AppAuditRouteImport } from './routes/app.audit'
+import { Route as AppProduitsIndexRouteImport } from './routes/app.produits.index'
+import { Route as AppProduitsProductKeyRouteImport } from './routes/app.produits.$productKey'
 
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppIndexRoute = AppIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTrianglesRoute = AppTrianglesRouteImport.update({
+  id: '/triangles',
+  path: '/triangles',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSinistresRoute = AppSinistresRouteImport.update({
+  id: '/sinistres',
+  path: '/sinistres',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSegmentsRoute = AppSegmentsRouteImport.update({
+  id: '/segments',
+  path: '/segments',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProvisionsRoute = AppProvisionsRouteImport.update({
+  id: '/provisions',
+  path: '/provisions',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProduitsRoute = AppProduitsRouteImport.update({
+  id: '/produits',
+  path: '/produits',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppParametresRoute = AppParametresRouteImport.update({
+  id: '/parametres',
+  path: '/parametres',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppImportRoute = AppImportRouteImport.update({
+  id: '/import',
+  path: '/import',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppIbnrRoute = AppIbnrRouteImport.update({
+  id: '/ibnr',
+  path: '/ibnr',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppExportsRoute = AppExportsRouteImport.update({
+  id: '/exports',
+  path: '/exports',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppBalanceRoute = AppBalanceRouteImport.update({
+  id: '/balance',
+  path: '/balance',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAuditRoute = AppAuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProduitsIndexRoute = AppProduitsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppProduitsRoute,
+} as any)
+const AppProduitsProductKeyRoute = AppProduitsProductKeyRouteImport.update({
+  id: '/$productKey',
+  path: '/$productKey',
+  getParentRoute: () => AppProduitsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/audit': typeof AppAuditRoute
+  '/app/balance': typeof AppBalanceRoute
+  '/app/exports': typeof AppExportsRoute
+  '/app/ibnr': typeof AppIbnrRoute
+  '/app/import': typeof AppImportRoute
+  '/app/parametres': typeof AppParametresRoute
+  '/app/produits': typeof AppProduitsRouteWithChildren
+  '/app/provisions': typeof AppProvisionsRoute
+  '/app/segments': typeof AppSegmentsRoute
+  '/app/sinistres': typeof AppSinistresRoute
+  '/app/triangles': typeof AppTrianglesRoute
+  '/app/': typeof AppIndexRoute
+  '/app/produits/$productKey': typeof AppProduitsProductKeyRoute
+  '/app/produits/': typeof AppProduitsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/app/audit': typeof AppAuditRoute
+  '/app/balance': typeof AppBalanceRoute
+  '/app/exports': typeof AppExportsRoute
+  '/app/ibnr': typeof AppIbnrRoute
+  '/app/import': typeof AppImportRoute
+  '/app/parametres': typeof AppParametresRoute
+  '/app/provisions': typeof AppProvisionsRoute
+  '/app/segments': typeof AppSegmentsRoute
+  '/app/sinistres': typeof AppSinistresRoute
+  '/app/triangles': typeof AppTrianglesRoute
+  '/app': typeof AppIndexRoute
+  '/app/produits/$productKey': typeof AppProduitsProductKeyRoute
+  '/app/produits': typeof AppProduitsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/audit': typeof AppAuditRoute
+  '/app/balance': typeof AppBalanceRoute
+  '/app/exports': typeof AppExportsRoute
+  '/app/ibnr': typeof AppIbnrRoute
+  '/app/import': typeof AppImportRoute
+  '/app/parametres': typeof AppParametresRoute
+  '/app/produits': typeof AppProduitsRouteWithChildren
+  '/app/provisions': typeof AppProvisionsRoute
+  '/app/segments': typeof AppSegmentsRoute
+  '/app/sinistres': typeof AppSinistresRoute
+  '/app/triangles': typeof AppTrianglesRoute
+  '/app/': typeof AppIndexRoute
+  '/app/produits/$productKey': typeof AppProduitsProductKeyRoute
+  '/app/produits/': typeof AppProduitsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/app'
+    | '/app/audit'
+    | '/app/balance'
+    | '/app/exports'
+    | '/app/ibnr'
+    | '/app/import'
+    | '/app/parametres'
+    | '/app/produits'
+    | '/app/provisions'
+    | '/app/segments'
+    | '/app/sinistres'
+    | '/app/triangles'
+    | '/app/'
+    | '/app/produits/$productKey'
+    | '/app/produits/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/app/audit'
+    | '/app/balance'
+    | '/app/exports'
+    | '/app/ibnr'
+    | '/app/import'
+    | '/app/parametres'
+    | '/app/provisions'
+    | '/app/segments'
+    | '/app/sinistres'
+    | '/app/triangles'
+    | '/app'
+    | '/app/produits/$productKey'
+    | '/app/produits'
+  id:
+    | '__root__'
+    | '/'
+    | '/app'
+    | '/app/audit'
+    | '/app/balance'
+    | '/app/exports'
+    | '/app/ibnr'
+    | '/app/import'
+    | '/app/parametres'
+    | '/app/produits'
+    | '/app/provisions'
+    | '/app/segments'
+    | '/app/sinistres'
+    | '/app/triangles'
+    | '/app/'
+    | '/app/produits/$productKey'
+    | '/app/produits/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppRoute: typeof AppRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,21 +236,157 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app/': {
+      id: '/app/'
+      path: '/'
+      fullPath: '/app/'
+      preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/triangles': {
+      id: '/app/triangles'
+      path: '/triangles'
+      fullPath: '/app/triangles'
+      preLoaderRoute: typeof AppTrianglesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/sinistres': {
+      id: '/app/sinistres'
+      path: '/sinistres'
+      fullPath: '/app/sinistres'
+      preLoaderRoute: typeof AppSinistresRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/segments': {
+      id: '/app/segments'
+      path: '/segments'
+      fullPath: '/app/segments'
+      preLoaderRoute: typeof AppSegmentsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/provisions': {
+      id: '/app/provisions'
+      path: '/provisions'
+      fullPath: '/app/provisions'
+      preLoaderRoute: typeof AppProvisionsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/produits': {
+      id: '/app/produits'
+      path: '/produits'
+      fullPath: '/app/produits'
+      preLoaderRoute: typeof AppProduitsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/parametres': {
+      id: '/app/parametres'
+      path: '/parametres'
+      fullPath: '/app/parametres'
+      preLoaderRoute: typeof AppParametresRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/import': {
+      id: '/app/import'
+      path: '/import'
+      fullPath: '/app/import'
+      preLoaderRoute: typeof AppImportRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/ibnr': {
+      id: '/app/ibnr'
+      path: '/ibnr'
+      fullPath: '/app/ibnr'
+      preLoaderRoute: typeof AppIbnrRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/exports': {
+      id: '/app/exports'
+      path: '/exports'
+      fullPath: '/app/exports'
+      preLoaderRoute: typeof AppExportsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/balance': {
+      id: '/app/balance'
+      path: '/balance'
+      fullPath: '/app/balance'
+      preLoaderRoute: typeof AppBalanceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/audit': {
+      id: '/app/audit'
+      path: '/audit'
+      fullPath: '/app/audit'
+      preLoaderRoute: typeof AppAuditRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/produits/': {
+      id: '/app/produits/'
+      path: '/'
+      fullPath: '/app/produits/'
+      preLoaderRoute: typeof AppProduitsIndexRouteImport
+      parentRoute: typeof AppProduitsRoute
+    }
+    '/app/produits/$productKey': {
+      id: '/app/produits/$productKey'
+      path: '/$productKey'
+      fullPath: '/app/produits/$productKey'
+      preLoaderRoute: typeof AppProduitsProductKeyRouteImport
+      parentRoute: typeof AppProduitsRoute
+    }
   }
 }
 
+interface AppProduitsRouteChildren {
+  AppProduitsProductKeyRoute: typeof AppProduitsProductKeyRoute
+  AppProduitsIndexRoute: typeof AppProduitsIndexRoute
+}
+
+const AppProduitsRouteChildren: AppProduitsRouteChildren = {
+  AppProduitsProductKeyRoute: AppProduitsProductKeyRoute,
+  AppProduitsIndexRoute: AppProduitsIndexRoute,
+}
+
+const AppProduitsRouteWithChildren = AppProduitsRoute._addFileChildren(
+  AppProduitsRouteChildren,
+)
+
+interface AppRouteChildren {
+  AppAuditRoute: typeof AppAuditRoute
+  AppBalanceRoute: typeof AppBalanceRoute
+  AppExportsRoute: typeof AppExportsRoute
+  AppIbnrRoute: typeof AppIbnrRoute
+  AppImportRoute: typeof AppImportRoute
+  AppParametresRoute: typeof AppParametresRoute
+  AppProduitsRoute: typeof AppProduitsRouteWithChildren
+  AppProvisionsRoute: typeof AppProvisionsRoute
+  AppSegmentsRoute: typeof AppSegmentsRoute
+  AppSinistresRoute: typeof AppSinistresRoute
+  AppTrianglesRoute: typeof AppTrianglesRoute
+  AppIndexRoute: typeof AppIndexRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppAuditRoute: AppAuditRoute,
+  AppBalanceRoute: AppBalanceRoute,
+  AppExportsRoute: AppExportsRoute,
+  AppIbnrRoute: AppIbnrRoute,
+  AppImportRoute: AppImportRoute,
+  AppParametresRoute: AppParametresRoute,
+  AppProduitsRoute: AppProduitsRouteWithChildren,
+  AppProvisionsRoute: AppProvisionsRoute,
+  AppSegmentsRoute: AppSegmentsRoute,
+  AppSinistresRoute: AppSinistresRoute,
+  AppTrianglesRoute: AppTrianglesRoute,
+  AppIndexRoute: AppIndexRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppRoute: AppRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
