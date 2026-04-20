@@ -1,0 +1,1728 @@
+[
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\eslint.config.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\DomainRunBanner.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\auth\\LoginGate.tsx",
+    "messages": [],
+    "suppressedMessages": [
+      {
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "React Hook useEffect has a missing dependency: 'error'. Either include it or remove the dependency array.",
+        "line": 21,
+        "column": 6,
+        "nodeType": "ArrayExpression",
+        "endLine": 21,
+        "endColumn": 32,
+        "suggestions": [
+          {
+            "desc": "Update the dependencies array to be: [mode, username, password, error]",
+            "fix": { "range": [841, 867], "text": "[mode, username, password, error]" }
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      }
+    ],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\layout\\Sidebar.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\layout\\Topbar.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\accordion.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\alert-dialog.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\alert.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\aspect-ratio.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\avatar.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\badge.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 32,
+        "column": 17,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 32,
+        "endColumn": 30
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import * as React from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst badgeVariants = cva(\n  \"inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2\",\n  {\n    variants: {\n      variant: {\n        default: \"border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80\",\n        secondary:\n          \"border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n        destructive:\n          \"border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80\",\n        outline: \"text-foreground\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  },\n);\n\nexport interface BadgeProps\n  extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n  return <div className={cn(badgeVariants({ variant }), className)} {...props} />;\n}\n\nexport { Badge, badgeVariants };\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\breadcrumb.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\button.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 49,
+        "column": 18,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 49,
+        "endColumn": 32
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import * as React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground shadow hover:bg-primary/90\",\n        destructive: \"bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90\",\n        outline:\n          \"border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground\",\n        secondary: \"bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-9 px-4 py-2\",\n        sm: \"h-8 rounded-md px-3 text-xs\",\n        lg: \"h-10 rounded-md px-8\",\n        icon: \"h-9 w-9\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  },\n);\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {\n  asChild?: boolean;\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />\n    );\n  },\n);\nButton.displayName = \"Button\";\n\nexport { Button, buttonVariants };\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\calendar.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\card.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\carousel.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\checkbox.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\collapsible.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\command.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\context-menu.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\dialog.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\drawer.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\dropdown-menu.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\file-upload-zone.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\form.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 163,
+        "column": 3,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 163,
+        "endColumn": 15
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import * as React from \"react\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport {\n  Controller,\n  FormProvider,\n  useFormContext,\n  type ControllerProps,\n  type FieldPath,\n  type FieldValues,\n} from \"react-hook-form\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Label } from \"@/components/ui/label\";\n\nconst Form = FormProvider;\n\ntype FormFieldContextValue<\n  TFieldValues extends FieldValues = FieldValues,\n  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,\n> = {\n  name: TName;\n};\n\nconst FormFieldContext = React.createContext<FormFieldContextValue | null>(null);\n\nconst FormField = <\n  TFieldValues extends FieldValues = FieldValues,\n  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,\n>({\n  ...props\n}: ControllerProps<TFieldValues, TName>) => {\n  return (\n    <FormFieldContext.Provider value={{ name: props.name }}>\n      <Controller {...props} />\n    </FormFieldContext.Provider>\n  );\n};\n\nconst useFormField = () => {\n  const fieldContext = React.useContext(FormFieldContext);\n  const itemContext = React.useContext(FormItemContext);\n  const { getFieldState, formState } = useFormContext();\n\n  if (!fieldContext) {\n    throw new Error(\"useFormField should be used within <FormField>\");\n  }\n\n  if (!itemContext) {\n    throw new Error(\"useFormField should be used within <FormItem>\");\n  }\n\n  const fieldState = getFieldState(fieldContext.name, formState);\n\n  const { id } = itemContext;\n\n  return {\n    id,\n    name: fieldContext.name,\n    formItemId: `${id}-form-item`,\n    formDescriptionId: `${id}-form-item-description`,\n    formMessageId: `${id}-form-item-message`,\n    ...fieldState,\n  };\n};\n\ntype FormItemContextValue = {\n  id: string;\n};\n\nconst FormItemContext = React.createContext<FormItemContextValue | null>(null);\n\nconst FormItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => {\n    const id = React.useId();\n\n    return (\n      <FormItemContext.Provider value={{ id }}>\n        <div ref={ref} className={cn(\"space-y-2\", className)} {...props} />\n      </FormItemContext.Provider>\n    );\n  },\n);\nFormItem.displayName = \"FormItem\";\n\nconst FormLabel = React.forwardRef<\n  React.ElementRef<typeof LabelPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>\n>(({ className, ...props }, ref) => {\n  const { error, formItemId } = useFormField();\n\n  return (\n    <Label\n      ref={ref}\n      className={cn(error && \"text-destructive\", className)}\n      htmlFor={formItemId}\n      {...props}\n    />\n  );\n});\nFormLabel.displayName = \"FormLabel\";\n\nconst FormControl = React.forwardRef<\n  React.ElementRef<typeof Slot>,\n  React.ComponentPropsWithoutRef<typeof Slot>\n>(({ ...props }, ref) => {\n  const { error, formItemId, formDescriptionId, formMessageId } = useFormField();\n\n  return (\n    <Slot\n      ref={ref}\n      id={formItemId}\n      aria-describedby={!error ? `${formDescriptionId}` : `${formDescriptionId} ${formMessageId}`}\n      aria-invalid={!!error}\n      {...props}\n    />\n  );\n});\nFormControl.displayName = \"FormControl\";\n\nconst FormDescription = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLParagraphElement>\n>(({ className, ...props }, ref) => {\n  const { formDescriptionId } = useFormField();\n\n  return (\n    <p\n      ref={ref}\n      id={formDescriptionId}\n      className={cn(\"text-[0.8rem] text-muted-foreground\", className)}\n      {...props}\n    />\n  );\n});\nFormDescription.displayName = \"FormDescription\";\n\nconst FormMessage = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLParagraphElement>\n>(({ className, children, ...props }, ref) => {\n  const { error, formMessageId } = useFormField();\n  const body = error ? String(error?.message ?? \"\") : children;\n\n  if (!body) {\n    return null;\n  }\n\n  return (\n    <p\n      ref={ref}\n      id={formMessageId}\n      className={cn(\"text-[0.8rem] font-medium text-destructive\", className)}\n      {...props}\n    >\n      {body}\n    </p>\n  );\n});\nFormMessage.displayName = \"FormMessage\";\n\nexport {\n  useFormField,\n  Form,\n  FormItem,\n  FormLabel,\n  FormControl,\n  FormDescription,\n  FormMessage,\n  FormField,\n};\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\hover-card.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\input-otp.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\input.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\kpi-card.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\label.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\menubar.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\navigation-menu.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 111,
+        "column": 3,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 111,
+        "endColumn": 29
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import * as React from \"react\";\nimport * as NavigationMenuPrimitive from \"@radix-ui/react-navigation-menu\";\nimport { cva } from \"class-variance-authority\";\nimport { ChevronDown } from \"lucide-react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst NavigationMenu = React.forwardRef<\n  React.ElementRef<typeof NavigationMenuPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>\n>(({ className, children, ...props }, ref) => (\n  <NavigationMenuPrimitive.Root\n    ref={ref}\n    className={cn(\"relative z-10 flex max-w-max flex-1 items-center justify-center\", className)}\n    {...props}\n  >\n    {children}\n    <NavigationMenuViewport />\n  </NavigationMenuPrimitive.Root>\n));\nNavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;\n\nconst NavigationMenuList = React.forwardRef<\n  React.ElementRef<typeof NavigationMenuPrimitive.List>,\n  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>\n>(({ className, ...props }, ref) => (\n  <NavigationMenuPrimitive.List\n    ref={ref}\n    className={cn(\"group flex flex-1 list-none items-center justify-center space-x-1\", className)}\n    {...props}\n  />\n));\nNavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;\n\nconst NavigationMenuItem = NavigationMenuPrimitive.Item;\n\nconst navigationMenuTriggerStyle = cva(\n  \"group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent\",\n);\n\nconst NavigationMenuTrigger = React.forwardRef<\n  React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,\n  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>\n>(({ className, children, ...props }, ref) => (\n  <NavigationMenuPrimitive.Trigger\n    ref={ref}\n    className={cn(navigationMenuTriggerStyle(), \"group\", className)}\n    {...props}\n  >\n    {children}{\" \"}\n    <ChevronDown\n      className=\"relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180\"\n      aria-hidden=\"true\"\n    />\n  </NavigationMenuPrimitive.Trigger>\n));\nNavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;\n\nconst NavigationMenuContent = React.forwardRef<\n  React.ElementRef<typeof NavigationMenuPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>\n>(({ className, ...props }, ref) => (\n  <NavigationMenuPrimitive.Content\n    ref={ref}\n    className={cn(\n      \"left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto \",\n      className,\n    )}\n    {...props}\n  />\n));\nNavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;\n\nconst NavigationMenuLink = NavigationMenuPrimitive.Link;\n\nconst NavigationMenuViewport = React.forwardRef<\n  React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,\n  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>\n>(({ className, ...props }, ref) => (\n  <div className={cn(\"absolute left-0 top-full flex justify-center\")}>\n    <NavigationMenuPrimitive.Viewport\n      className={cn(\n        \"origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]\",\n        className,\n      )}\n      ref={ref}\n      {...props}\n    />\n  </div>\n));\nNavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName;\n\nconst NavigationMenuIndicator = React.forwardRef<\n  React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,\n  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>\n>(({ className, ...props }, ref) => (\n  <NavigationMenuPrimitive.Indicator\n    ref={ref}\n    className={cn(\n      \"top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in\",\n      className,\n    )}\n    {...props}\n  >\n    <div className=\"relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md\" />\n  </NavigationMenuPrimitive.Indicator>\n));\nNavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayName;\n\nexport {\n  navigationMenuTriggerStyle,\n  NavigationMenu,\n  NavigationMenuList,\n  NavigationMenuItem,\n  NavigationMenuContent,\n  NavigationMenuTrigger,\n  NavigationMenuLink,\n  NavigationMenuIndicator,\n  NavigationMenuViewport,\n};\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\pagination.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\popover.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\progress.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\radio-group.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\resizable.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\scroll-area.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\select.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\separator.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\sheet.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\sidebar.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 743,
+        "column": 3,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 743,
+        "endColumn": 13
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import * as React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { PanelLeft } from \"lucide-react\";\n\nimport { useIsMobile } from \"@/hooks/use-mobile\";\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/components/ui/button\";\nimport { Input } from \"@/components/ui/input\";\nimport { Separator } from \"@/components/ui/separator\";\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n} from \"@/components/ui/sheet\";\nimport { Skeleton } from \"@/components/ui/skeleton\";\nimport { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nconst SIDEBAR_COOKIE_NAME = \"sidebar_state\";\nconst SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;\nconst SIDEBAR_WIDTH = \"16rem\";\nconst SIDEBAR_WIDTH_MOBILE = \"18rem\";\nconst SIDEBAR_WIDTH_ICON = \"3rem\";\nconst SIDEBAR_KEYBOARD_SHORTCUT = \"b\";\n\ntype SidebarContextProps = {\n  state: \"expanded\" | \"collapsed\";\n  open: boolean;\n  setOpen: (open: boolean) => void;\n  openMobile: boolean;\n  setOpenMobile: (open: boolean) => void;\n  isMobile: boolean;\n  toggleSidebar: () => void;\n};\n\nconst SidebarContext = React.createContext<SidebarContextProps | null>(null);\n\nfunction useSidebar() {\n  const context = React.useContext(SidebarContext);\n  if (!context) {\n    throw new Error(\"useSidebar must be used within a SidebarProvider.\");\n  }\n\n  return context;\n}\n\nconst SidebarProvider = React.forwardRef<\n  HTMLDivElement,\n  React.ComponentProps<\"div\"> & {\n    defaultOpen?: boolean;\n    open?: boolean;\n    onOpenChange?: (open: boolean) => void;\n  }\n>(\n  (\n    {\n      defaultOpen = true,\n      open: openProp,\n      onOpenChange: setOpenProp,\n      className,\n      style,\n      children,\n      ...props\n    },\n    ref,\n  ) => {\n    const isMobile = useIsMobile();\n    const [openMobile, setOpenMobile] = React.useState(false);\n\n    // This is the internal state of the sidebar.\n    // We use openProp and setOpenProp for control from outside the component.\n    const [_open, _setOpen] = React.useState(defaultOpen);\n    const open = openProp ?? _open;\n    const setOpen = React.useCallback(\n      (value: boolean | ((value: boolean) => boolean)) => {\n        const openState = typeof value === \"function\" ? value(open) : value;\n        if (setOpenProp) {\n          setOpenProp(openState);\n        } else {\n          _setOpen(openState);\n        }\n\n        // This sets the cookie to keep the sidebar state.\n        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;\n      },\n      [setOpenProp, open],\n    );\n\n    // Helper to toggle the sidebar.\n    const toggleSidebar = React.useCallback(() => {\n      return isMobile ? setOpenMobile((open) => !open) : setOpen((open) => !open);\n    }, [isMobile, setOpen, setOpenMobile]);\n\n    // Adds a keyboard shortcut to toggle the sidebar.\n    React.useEffect(() => {\n      const handleKeyDown = (event: KeyboardEvent) => {\n        if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {\n          event.preventDefault();\n          toggleSidebar();\n        }\n      };\n\n      window.addEventListener(\"keydown\", handleKeyDown);\n      return () => window.removeEventListener(\"keydown\", handleKeyDown);\n    }, [toggleSidebar]);\n\n    // We add a state so that we can do data-state=\"expanded\" or \"collapsed\".\n    // This makes it easier to style the sidebar with Tailwind classes.\n    const state = open ? \"expanded\" : \"collapsed\";\n\n    const contextValue = React.useMemo<SidebarContextProps>(\n      () => ({\n        state,\n        open,\n        setOpen,\n        isMobile,\n        openMobile,\n        setOpenMobile,\n        toggleSidebar,\n      }),\n      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar],\n    );\n\n    return (\n      <SidebarContext.Provider value={contextValue}>\n        <TooltipProvider delayDuration={0}>\n          <div\n            style={\n              {\n                \"--sidebar-width\": SIDEBAR_WIDTH,\n                \"--sidebar-width-icon\": SIDEBAR_WIDTH_ICON,\n                ...style,\n              } as React.CSSProperties\n            }\n            className={cn(\n              \"group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar\",\n              className,\n            )}\n            ref={ref}\n            {...props}\n          >\n            {children}\n          </div>\n        </TooltipProvider>\n      </SidebarContext.Provider>\n    );\n  },\n);\nSidebarProvider.displayName = \"SidebarProvider\";\n\nconst Sidebar = React.forwardRef<\n  HTMLDivElement,\n  React.ComponentProps<\"div\"> & {\n    side?: \"left\" | \"right\";\n    variant?: \"sidebar\" | \"floating\" | \"inset\";\n    collapsible?: \"offcanvas\" | \"icon\" | \"none\";\n  }\n>(\n  (\n    {\n      side = \"left\",\n      variant = \"sidebar\",\n      collapsible = \"offcanvas\",\n      className,\n      children,\n      ...props\n    },\n    ref,\n  ) => {\n    const { isMobile, state, openMobile, setOpenMobile } = useSidebar();\n\n    if (collapsible === \"none\") {\n      return (\n        <div\n          className={cn(\n            \"flex h-full w-(--sidebar-width) flex-col bg-sidebar text-sidebar-foreground\",\n            className,\n          )}\n          ref={ref}\n          {...props}\n        >\n          {children}\n        </div>\n      );\n    }\n\n    if (isMobile) {\n      return (\n        <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>\n          <SheetContent\n            data-sidebar=\"sidebar\"\n            data-mobile=\"true\"\n            className=\"w-(--sidebar-width) bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden\"\n            style={\n              {\n                \"--sidebar-width\": SIDEBAR_WIDTH_MOBILE,\n              } as React.CSSProperties\n            }\n            side={side}\n          >\n            <SheetHeader className=\"sr-only\">\n              <SheetTitle>Sidebar</SheetTitle>\n              <SheetDescription>Displays the mobile sidebar.</SheetDescription>\n            </SheetHeader>\n            <div className=\"flex h-full w-full flex-col\">{children}</div>\n          </SheetContent>\n        </Sheet>\n      );\n    }\n\n    return (\n      <div\n        ref={ref}\n        className=\"group peer hidden text-sidebar-foreground md:block\"\n        data-state={state}\n        data-collapsible={state === \"collapsed\" ? collapsible : \"\"}\n        data-variant={variant}\n        data-side={side}\n      >\n        {/* This is what handles the sidebar gap on desktop */}\n        <div\n          className={cn(\n            \"relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear\",\n            \"group-data-[collapsible=offcanvas]:w-0\",\n            \"group-data-[side=right]:rotate-180\",\n            variant === \"floating\" || variant === \"inset\"\n              ? \"group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]\"\n              : \"group-data-[collapsible=icon]:w-(--sidebar-width-icon)\",\n          )}\n        />\n        <div\n          className={cn(\n            \"fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex\",\n            side === \"left\"\n              ? \"left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]\"\n              : \"right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]\",\n            // Adjust the padding for floating and inset variants.\n            variant === \"floating\" || variant === \"inset\"\n              ? \"p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]\"\n              : \"group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l\",\n            className,\n          )}\n          {...props}\n        >\n          <div\n            data-sidebar=\"sidebar\"\n            className=\"flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow\"\n          >\n            {children}\n          </div>\n        </div>\n      </div>\n    );\n  },\n);\nSidebar.displayName = \"Sidebar\";\n\nconst SidebarTrigger = React.forwardRef<\n  React.ElementRef<typeof Button>,\n  React.ComponentProps<typeof Button>\n>(({ className, onClick, ...props }, ref) => {\n  const { toggleSidebar } = useSidebar();\n\n  return (\n    <Button\n      ref={ref}\n      data-sidebar=\"trigger\"\n      variant=\"ghost\"\n      size=\"icon\"\n      className={cn(\"h-7 w-7\", className)}\n      onClick={(event) => {\n        onClick?.(event);\n        toggleSidebar();\n      }}\n      {...props}\n    >\n      <PanelLeft />\n      <span className=\"sr-only\">Toggle Sidebar</span>\n    </Button>\n  );\n});\nSidebarTrigger.displayName = \"SidebarTrigger\";\n\nconst SidebarRail = React.forwardRef<HTMLButtonElement, React.ComponentProps<\"button\">>(\n  ({ className, ...props }, ref) => {\n    const { toggleSidebar } = useSidebar();\n\n    return (\n      <button\n        ref={ref}\n        data-sidebar=\"rail\"\n        aria-label=\"Toggle Sidebar\"\n        tabIndex={-1}\n        onClick={toggleSidebar}\n        title=\"Toggle Sidebar\"\n        className={cn(\n          \"absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex\",\n          \"[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize\",\n          \"[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize\",\n          \"group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar\",\n          \"[[data-side=left][data-collapsible=offcanvas]_&]:-right-2\",\n          \"[[data-side=right][data-collapsible=offcanvas]_&]:-left-2\",\n          className,\n        )}\n        {...props}\n      />\n    );\n  },\n);\nSidebarRail.displayName = \"SidebarRail\";\n\nconst SidebarInset = React.forwardRef<HTMLDivElement, React.ComponentProps<\"main\">>(\n  ({ className, ...props }, ref) => {\n    return (\n      <main\n        ref={ref}\n        className={cn(\n          \"relative flex w-full flex-1 flex-col bg-background\",\n          \"md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow\",\n          className,\n        )}\n        {...props}\n      />\n    );\n  },\n);\nSidebarInset.displayName = \"SidebarInset\";\n\nconst SidebarInput = React.forwardRef<\n  React.ElementRef<typeof Input>,\n  React.ComponentProps<typeof Input>\n>(({ className, ...props }, ref) => {\n  return (\n    <Input\n      ref={ref}\n      data-sidebar=\"input\"\n      className={cn(\n        \"h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring\",\n        className,\n      )}\n      {...props}\n    />\n  );\n});\nSidebarInput.displayName = \"SidebarInput\";\n\nconst SidebarHeader = React.forwardRef<HTMLDivElement, React.ComponentProps<\"div\">>(\n  ({ className, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        data-sidebar=\"header\"\n        className={cn(\"flex flex-col gap-2 p-2\", className)}\n        {...props}\n      />\n    );\n  },\n);\nSidebarHeader.displayName = \"SidebarHeader\";\n\nconst SidebarFooter = React.forwardRef<HTMLDivElement, React.ComponentProps<\"div\">>(\n  ({ className, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        data-sidebar=\"footer\"\n        className={cn(\"flex flex-col gap-2 p-2\", className)}\n        {...props}\n      />\n    );\n  },\n);\nSidebarFooter.displayName = \"SidebarFooter\";\n\nconst SidebarSeparator = React.forwardRef<\n  React.ElementRef<typeof Separator>,\n  React.ComponentProps<typeof Separator>\n>(({ className, ...props }, ref) => {\n  return (\n    <Separator\n      ref={ref}\n      data-sidebar=\"separator\"\n      className={cn(\"mx-2 w-auto bg-sidebar-border\", className)}\n      {...props}\n    />\n  );\n});\nSidebarSeparator.displayName = \"SidebarSeparator\";\n\nconst SidebarContent = React.forwardRef<HTMLDivElement, React.ComponentProps<\"div\">>(\n  ({ className, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        data-sidebar=\"content\"\n        className={cn(\n          \"flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden\",\n          className,\n        )}\n        {...props}\n      />\n    );\n  },\n);\nSidebarContent.displayName = \"SidebarContent\";\n\nconst SidebarGroup = React.forwardRef<HTMLDivElement, React.ComponentProps<\"div\">>(\n  ({ className, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        data-sidebar=\"group\"\n        className={cn(\"relative flex w-full min-w-0 flex-col p-2\", className)}\n        {...props}\n      />\n    );\n  },\n);\nSidebarGroup.displayName = \"SidebarGroup\";\n\nconst SidebarGroupLabel = React.forwardRef<\n  HTMLDivElement,\n  React.ComponentProps<\"div\"> & { asChild?: boolean }\n>(({ className, asChild = false, ...props }, ref) => {\n  const Comp = asChild ? Slot : \"div\";\n\n  return (\n    <Comp\n      ref={ref}\n      data-sidebar=\"group-label\"\n      className={cn(\n        \"flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium text-sidebar-foreground/70 outline-none ring-sidebar-ring transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0\",\n        \"group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0\",\n        className,\n      )}\n      {...props}\n    />\n  );\n});\nSidebarGroupLabel.displayName = \"SidebarGroupLabel\";\n\nconst SidebarGroupAction = React.forwardRef<\n  HTMLButtonElement,\n  React.ComponentProps<\"button\"> & { asChild?: boolean }\n>(({ className, asChild = false, ...props }, ref) => {\n  const Comp = asChild ? Slot : \"button\";\n\n  return (\n    <Comp\n      ref={ref}\n      data-sidebar=\"group-action\"\n      className={cn(\n        \"absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0\",\n        // Increases the hit area of the button on mobile.\n        \"after:absolute after:-inset-2 after:md:hidden\",\n        \"group-data-[collapsible=icon]:hidden\",\n        className,\n      )}\n      {...props}\n    />\n  );\n});\nSidebarGroupAction.displayName = \"SidebarGroupAction\";\n\nconst SidebarGroupContent = React.forwardRef<HTMLDivElement, React.ComponentProps<\"div\">>(\n  ({ className, ...props }, ref) => (\n    <div\n      ref={ref}\n      data-sidebar=\"group-content\"\n      className={cn(\"w-full text-sm\", className)}\n      {...props}\n    />\n  ),\n);\nSidebarGroupContent.displayName = \"SidebarGroupContent\";\n\nconst SidebarMenu = React.forwardRef<HTMLUListElement, React.ComponentProps<\"ul\">>(\n  ({ className, ...props }, ref) => (\n    <ul\n      ref={ref}\n      data-sidebar=\"menu\"\n      className={cn(\"flex w-full min-w-0 flex-col gap-1\", className)}\n      {...props}\n    />\n  ),\n);\nSidebarMenu.displayName = \"SidebarMenu\";\n\nconst SidebarMenuItem = React.forwardRef<HTMLLIElement, React.ComponentProps<\"li\">>(\n  ({ className, ...props }, ref) => (\n    <li\n      ref={ref}\n      data-sidebar=\"menu-item\"\n      className={cn(\"group/menu-item relative\", className)}\n      {...props}\n    />\n  ),\n);\nSidebarMenuItem.displayName = \"SidebarMenuItem\";\n\nconst sidebarMenuButtonVariants = cva(\n  \"peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-none ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"hover:bg-sidebar-accent hover:text-sidebar-accent-foreground\",\n        outline:\n          \"bg-background shadow-[0_0_0_1px_var(--sidebar-border)] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--sidebar-accent)]\",\n      },\n      size: {\n        default: \"h-8 text-sm\",\n        sm: \"h-7 text-xs\",\n        lg: \"h-12 text-sm group-data-[collapsible=icon]:!p-0\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  },\n);\n\nconst SidebarMenuButton = React.forwardRef<\n  HTMLButtonElement,\n  React.ComponentProps<\"button\"> & {\n    asChild?: boolean;\n    isActive?: boolean;\n    tooltip?: string | React.ComponentProps<typeof TooltipContent>;\n  } & VariantProps<typeof sidebarMenuButtonVariants>\n>(\n  (\n    {\n      asChild = false,\n      isActive = false,\n      variant = \"default\",\n      size = \"default\",\n      tooltip,\n      className,\n      ...props\n    },\n    ref,\n  ) => {\n    const Comp = asChild ? Slot : \"button\";\n    const { isMobile, state } = useSidebar();\n\n    const button = (\n      <Comp\n        ref={ref}\n        data-sidebar=\"menu-button\"\n        data-size={size}\n        data-active={isActive}\n        className={cn(sidebarMenuButtonVariants({ variant, size }), className)}\n        {...props}\n      />\n    );\n\n    if (!tooltip) {\n      return button;\n    }\n\n    if (typeof tooltip === \"string\") {\n      tooltip = {\n        children: tooltip,\n      };\n    }\n\n    return (\n      <Tooltip>\n        <TooltipTrigger asChild>{button}</TooltipTrigger>\n        <TooltipContent\n          side=\"right\"\n          align=\"center\"\n          hidden={state !== \"collapsed\" || isMobile}\n          {...tooltip}\n        />\n      </Tooltip>\n    );\n  },\n);\nSidebarMenuButton.displayName = \"SidebarMenuButton\";\n\nconst SidebarMenuAction = React.forwardRef<\n  HTMLButtonElement,\n  React.ComponentProps<\"button\"> & {\n    asChild?: boolean;\n    showOnHover?: boolean;\n  }\n>(({ className, asChild = false, showOnHover = false, ...props }, ref) => {\n  const Comp = asChild ? Slot : \"button\";\n\n  return (\n    <Comp\n      ref={ref}\n      data-sidebar=\"menu-action\"\n      className={cn(\n        \"absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 peer-hover/menu-button:text-sidebar-accent-foreground [&>svg]:size-4 [&>svg]:shrink-0\",\n        // Increases the hit area of the button on mobile.\n        \"after:absolute after:-inset-2 after:md:hidden\",\n        \"peer-data-[size=sm]/menu-button:top-1\",\n        \"peer-data-[size=default]/menu-button:top-1.5\",\n        \"peer-data-[size=lg]/menu-button:top-2.5\",\n        \"group-data-[collapsible=icon]:hidden\",\n        showOnHover &&\n          \"group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 peer-data-[active=true]/menu-button:text-sidebar-accent-foreground md:opacity-0\",\n        className,\n      )}\n      {...props}\n    />\n  );\n});\nSidebarMenuAction.displayName = \"SidebarMenuAction\";\n\nconst SidebarMenuBadge = React.forwardRef<HTMLDivElement, React.ComponentProps<\"div\">>(\n  ({ className, ...props }, ref) => (\n    <div\n      ref={ref}\n      data-sidebar=\"menu-badge\"\n      className={cn(\n        \"pointer-events-none absolute right-1 flex h-5 min-w-5 select-none items-center justify-center rounded-md px-1 text-xs font-medium tabular-nums text-sidebar-foreground\",\n        \"peer-hover/menu-button:text-sidebar-accent-foreground peer-data-[active=true]/menu-button:text-sidebar-accent-foreground\",\n        \"peer-data-[size=sm]/menu-button:top-1\",\n        \"peer-data-[size=default]/menu-button:top-1.5\",\n        \"peer-data-[size=lg]/menu-button:top-2.5\",\n        \"group-data-[collapsible=icon]:hidden\",\n        className,\n      )}\n      {...props}\n    />\n  ),\n);\nSidebarMenuBadge.displayName = \"SidebarMenuBadge\";\n\nconst SidebarMenuSkeleton = React.forwardRef<\n  HTMLDivElement,\n  React.ComponentProps<\"div\"> & {\n    showIcon?: boolean;\n  }\n>(({ className, showIcon = false, ...props }, ref) => {\n  // Random width between 50 to 90%.\n  const width = React.useMemo(() => {\n    return `${Math.floor(Math.random() * 40) + 50}%`;\n  }, []);\n\n  return (\n    <div\n      ref={ref}\n      data-sidebar=\"menu-skeleton\"\n      className={cn(\"flex h-8 items-center gap-2 rounded-md px-2\", className)}\n      {...props}\n    >\n      {showIcon && <Skeleton className=\"size-4 rounded-md\" data-sidebar=\"menu-skeleton-icon\" />}\n      <Skeleton\n        className=\"h-4 max-w-(--skeleton-width) flex-1\"\n        data-sidebar=\"menu-skeleton-text\"\n        style={\n          {\n            \"--skeleton-width\": width,\n          } as React.CSSProperties\n        }\n      />\n    </div>\n  );\n});\nSidebarMenuSkeleton.displayName = \"SidebarMenuSkeleton\";\n\nconst SidebarMenuSub = React.forwardRef<HTMLUListElement, React.ComponentProps<\"ul\">>(\n  ({ className, ...props }, ref) => (\n    <ul\n      ref={ref}\n      data-sidebar=\"menu-sub\"\n      className={cn(\n        \"mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l border-sidebar-border px-2.5 py-0.5\",\n        \"group-data-[collapsible=icon]:hidden\",\n        className,\n      )}\n      {...props}\n    />\n  ),\n);\nSidebarMenuSub.displayName = \"SidebarMenuSub\";\n\nconst SidebarMenuSubItem = React.forwardRef<HTMLLIElement, React.ComponentProps<\"li\">>(\n  ({ ...props }, ref) => <li ref={ref} {...props} />,\n);\nSidebarMenuSubItem.displayName = \"SidebarMenuSubItem\";\n\nconst SidebarMenuSubButton = React.forwardRef<\n  HTMLAnchorElement,\n  React.ComponentProps<\"a\"> & {\n    asChild?: boolean;\n    size?: \"sm\" | \"md\";\n    isActive?: boolean;\n  }\n>(({ asChild = false, size = \"md\", isActive, className, ...props }, ref) => {\n  const Comp = asChild ? Slot : \"a\";\n\n  return (\n    <Comp\n      ref={ref}\n      data-sidebar=\"menu-sub-button\"\n      data-size={size}\n      data-active={isActive}\n      className={cn(\n        \"flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sidebar-foreground outline-none ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground\",\n        \"data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-accent-foreground\",\n        size === \"sm\" && \"text-xs\",\n        size === \"md\" && \"text-sm\",\n        \"group-data-[collapsible=icon]:hidden\",\n        className,\n      )}\n      {...props}\n    />\n  );\n});\nSidebarMenuSubButton.displayName = \"SidebarMenuSubButton\";\n\nexport {\n  Sidebar,\n  SidebarContent,\n  SidebarFooter,\n  SidebarGroup,\n  SidebarGroupAction,\n  SidebarGroupContent,\n  SidebarGroupLabel,\n  SidebarHeader,\n  SidebarInput,\n  SidebarInset,\n  SidebarMenu,\n  SidebarMenuAction,\n  SidebarMenuBadge,\n  SidebarMenuButton,\n  SidebarMenuItem,\n  SidebarMenuSkeleton,\n  SidebarMenuSub,\n  SidebarMenuSubButton,\n  SidebarMenuSubItem,\n  SidebarProvider,\n  SidebarRail,\n  SidebarSeparator,\n  SidebarTrigger,\n  useSidebar,\n};\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\skeleton.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\slider.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\sonner.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\switch.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\table.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\tabs.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\textarea.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\toggle-group.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\toggle.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 42,
+        "column": 18,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 42,
+        "endColumn": 32
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import * as React from \"react\";\nimport * as TogglePrimitive from \"@radix-ui/react-toggle\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst toggleVariants = cva(\n  \"inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-transparent\",\n        outline:\n          \"border border-input bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground\",\n      },\n      size: {\n        default: \"h-9 px-2 min-w-9\",\n        sm: \"h-8 px-1.5 min-w-8\",\n        lg: \"h-10 px-2.5 min-w-10\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  },\n);\n\nconst Toggle = React.forwardRef<\n  React.ElementRef<typeof TogglePrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> & VariantProps<typeof toggleVariants>\n>(({ className, variant, size, ...props }, ref) => (\n  <TogglePrimitive.Root\n    ref={ref}\n    className={cn(toggleVariants({ variant, size, className }))}\n    {...props}\n  />\n));\n\nToggle.displayName = TogglePrimitive.Root.displayName;\n\nexport { Toggle, toggleVariants };\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\components\\ui\\tooltip.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\hooks\\use-mobile.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\api\\auth.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 78,
+        "column": 17,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 78,
+        "endColumn": 24
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from \"react\";\nimport * as api from \"./endpoints\";\nimport { clearTokens, getStoredUser, storeTokens } from \"./tokens\";\nimport type { TokenUser } from \"./types\";\n\ninterface AuthCtx {\n  user: TokenUser | null;\n  isAuthenticated: boolean;\n  isLoading: boolean;\n  login: (username: string, password: string) => Promise<void>;\n  bootstrap: (username: string, password: string) => Promise<void>;\n  logout: () => Promise<void>;\n  refreshMe: () => Promise<void>;\n}\n\nconst Ctx = createContext<AuthCtx | null>(null);\n\nexport function AuthProvider({ children }: { children: ReactNode }) {\n  const [user, setUser] = useState<TokenUser | null>(() => getStoredUser());\n  const [isLoading, setIsLoading] = useState<boolean>(() => !!getStoredUser());\n\n  const refreshMe = useCallback(async () => {\n    try {\n      const res = await api.me();\n      setUser({\n        user_id: res.user_id,\n        username: res.username,\n        role: res.role as TokenUser[\"role\"],\n        status: res.status as TokenUser[\"status\"],\n      });\n    } catch {\n      setUser(null);\n      clearTokens();\n    } finally {\n      setIsLoading(false);\n    }\n  }, []);\n\n  useEffect(() => {\n    if (getStoredUser()) {\n      refreshMe();\n    } else {\n      setIsLoading(false);\n    }\n  }, [refreshMe]);\n\n  const login = useCallback(async (username: string, password: string) => {\n    const env = await api.login(username, password);\n    storeTokens(env);\n    setUser(env.user);\n  }, []);\n\n  const bootstrap = useCallback(async (username: string, password: string) => {\n    const env = await api.bootstrap(username, password);\n    storeTokens(env);\n    setUser(env.user);\n  }, []);\n\n  const logout = useCallback(async () => {\n    try {\n      await api.logout();\n    } catch {\n      /* ignore */\n    }\n    clearTokens();\n    setUser(null);\n  }, []);\n\n  return (\n    <Ctx.Provider\n      value={{ user, isAuthenticated: !!user, isLoading, login, bootstrap, logout, refreshMe }}\n    >\n      {children}\n    </Ctx.Provider>\n  );\n}\n\nexport function useAuth() {\n  const ctx = useContext(Ctx);\n  if (!ctx) throw new Error(\"useAuth must be used inside AuthProvider\");\n  return ctx;\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\api\\client.ts",
+    "messages": [
+      {
+        "ruleId": "prefer-const",
+        "severity": 2,
+        "message": "'token' is never reassigned. Use 'const' instead.",
+        "line": 93,
+        "column": 7,
+        "nodeType": "Identifier",
+        "messageId": "useConst",
+        "endLine": 93,
+        "endColumn": 12,
+        "fix": { "range": [2972, 3015], "text": "const token = auth ? getAccessToken() : null;" }
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 1,
+    "fixableWarningCount": 0,
+    "source": "import { clearTokens, getAccessToken, getRefreshToken, storeTokens } from \"./tokens\";\nimport type { TokenEnvelope } from \"./types\";\n\nconst DEFAULT_API_BASE_URL = \"/api/v1\";\n\nfunction trimTrailingSlash(value: string): string {\n  return value.endsWith(\"/\") ? value.slice(0, -1) : value;\n}\n\nexport const API_BASE_URL: string = trimTrailingSlash(\n  (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() || DEFAULT_API_BASE_URL,\n);\n\nexport class ApiError extends Error {\n  status: number;\n  detail: string;\n  constructor(status: number, detail: string) {\n    super(detail || `HTTP ${status}`);\n    this.status = status;\n    this.detail = detail;\n  }\n}\n\ninterface RequestOptions {\n  method?: string;\n  query?: Record<string, string | number | boolean | null | undefined>;\n  body?: unknown;\n  rawBody?: BodyInit | null;\n  headers?: Record<string, string>;\n  auth?: boolean;\n  signal?: AbortSignal;\n}\n\nlet refreshInFlight: Promise<string | null> | null = null;\n\nasync function performRefresh(): Promise<string | null> {\n  const refresh = getRefreshToken();\n  if (!refresh) return null;\n  try {\n    const res = await fetch(`${API_BASE_URL}/auth/refresh`, {\n      method: \"POST\",\n      headers: { \"Content-Type\": \"application/json\" },\n      body: JSON.stringify({ refresh_token: refresh }),\n    });\n    if (!res.ok) {\n      clearTokens();\n      return null;\n    }\n    const env = (await res.json()) as TokenEnvelope;\n    storeTokens(env);\n    return env.access_token;\n  } catch {\n    clearTokens();\n    return null;\n  }\n}\n\nfunction buildUrl(path: string, query?: RequestOptions[\"query\"]): string {\n  let url: URL;\n  if (path.startsWith(\"http://\") || path.startsWith(\"https://\")) {\n    url = new URL(path);\n  } else if (API_BASE_URL.startsWith(\"http://\") || API_BASE_URL.startsWith(\"https://\")) {\n    url = new URL(`${API_BASE_URL}${path}`);\n  } else {\n    const origin = typeof window !== \"undefined\" ? window.location.origin : \"http://localhost\";\n    url = new URL(`${API_BASE_URL}${path}`, origin);\n  }\n\n  if (query) {\n    for (const [k, v] of Object.entries(query)) {\n      if (v === undefined || v === null) continue;\n      url.searchParams.set(k, String(v));\n    }\n  }\n  return url.toString();\n}\n\nexport async function apiFetch<T>(path: string, opts: RequestOptions = {}): Promise<T> {\n  const { method = \"GET\", query, body, rawBody, headers = {}, auth = true, signal } = opts;\n  const url = buildUrl(path, query);\n\n  const doFetch = async (token: string | null): Promise<Response> => {\n    const finalHeaders: Record<string, string> = { ...headers };\n    if (auth && token) finalHeaders[\"Authorization\"] = `Bearer ${token}`;\n    let finalBody: BodyInit | null | undefined = rawBody;\n    if (body !== undefined && rawBody === undefined) {\n      finalHeaders[\"Content-Type\"] = finalHeaders[\"Content-Type\"] ?? \"application/json\";\n      finalBody = JSON.stringify(body);\n    }\n    return fetch(url, { method, headers: finalHeaders, body: finalBody, signal });\n  };\n\n  let token = auth ? getAccessToken() : null;\n  let res = await doFetch(token);\n\n  if (res.status === 401 && auth) {\n    refreshInFlight = refreshInFlight ?? performRefresh();\n    const newToken = await refreshInFlight;\n    refreshInFlight = null;\n    if (newToken) {\n      res = await doFetch(newToken);\n    }\n  }\n\n  if (!res.ok) {\n    let detail = `HTTP ${res.status}`;\n    try {\n      const data = await res.json();\n      detail = typeof data?.detail === \"string\" ? data.detail : JSON.stringify(data);\n    } catch {\n      /* ignore */\n    }\n    throw new ApiError(res.status, detail);\n  }\n\n  const ctype = res.headers.get(\"content-type\") ?? \"\";\n  if (ctype.includes(\"application/json\")) return (await res.json()) as T;\n  // fallback: return blob for binary\n  return (await res.blob()) as unknown as T;\n}\n\nexport async function apiFetchBlob(path: string, opts: RequestOptions = {}): Promise<Blob> {\n  return apiFetch<Blob>(path, opts);\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\api\\endpoints.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\api\\queries.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\api\\runRows.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\api\\tokens.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\api\\types.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\backendProducts.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\bilanData.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\liveData.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\mockData.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\resetFrontendState.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\roles.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 16,
+        "column": 14,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 16,
+        "endColumn": 43
+      },
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+        "line": 98,
+        "column": 17,
+        "nodeType": "Identifier",
+        "messageId": "namedExport",
+        "endLine": 98,
+        "endColumn": 24
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 2,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import { createContext, useContext, useMemo, useState, type ReactNode } from \"react\";\nimport { Crown, Calculator, FileSpreadsheet, Eye } from \"lucide-react\";\nimport { useAuth } from \"./api/auth\";\nimport type { BackendRole } from \"./api/types\";\n\nexport type Role = \"admin\" | \"actuaire\" | \"sinistres\" | \"auditeur\";\n\nexport interface RoleInfo {\n  key: Role;\n  label: string;\n  user: string;\n  icon: typeof Crown;\n  description: string;\n}\n\nexport const ROLES: Record<Role, RoleInfo> = {\n  admin: {\n    key: \"admin\",\n    label: \"Direction\",\n    user: \"M. Hadj\",\n    icon: Crown,\n    description: \"Vue exécutive · validation · audit global\",\n  },\n  actuaire: {\n    key: \"actuaire\",\n    label: \"Actuaire\",\n    user: \"S. Boukerma\",\n    icon: Calculator,\n    description: \"Méthodes · triangulation · IBNR · hypothèses\",\n  },\n  sinistres: {\n    key: \"sinistres\",\n    label: \"Sinistres\",\n    user: \"K. Lounis\",\n    icon: FileSpreadsheet,\n    description: \"Dossiers · PSAP · règlements\",\n  },\n  auditeur: {\n    key: \"auditeur\",\n    label: \"Auditeur\",\n    user: \"F. Mansouri\",\n    icon: Eye,\n    description: \"Lecture seule · traçabilité · exports validés\",\n  },\n};\n\n// Map backend roles onto the existing UI roles (keeps the visual role selector working).\nconst BACKEND_TO_UI: Record<BackendRole, Role> = {\n  ADMIN: \"admin\",\n  HR: \"actuaire\",\n  VIEWER: \"auditeur\",\n};\n\ninterface Ctx {\n  role: Role;\n  setRole: (r: Role) => void;\n  info: RoleInfo;\n  can: (action: \"edit\" | \"validate\" | \"export\" | \"import\" | \"viewAudit\") => boolean;\n}\n\nconst RoleContext = createContext<Ctx | null>(null);\n\nexport function RoleProvider({ children }: { children: ReactNode }) {\n  const auth = useAuth();\n  const [manualRole, setManualRole] = useState<Role | null>(null);\n\n  const role: Role = useMemo(() => {\n    if (manualRole) return manualRole;\n    if (auth?.user) return BACKEND_TO_UI[auth.user.role] ?? \"auditeur\";\n    return \"admin\";\n  }, [manualRole, auth?.user]);\n\n  const info: RoleInfo = useMemo(() => {\n    const base = ROLES[role];\n    if (auth?.user && !manualRole) {\n      return { ...base, user: auth.user.username };\n    }\n    return base;\n  }, [role, auth?.user, manualRole]);\n\n  const can = (action: Parameters<Ctx[\"can\"]>[0]) => {\n    const matrix: Record<Role, Record<typeof action, boolean>> = {\n      admin: { edit: true, validate: true, export: true, import: true, viewAudit: true },\n      actuaire: { edit: true, validate: false, export: true, import: true, viewAudit: true },\n      sinistres: { edit: true, validate: false, export: true, import: false, viewAudit: false },\n      auditeur: { edit: false, validate: false, export: true, import: false, viewAudit: true },\n    };\n    return matrix[role][action];\n  };\n\n  return (\n    <RoleContext.Provider value={{ role, setRole: setManualRole, info, can }}>\n      {children}\n    </RoleContext.Provider>\n  );\n}\n\nexport function useRole() {\n  const ctx = useContext(RoleContext);\n  if (!ctx) throw new Error(\"useRole must be used inside RoleProvider\");\n  return ctx;\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\lib\\utils.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routeTree.gen.ts",
+    "messages": [],
+    "suppressedMessages": [
+      {
+        "ruleId": "@typescript-eslint/ban-ts-comment",
+        "severity": 2,
+        "message": "Do not use \"@ts-nocheck\" because it alters compilation errors.",
+        "line": 3,
+        "column": 1,
+        "nodeType": "Line",
+        "messageId": "tsDirectiveComment",
+        "endLine": 3,
+        "endColumn": 15,
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 37,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 37,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [1928, 1931], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [1928, 1931], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 42,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 42,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [2049, 2052], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [2049, 2052], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 47,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 47,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [2169, 2172], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [2169, 2172], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 52,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 52,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [2315, 2318], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [2315, 2318], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 57,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 57,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [2461, 2464], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [2461, 2464], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 62,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 62,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [2603, 2606], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [2603, 2606], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 67,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 67,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [2725, 2728], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [2725, 2728], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 72,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 72,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [2875, 2878], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [2875, 2878], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 77,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 77,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3017, 3020], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3017, 3020], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 82,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 82,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3143, 3146], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3143, 3146], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 87,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 87,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3261, 3264], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3261, 3264], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 92,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 92,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3379, 3382], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3379, 3382], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 97,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 97,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3529, 3532], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3529, 3532], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 102,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 102,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3663, 3666], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3663, 3666], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 107,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 107,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3789, 3792], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3789, 3792], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 112,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 112,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [3927, 3930], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [3927, 3930], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 117,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 117,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [4065, 4068], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [4065, 4068], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 122,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 122,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [4195, 4198], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [4195, 4198], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 127,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 127,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [4339, 4342], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [4339, 4342], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 132,
+        "column": 6,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 132,
+        "endColumn": 9,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [4515, 4518], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [4515, 4518], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ],
+        "suppressions": [{ "kind": "directive", "justification": "" }]
+      }
+    ],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\router.tsx",
+    "messages": [
+      {
+        "ruleId": "react-refresh/only-export-components",
+        "severity": 1,
+        "message": "Fast refresh only works when a file only exports components. Move your component(s) to a separate file.",
+        "line": 4,
+        "column": 10,
+        "nodeType": "Identifier",
+        "messageId": "localComponents",
+        "endLine": 4,
+        "endColumn": 31
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import { createRouter, useRouter } from \"@tanstack/react-router\";\nimport { routeTree } from \"./routeTree.gen\";\n\nfunction DefaultErrorComponent({ error, reset }: { error: Error; reset: () => void }) {\n  const router = useRouter();\n\n  return (\n    <div className=\"flex min-h-screen items-center justify-center bg-background px-4\">\n      <div className=\"max-w-md text-center\">\n        <div className=\"mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10\">\n          <svg\n            xmlns=\"http://www.w3.org/2000/svg\"\n            className=\"h-8 w-8 text-destructive\"\n            fill=\"none\"\n            viewBox=\"0 0 24 24\"\n            stroke=\"currentColor\"\n            strokeWidth={2}\n          >\n            <path\n              strokeLinecap=\"round\"\n              strokeLinejoin=\"round\"\n              d=\"M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z\"\n            />\n          </svg>\n        </div>\n        <h1 className=\"text-2xl font-bold tracking-tight text-foreground\">Something went wrong</h1>\n        <p className=\"mt-2 text-sm text-muted-foreground\">\n          An unexpected error occurred. Please try again.\n        </p>\n        {import.meta.env.DEV && error.message && (\n          <pre className=\"mt-4 max-h-40 overflow-auto rounded-md bg-muted p-3 text-left font-mono text-xs text-destructive\">\n            {error.message}\n          </pre>\n        )}\n        <div className=\"mt-6 flex items-center justify-center gap-3\">\n          <button\n            onClick={() => {\n              router.invalidate();\n              reset();\n            }}\n            className=\"inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90\"\n          >\n            Try again\n          </button>\n          <a\n            href=\"/\"\n            className=\"inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent\"\n          >\n            Go home\n          </a>\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport const getRouter = () => {\n  const router = createRouter({\n    routeTree,\n    context: {},\n    scrollRestoration: true,\n    defaultPreloadStaleTime: 0,\n    defaultErrorComponent: DefaultErrorComponent,\n  });\n\n  return router;\n};\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\__root.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.audit.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.balance.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.exports.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.ibnr.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.import.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.index.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.parametres.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.pb.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.pe.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.ppna.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.produits.$productKey.tsx",
+    "messages": [
+      {
+        "ruleId": "react-hooks/rules-of-hooks",
+        "severity": 2,
+        "message": "React Hook \"useMemo\" is called conditionally. React Hooks must be called in the exact same order in every component render.",
+        "line": 85,
+        "column": 17,
+        "nodeType": "Identifier",
+        "endLine": 85,
+        "endColumn": 24
+      },
+      {
+        "ruleId": "react-hooks/rules-of-hooks",
+        "severity": 2,
+        "message": "React Hook \"useMemo\" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?",
+        "line": 117,
+        "column": 28,
+        "nodeType": "Identifier",
+        "endLine": 117,
+        "endColumn": 35
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 2,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import { createFileRoute, Link, notFound } from \"@tanstack/react-router\";\nimport { Topbar } from \"@/components/layout/Topbar\";\nimport { KpiCard, SectionCard, Badge } from \"@/components/ui/kpi-card\";\nimport { useMemo } from \"react\";\nimport { useDashboardSummary, useRunRows } from \"@/lib/api/queries\";\nimport { toIbnrSummary, toPpnaSummary, toSapSummary } from \"@/lib/api/runRows\";\nimport { buildBackendProducts } from \"@/lib/backendProducts\";\nimport { ChevronLeft, FileText, Layers, ShieldAlert, TrendingUp } from \"lucide-react\";\nimport {\n  ResponsiveContainer,\n  AreaChart,\n  Area,\n  XAxis,\n  YAxis,\n  Tooltip,\n  CartesianGrid,\n  RadialBarChart,\n  RadialBar,\n  PolarAngleAxis,\n} from \"recharts\";\n\nexport const Route = createFileRoute(\"/app/produits/$productKey\")({\n  head: ({ params }) => {\n    return { meta: [{ title: `${params.productKey} — L'Algérienne Vie` }] };\n  },\n  component: ProductDetail,\n  notFoundComponent: () => (\n    <div className=\"p-12 text-center\">\n      <h1 className=\"font-display text-2xl mb-2\">Produit introuvable</h1>\n      <Link to=\"/app/produits\" className=\"text-primary\">\n        Retour aux produits\n      </Link>\n    </div>\n  ),\n});\n\nconst fmtMDA = (valueInDa: number) =>\n  (valueInDa / 1_000_000).toLocaleString(\"fr-FR\", {\n    minimumFractionDigits: 2,\n    maximumFractionDigits: 2,\n  }) + \" M DA\";\n\nconst fmtPct = (value: number) => `${(value * 100).toFixed(1)} %`;\n\nfunction ProductDetail() {\n  const { productKey } = Route.useParams();\n\n  const summaryQuery = useDashboardSummary();\n  const runIds = {\n    ppna: summaryQuery.data?.domains?.ppna?.run_id ?? null,\n    sap: summaryQuery.data?.domains?.sap?.run_id ?? null,\n    ibnr: summaryQuery.data?.domains?.ibnr?.run_id ?? null,\n  };\n\n  const ppnaRows = useRunRows<unknown[]>(\"ppna\", runIds.ppna);\n  const sapRows = useRunRows<unknown[]>(\"sap\", runIds.sap);\n  const ibnrRows = useRunRows<unknown>(\"ibnr\", runIds.ibnr);\n\n  const ppna = useMemo(() => toPpnaSummary(ppnaRows.data), [ppnaRows.data]);\n  const sap = useMemo(() => toSapSummary(sapRows.data), [sapRows.data]);\n  const ibnr = useMemo(() => toIbnrSummary(ibnrRows.data), [ibnrRows.data]);\n\n  const products = useMemo(() => buildBackendProducts(ppna, sap, ibnr), [ibnr, ppna, sap]);\n  const product = products.find((item) => item.slug === productKey);\n  const isLoading =\n    summaryQuery.isLoading || ppnaRows.isLoading || sapRows.isLoading || ibnrRows.isLoading;\n\n  if (isLoading && !product) {\n    return (\n      <>\n        <Topbar title=\"Produit\" subtitle=\"Chargement des agrégats backend\" />\n        <div className=\"p-6 lg:p-8\">\n          <div className=\"rounded-md border border-border bg-card px-4 py-3 text-sm text-muted-foreground\">\n            Chargement des données produit depuis le backend...\n          </div>\n        </div>\n      </>\n    );\n  }\n\n  if (!product) throw notFound();\n\n  const productSapRows = sap.rows.filter((row) => row.product === product.name);\n\n  const trend = useMemo(() => {\n    const byYear = new Map<string, { declared: number; sap: number }>();\n    for (const row of productSapRows) {\n      const year = /^\\d{4}/.test(row.declarationDate) ? row.declarationDate.slice(0, 4) : \"N/A\";\n      const current = byYear.get(year) ?? { declared: 0, sap: 0 };\n      current.declared += row.declaredAmount;\n      current.sap += row.sapAmount;\n      byYear.set(year, current);\n    }\n    return Array.from(byYear.entries())\n      .map(([year, values]) => ({\n        year,\n        declared: +(values.declared / 1_000_000).toFixed(3),\n        sap: +(values.sap / 1_000_000).toFixed(3),\n      }))\n      .sort((a, b) => a.year.localeCompare(b.year));\n  }, [productSapRows]);\n\n  const lossRatio = product.premiums > 0 ? product.sap / product.premiums : 0;\n  const ratio = [\n    {\n      name: \"S/P\",\n      value: lossRatio * 100,\n      fill:\n        lossRatio < 0.6\n          ? \"var(--success)\"\n          : lossRatio < 0.85\n            ? \"var(--gold)\"\n            : \"var(--destructive)\",\n    },\n  ];\n\n  const networkBreakdown = useMemo(() => {\n    const map = new Map<string, number>();\n    for (const row of productSapRows) {\n      map.set(row.network, (map.get(row.network) ?? 0) + 1);\n    }\n    return Array.from(map.entries())\n      .map(([name, dossiers]) => ({ name, dossiers }))\n      .sort((a, b) => b.dossiers - a.dossiers);\n  }, [productSapRows]);\n\n  return (\n    <>\n      <Topbar title={product.name} subtitle=\"Vue produit dérivée des runs backend\" />\n      <div className=\"p-6 lg:p-8 space-y-6\">\n        <Link\n          to=\"/app/produits\"\n          className=\"inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground\"\n        >\n          <ChevronLeft className=\"h-4 w-4\" /> Toutes les branches\n        </Link>\n\n        <div className=\"bg-gradient-primary text-white rounded-lg p-6 lg:p-8 flex items-start gap-5 shadow-elegant\">\n          <div className=\"h-16 w-16 rounded-md bg-white/10 backdrop-blur flex items-center justify-center border border-white/20\">\n            <span className=\"font-display text-3xl text-gold\">\n              {product.name.slice(0, 1).toUpperCase()}\n            </span>\n          </div>\n          <div className=\"flex-1 min-w-0\">\n            <div className=\"text-[10px] tracking-[0.22em] uppercase text-gold mb-1\">\n              Backend aggregé\n            </div>\n            <h2 className=\"font-display text-2xl mb-1\">{product.name}</h2>\n            <p className=\"text-white/70 text-sm max-w-2xl\">\n              Données consolidées à partir des sorties PPNA / SAP / IBNR. Aucun modèle frontend\n              local.\n            </p>\n          </div>\n          <Badge variant=\"gold\">Actif</Badge>\n        </div>\n\n        <div className=\"grid grid-cols-2 lg:grid-cols-4 gap-4\">\n          <KpiCard\n            label=\"Dossiers SAP\"\n            value={product.claimCount.toLocaleString(\"fr-FR\")}\n            hint=\"Source SAP\"\n            icon={<FileText className=\"h-4 w-4\" />}\n            accent=\"primary\"\n          />\n          <KpiCard\n            label=\"Primes\"\n            value={fmtMDA(product.premiums)}\n            icon={<Layers className=\"h-4 w-4\" />}\n          />\n          <KpiCard\n            label=\"SAP\"\n            value={fmtMDA(product.sap)}\n            hint={`S/P ${fmtPct(lossRatio)}`}\n            icon={<ShieldAlert className=\"h-4 w-4\" />}\n            accent=\"gold\"\n          />\n          <KpiCard\n            label=\"Réserves techniques\"\n            value={fmtMDA(product.reserveTotal)}\n            hint=\"PPNA + SAP + IBNR\"\n            icon={<TrendingUp className=\"h-4 w-4\" />}\n          />\n        </div>\n\n        <div className=\"grid lg:grid-cols-3 gap-6\">\n          <SectionCard\n            className=\"lg:col-span-2\"\n            title=\"Déclaré vs SAP\"\n            description=\"Vue annuelle extraite des lignes SAP du produit\"\n          >\n            <ResponsiveContainer width=\"100%\" height={260}>\n              <AreaChart data={trend} margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>\n                <defs>\n                  <linearGradient id=\"pp\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n                    <stop offset=\"5%\" stopColor=\"var(--chart-1)\" stopOpacity={0.4} />\n                    <stop offset=\"95%\" stopColor=\"var(--chart-1)\" stopOpacity={0.02} />\n                  </linearGradient>\n                  <linearGradient id=\"ss\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n                    <stop offset=\"5%\" stopColor=\"var(--gold)\" stopOpacity={0.4} />\n                    <stop offset=\"95%\" stopColor=\"var(--gold)\" stopOpacity={0.02} />\n                  </linearGradient>\n                </defs>\n                <CartesianGrid strokeDasharray=\"3 3\" stroke=\"var(--border)\" vertical={false} />\n                <XAxis\n                  dataKey=\"year\"\n                  stroke=\"var(--muted-foreground)\"\n                  fontSize={11}\n                  tickLine={false}\n                  axisLine={false}\n                />\n                <YAxis\n                  stroke=\"var(--muted-foreground)\"\n                  fontSize={11}\n                  tickLine={false}\n                  axisLine={false}\n                />\n                <Tooltip\n                  contentStyle={{\n                    background: \"var(--card)\",\n                    border: \"1px solid var(--border)\",\n                    borderRadius: 8,\n                    fontSize: 12,\n                  }}\n                />\n                <Area\n                  type=\"monotone\"\n                  dataKey=\"declared\"\n                  stroke=\"var(--chart-1)\"\n                  fill=\"url(#pp)\"\n                  strokeWidth={2}\n                  name=\"Déclaré\"\n                />\n                <Area\n                  type=\"monotone\"\n                  dataKey=\"sap\"\n                  stroke=\"var(--gold)\"\n                  fill=\"url(#ss)\"\n                  strokeWidth={2}\n                  name=\"SAP\"\n                />\n              </AreaChart>\n            </ResponsiveContainer>\n          </SectionCard>\n\n          <SectionCard title=\"Loss ratio\" description=\"Cible technique < 85%\">\n            <ResponsiveContainer width=\"100%\" height={200}>\n              <RadialBarChart\n                innerRadius=\"65%\"\n                outerRadius=\"100%\"\n                data={ratio}\n                startAngle={90}\n                endAngle={-270}\n              >\n                <PolarAngleAxis type=\"number\" domain={[0, 100]} tick={false} />\n                <RadialBar background dataKey=\"value\" cornerRadius={6} />\n              </RadialBarChart>\n            </ResponsiveContainer>\n            <div className=\"text-center -mt-32 mb-12 pointer-events-none\">\n              <div className=\"font-display text-4xl text-foreground\">{fmtPct(lossRatio)}</div>\n              <div className=\"text-xs text-muted-foreground tracking-wide uppercase mt-1\">\n                S / P\n              </div>\n            </div>\n          </SectionCard>\n        </div>\n\n        <div className=\"grid lg:grid-cols-2 gap-6\">\n          <SectionCard\n            title=\"Répartition par réseau\"\n            description=\"Nombre de dossiers SAP par réseau\"\n          >\n            <div className=\"space-y-4\">\n              {networkBreakdown.map((network, i) => {\n                const max = Math.max(...networkBreakdown.map((x) => x.dossiers));\n                const w = max > 0 ? (network.dossiers / max) * 100 : 0;\n                return (\n                  <div key={network.name}>\n                    <div className=\"flex justify-between text-sm mb-1.5\">\n                      <span className=\"text-foreground font-medium\">{network.name}</span>\n                      <span className=\"text-muted-foreground\">\n                        {network.dossiers.toLocaleString(\"fr-FR\")} dossiers\n                      </span>\n                    </div>\n                    <div className=\"h-2 bg-muted rounded-full overflow-hidden\">\n                      <div\n                        className=\"h-full bg-gradient-gold rounded-full transition-all\"\n                        style={{ width: `${w}%`, opacity: 1 - i * 0.2 }}\n                      />\n                    </div>\n                  </div>\n                );\n              })}\n            </div>\n          </SectionCard>\n\n          <SectionCard title=\"Indicateurs techniques\" description=\"Hypothèses et ratios produit\">\n            <dl className=\"divide-y divide-border\">\n              {[\n                [\"Loss ratio (S/P)\", fmtPct(lossRatio)],\n                [\"Primes\", fmtMDA(product.premiums)],\n                [\"PPNA\", fmtMDA(product.ppna)],\n                [\"SAP\", fmtMDA(product.sap)],\n                [\"IBNR\", fmtMDA(product.ibnr)],\n                [\"Réseaux observés\", product.networks.length.toString()],\n              ].map(([k, v]) => (\n                <div key={k} className=\"flex justify-between py-3 text-sm\">\n                  <dt className=\"text-muted-foreground\">{k}</dt>\n                  <dd className=\"font-medium text-foreground\">{v}</dd>\n                </div>\n              ))}\n            </dl>\n          </SectionCard>\n        </div>\n      </div>\n    </>\n  );\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.produits.index.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.produits.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.provisions.tsx",
+    "messages": [
+      {
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "React Hook useMemo has a missing dependency: 'runByDomain'. Either include it or remove the dependency array.",
+        "line": 147,
+        "column": 6,
+        "nodeType": "ArrayExpression",
+        "endLine": 154,
+        "endColumn": 4,
+        "suggestions": [
+          {
+            "desc": "Update the dependencies array to be: [summaryQuery.data?.domains, runByDomain]",
+            "fix": { "range": [4995, 5137], "text": "[summaryQuery.data?.domains, runByDomain]" }
+          }
+        ]
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import { Link, createFileRoute } from \"@tanstack/react-router\";\nimport { Topbar } from \"@/components/layout/Topbar\";\nimport { KpiCard, SectionCard, Badge } from \"@/components/ui/kpi-card\";\nimport { Calculator, Download } from \"lucide-react\";\nimport { useMemo, useState } from \"react\";\nimport { useDashboardSummary, useRun } from \"@/lib/api/queries\";\nimport type { Domain } from \"@/lib/api/types\";\n\nexport const Route = createFileRoute(\"/app/provisions\")({\n  head: () => ({ meta: [{ title: \"Modules de provisionnement — L'Algérienne Vie\" }] }),\n  component: ProvisionsPage,\n});\n\nconst fmtMDA = (valueInDa: number) =>\n  (valueInDa / 1_000_000).toLocaleString(\"fr-FR\", {\n    minimumFractionDigits: 2,\n    maximumFractionDigits: 2,\n  }) + \" M DA\";\n\ninterface ProvisionModule {\n  key: Domain;\n  name: string;\n  full: string;\n  formula: string;\n  inputs: string[];\n  value: number;\n  badge: \"validé\" | \"en cours\" | \"à démarrer\";\n  runId: string | null;\n  parameters: Record<string, unknown>;\n}\n\nconst MODULE_METADATA: Record<\n  Domain,\n  Omit<ProvisionModule, \"value\" | \"badge\" | \"runId\" | \"parameters\">\n> = {\n  ppna: {\n    key: \"ppna\",\n    name: \"PPNA\",\n    full: \"Provision pour Primes Non Acquises\",\n    formula:\n      \"contract_days = (echeance - effet) + 1 ; remaining_days = IF(cloture<effet OR cloture>echeance, 0, echeance-cloture) ; PPNA = net_premium * remaining_days / contract_days\",\n    inputs: [\"net_premium\", \"effect_date\", \"expiry_date\", \"closing_date\"],\n  },\n  sap: {\n    key: \"sap\",\n    name: \"SAP\",\n    full: \"Provision pour Sinistres À Payer\",\n    formula:\n      \"if closing_date < declaration_date => 0 ; if declaration_date < closing_date < settlement_notification_date => declared_amount ; else: status REJET => 0, status SAP => declared_amount, otherwise max(0, declared_amount - paid_amount)\",\n    inputs: [\n      \"declaration_date\",\n      \"settlement_notification_date\",\n      \"declared_amount\",\n      \"paid_amount\",\n      \"status\",\n      \"closing_date\",\n    ],\n  },\n  ibnr: {\n    key: \"ibnr\",\n    name: \"IBNR\",\n    full: \"Incurred But Not Reported\",\n    formula:\n      \"F[j] = SUM(C[i,j]) / SUM(C[i,j-1]) ; projection C[i,j] = F[j] * C[i,j-1] ; reserve_i = ultimate_i - diagonal_i ; IBNR = SUM(reserve_i)\",\n    inputs: [\n      \"occurrence_year\",\n      \"declaration_year\",\n      \"claim_amount\",\n      \"closing_year\",\n      \"occurrence_year_window\",\n    ],\n  },\n  pe: {\n    key: \"pe\",\n    name: \"PE\",\n    full: \"Provision d'Égalisation\",\n    formula:\n      \"historical_average = (claims_charge_n1 + claims_charge_n2 + claims_charge_n3) / 3 ; component_pos = max(0, technical_result) * positive_result_coefficient ; component_hist = historical_average * historical_average_coefficient ; PE = technical_result>0 ? min(component_pos, component_hist) : 0\",\n    inputs: [\n      \"technical_result\",\n      \"claims_charge_n1\",\n      \"claims_charge_n2\",\n      \"claims_charge_n3\",\n      \"positive_result_coefficient\",\n      \"historical_average_coefficient\",\n    ],\n  },\n  pb: {\n    key: \"pb\",\n    name: \"PB\",\n    full: \"Participation aux Bénéfices\",\n    formula:\n      \"total_credit = premiums_n + rec_opening + sap_opening ; management_fee_amount = management_fee_rate * premiums_n ; total_debit = claims_paid_n + prec_closing + sap_closing + management_fee_amount + prior_debit_carryover ; credit_balance = total_credit - total_debit ; PB = (loss_ratio<=threshold AND credit_balance>0) ? pb_rate*credit_balance : 0\",\n    inputs: [\n      \"premiums_n\",\n      \"rec_opening\",\n      \"sap_opening\",\n      \"claims_paid_n\",\n      \"prec_closing\",\n      \"sap_closing\",\n      \"management_fee_rate\",\n      \"prior_debit_carryover\",\n      \"loss_ratio\",\n      \"loss_ratio_threshold\",\n      \"pb_rate\",\n    ],\n  },\n};\n\nfunction ProvisionsPage() {\n  const summaryQuery = useDashboardSummary();\n  const runIds = {\n    ppna: summaryQuery.data?.domains?.ppna?.run_id ?? null,\n    sap: summaryQuery.data?.domains?.sap?.run_id ?? null,\n    pe: summaryQuery.data?.domains?.pe?.run_id ?? null,\n    pb: summaryQuery.data?.domains?.pb?.run_id ?? null,\n    ibnr: summaryQuery.data?.domains?.ibnr?.run_id ?? null,\n  };\n\n  const ppnaRun = useRun(\"ppna\", runIds.ppna);\n  const sapRun = useRun(\"sap\", runIds.sap);\n  const peRun = useRun(\"pe\", runIds.pe);\n  const pbRun = useRun(\"pb\", runIds.pb);\n  const ibnrRun = useRun(\"ibnr\", runIds.ibnr);\n\n  const runByDomain = {\n    ppna: ppnaRun.data,\n    sap: sapRun.data,\n    pe: peRun.data,\n    pb: pbRun.data,\n    ibnr: ibnrRun.data,\n  } as const;\n\n  const modules = useMemo<ProvisionModule[]>(() => {\n    return ([\"ppna\", \"sap\", \"ibnr\", \"pe\", \"pb\"] as Domain[]).map((domain) => {\n      const metadata = MODULE_METADATA[domain];\n      const slot = summaryQuery.data?.domains?.[domain];\n      const run = runByDomain[domain];\n      return {\n        ...metadata,\n        value: slot?.total ?? 0,\n        badge: slot ? \"validé\" : \"à démarrer\",\n        runId: slot?.run_id ?? null,\n        parameters: (run?.parameters ?? {}) as Record<string, unknown>,\n      };\n    });\n  }, [\n    summaryQuery.data?.domains,\n    runByDomain.ibnr,\n    runByDomain.pb,\n    runByDomain.pe,\n    runByDomain.ppna,\n    runByDomain.sap,\n  ]);\n\n  const [active, setActive] = useState<Domain>(\"ppna\");\n  const m = modules.find((item) => item.key === active) ?? modules[0];\n\n  const total = modules.reduce((sum, module) => sum + module.value, 0);\n  const hasAnyRun = modules.some((module) => module.runId);\n\n  return (\n    <>\n      <Topbar\n        title=\"Modules de provisionnement\"\n        subtitle=\"Sept modules techniques · formules, hypothèses, sorties\"\n      />\n      <div className=\"p-6 lg:p-8 space-y-6\">\n        {!hasAnyRun && !summaryQuery.isLoading && (\n          <SectionCard\n            title=\"Aucun run disponible\"\n            description=\"Lancez les calculs backend pour alimenter cette vue\"\n          >\n            <p className=\"text-sm text-muted-foreground\">\n              Les montants et paramètres affichés ici proviennent exclusivement des runs backend.\n            </p>\n            <Link\n              to=\"/app/import\"\n              className=\"mt-3 inline-block text-sm text-primary underline underline-offset-4\"\n            >\n              Aller à l'import des documents\n            </Link>\n          </SectionCard>\n        )}\n\n        <div className=\"grid grid-cols-2 lg:grid-cols-4 gap-4\">\n          <KpiCard\n            label=\"PPNA\"\n            value={fmtMDA(modules.find((x) => x.key === \"ppna\")?.value ?? 0)}\n            accent=\"primary\"\n            icon={<Calculator className=\"h-4 w-4\" />}\n          />\n          <KpiCard\n            label=\"SAP\"\n            value={fmtMDA(modules.find((x) => x.key === \"sap\")?.value ?? 0)}\n            icon={<Calculator className=\"h-4 w-4\" />}\n          />\n          <KpiCard\n            label=\"IBNR\"\n            value={fmtMDA(modules.find((x) => x.key === \"ibnr\")?.value ?? 0)}\n            accent=\"gold\"\n            icon={<Calculator className=\"h-4 w-4\" />}\n          />\n          <KpiCard\n            label=\"PE + PB\"\n            value={fmtMDA(\n              (modules.find((x) => x.key === \"pe\")?.value ?? 0) +\n                (modules.find((x) => x.key === \"pb\")?.value ?? 0),\n            )}\n            icon={<Calculator className=\"h-4 w-4\" />}\n          />\n        </div>\n\n        <div className=\"grid lg:grid-cols-12 gap-6\">\n          {/* Tabs */}\n          <div className=\"lg:col-span-3\">\n            <div className=\"bg-card border border-border rounded-lg overflow-hidden shadow-soft\">\n              {modules.map((mod) => (\n                <button\n                  key={mod.key}\n                  onClick={() => setActive(mod.key)}\n                  className={`w-full text-left px-4 py-3 border-b border-border last:border-0 transition-colors ${\n                    active === mod.key ? \"bg-primary/5 border-l-2 border-l-gold\" : \"hover:bg-muted\"\n                  }`}\n                >\n                  <div className=\"text-sm font-medium text-foreground\">{mod.name}</div>\n                  <div className=\"text-[11px] text-muted-foreground\">{mod.full}</div>\n                </button>\n              ))}\n            </div>\n          </div>\n\n          {/* Detail */}\n          <div className=\"lg:col-span-9 space-y-6\">\n            <SectionCard\n              title={`${m.name} · ${m.full}`}\n              description=\"Formule backend, entrées requises et sortie courante\"\n              action={\n                <div className=\"flex items-center gap-2\">\n                  <Badge\n                    variant={\n                      m.badge === \"validé\" ? \"success\" : m.badge === \"en cours\" ? \"warning\" : \"info\"\n                    }\n                  >\n                    {m.badge}\n                  </Badge>\n                  <button className=\"inline-flex items-center gap-1.5 text-xs bg-gradient-primary text-white px-3 py-1.5 rounded-md hover:shadow-elegant\">\n                    <Download className=\"h-3 w-3\" /> Export\n                  </button>\n                </div>\n              }\n            >\n              <div className=\"grid lg:grid-cols-3 gap-6\">\n                <div className=\"lg:col-span-2 space-y-5\">\n                  <div>\n                    <div className=\"text-[10px] tracking-[0.18em] uppercase text-muted-foreground mb-2\">\n                      Formule\n                    </div>\n                    <div className=\"bg-primary/5 border border-primary/10 rounded-md p-4 font-mono text-sm text-primary leading-relaxed\">\n                      {m.formula}\n                    </div>\n                  </div>\n                  <div>\n                    <div className=\"text-[10px] tracking-[0.18em] uppercase text-muted-foreground mb-2\">\n                      Entrées requises\n                    </div>\n                    <ul className=\"grid sm:grid-cols-2 gap-2\">\n                      {m.inputs.map((inp) => (\n                        <li\n                          key={inp}\n                          className=\"flex items-center gap-2 text-sm text-foreground bg-muted/40 rounded-md px-3 py-2\"\n                        >\n                          <span className=\"h-1.5 w-1.5 rounded-full bg-gold\" /> {inp}\n                        </li>\n                      ))}\n                    </ul>\n                  </div>\n                </div>\n                <div className=\"bg-gradient-primary text-white rounded-md p-5 flex flex-col justify-between\">\n                  <div className=\"text-[10px] tracking-[0.22em] uppercase text-gold mb-2\">\n                    Sortie T4-2024\n                  </div>\n                  <div>\n                    <div className=\"font-display text-4xl\">{fmtMDA(m.value)}</div>\n                    <div className=\"text-xs text-white/60 mt-2\">\n                      Run: {m.runId ?? \"non disponible\"}\n                    </div>\n                  </div>\n                  <div className=\"mt-4 border-t border-white/20 pt-3\">\n                    <div className=\"text-[10px] tracking-[0.18em] uppercase text-white/70 mb-1\">\n                      Paramètres\n                    </div>\n                    <div className=\"text-[11px] text-white/80 break-words\">\n                      {Object.keys(m.parameters).length === 0\n                        ? \"(paramètres par défaut)\"\n                        : JSON.stringify(m.parameters)}\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </SectionCard>\n\n            <SectionCard\n              title=\"Contribution par module\"\n              description=\"Part de chaque module dans le total backend\"\n            >\n              <div className=\"space-y-3\">\n                {modules.map((module) => {\n                  const share = total > 0 ? module.value / total : 0;\n                  return (\n                    <div key={module.key}>\n                      <div className=\"flex justify-between text-sm mb-1.5\">\n                        <span className=\"text-foreground\">{module.name}</span>\n                        <span className=\"font-medium text-foreground\">\n                          {fmtMDA(module.value)}{\" \"}\n                          <span className=\"text-muted-foreground text-xs ml-1\">\n                            ({(share * 100).toFixed(1)}%)\n                          </span>\n                        </span>\n                      </div>\n                      <div className=\"h-1.5 bg-muted rounded-full overflow-hidden\">\n                        <div\n                          className=\"h-full bg-gradient-gold rounded-full\"\n                          style={{ width: `${Math.max(share * 100, 2)}%` }}\n                        />\n                      </div>\n                    </div>\n                  );\n                })}\n              </div>\n            </SectionCard>\n          </div>\n        </div>\n      </div>\n    </>\n  );\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.sap.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.segments.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.sinistres.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.triangles.tsx",
+    "messages": [
+      {
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'triangleCells' logical expression could make the dependencies of useMemo Hook (at line 64) change on every render. To fix this, wrap the initialization of 'triangleCells' in its own useMemo() Hook.",
+        "line": 59,
+        "column": 9,
+        "nodeType": "VariableDeclarator",
+        "endLine": 59,
+        "endColumn": 65
+      },
+      {
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'triangleCells' logical expression could make the dependencies of useMemo Hook (at line 69) change on every render. To fix this, wrap the initialization of 'triangleCells' in its own useMemo() Hook.",
+        "line": 59,
+        "column": 9,
+        "nodeType": "VariableDeclarator",
+        "endLine": 59,
+        "endColumn": 65
+      },
+      {
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'triangleCells' logical expression could make the dependencies of useMemo Hook (at line 89) change on every render. To fix this, wrap the initialization of 'triangleCells' in its own useMemo() Hook.",
+        "line": 59,
+        "column": 9,
+        "nodeType": "VariableDeclarator",
+        "endLine": 59,
+        "endColumn": 65
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 3,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import { Link, createFileRoute } from \"@tanstack/react-router\";\nimport { Topbar } from \"@/components/layout/Topbar\";\nimport { SectionCard, Badge } from \"@/components/ui/kpi-card\";\nimport { useMemo, useState } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { useDashboardSummary, useRunRows } from \"@/lib/api/queries\";\nimport { toIbnrSummary } from \"@/lib/api/runRows\";\nimport { downloadRunArtifact } from \"@/lib/api/endpoints\";\nimport { Download, ToggleLeft, ToggleRight } from \"lucide-react\";\n\nexport const Route = createFileRoute(\"/app/triangles\")({\n  head: () => ({ meta: [{ title: \"Triangulation — L'Algérienne Vie\" }] }),\n  component: TrianglesPage,\n});\n\ninterface TriangleCellPayload {\n  occurrence_year: number;\n  development_year: number;\n  incremental_amount: number;\n  cumulative_amount: number;\n}\n\ninterface DevelopmentFactorPayload {\n  development_year: number;\n  factor: number;\n}\n\ninterface IbnrResultArtifact {\n  triangle_cells?: TriangleCellPayload[];\n  development_factors?: DevelopmentFactorPayload[];\n}\n\nconst fmtM = (v: number) =>\n  v === 0\n    ? \"—\"\n    : (v / 1_000_000).toLocaleString(\"fr-FR\", {\n        minimumFractionDigits: 2,\n        maximumFractionDigits: 2,\n      }) + \" M DA\";\n\nfunction TrianglesPage() {\n  const summaryQuery = useDashboardSummary();\n  const runId = summaryQuery.data?.domains?.ibnr?.run_id ?? null;\n  const rowsQuery = useRunRows<unknown>(\"ibnr\", runId);\n\n  const artifactQuery = useQuery({\n    queryKey: [\"ibnr\", \"result-artifact\", runId],\n    enabled: Boolean(runId),\n    queryFn: async () => {\n      const blob = await downloadRunArtifact(\"ibnr\", runId as string, \"result.json\");\n      const text = await blob.text();\n      return JSON.parse(text) as IbnrResultArtifact;\n    },\n  });\n\n  const ibnrSummary = useMemo(() => toIbnrSummary(rowsQuery.data), [rowsQuery.data]);\n  const [cumulative, setCumulative] = useState(true);\n\n  const triangleCells = artifactQuery.data?.triangle_cells ?? [];\n\n  const occurrenceYears = useMemo(\n    () =>\n      Array.from(new Set(triangleCells.map((cell) => cell.occurrence_year))).sort((a, b) => a - b),\n    [triangleCells],\n  );\n\n  const maxDevelopmentYear = useMemo(\n    () => triangleCells.reduce((max, cell) => Math.max(max, cell.development_year), 0),\n    [triangleCells],\n  );\n\n  const matrix = useMemo(() => {\n    const cellMap = new Map<string, TriangleCellPayload>();\n    for (const cell of triangleCells) {\n      cellMap.set(`${cell.occurrence_year}-${cell.development_year}`, cell);\n    }\n    return occurrenceYears.map((year) => {\n      const values: Array<number | null> = [];\n      for (let dev = 0; dev <= maxDevelopmentYear; dev += 1) {\n        const cell = cellMap.get(`${year}-${dev}`);\n        if (!cell) {\n          values.push(null);\n          continue;\n        }\n        values.push(cumulative ? cell.cumulative_amount : cell.incremental_amount);\n      }\n      return values;\n    });\n  }, [cumulative, maxDevelopmentYear, occurrenceYears, triangleCells]);\n\n  const flat = matrix.flat().filter((v): v is number => typeof v === \"number\");\n  const min = flat.length > 0 ? Math.min(...flat) : 0;\n  const max = flat.length > 0 ? Math.max(...flat) : 0;\n\n  const colorFor = (v: number) => {\n    const t = (v - min) / (max - min || 1);\n    return `oklch(${0.96 - t * 0.18} ${0.04 + t * 0.08} 75)`;\n  };\n\n  const factorMap = useMemo(() => {\n    const map = new Map<number, number>();\n    for (const factor of artifactQuery.data?.development_factors ?? []) {\n      map.set(factor.development_year, factor.factor);\n    }\n    return map;\n  }, [artifactQuery.data?.development_factors]);\n\n  const ultimates = ibnrSummary.mergedRows.map((row) => ({\n    year: row.occurrenceYear,\n    known: row.diagonal,\n    ultimate: row.ultimate,\n    ibnr: row.reserve,\n  }));\n\n  const isLoading =\n    summaryQuery.isLoading || (Boolean(runId) && (rowsQuery.isLoading || artifactQuery.isLoading));\n  const hasData = ultimates.length > 0;\n\n  return (\n    <>\n      <Topbar\n        title=\"Triangulation des sinistres\"\n        subtitle=\"Développement cumulé · base Chain Ladder\"\n      />\n      <div className=\"p-6 lg:p-8 space-y-6\">\n        {!runId && (\n          <SectionCard\n            title=\"Aucun run IBNR disponible\"\n            description=\"Importez un document IBNR puis lancez un calcul backend\"\n          >\n            <p className=\"text-sm text-muted-foreground\">\n              Cette page n'utilise plus de triangle local: seules les données backend sont\n              affichées.\n            </p>\n            <Link\n              to=\"/app/import\"\n              className=\"mt-3 inline-block text-sm text-primary underline underline-offset-4\"\n            >\n              Aller à l'import des documents\n            </Link>\n          </SectionCard>\n        )}\n\n        {runId && (rowsQuery.isError || artifactQuery.isError) && (\n          <SectionCard\n            title=\"Erreur de chargement\"\n            description=\"Impossible de récupérer les résultats IBNR backend\"\n          >\n            <p className=\"text-sm text-danger-foreground\">\n              {rowsQuery.error instanceof Error\n                ? rowsQuery.error.message\n                : artifactQuery.error instanceof Error\n                  ? artifactQuery.error.message\n                  : \"Erreur inconnue\"}\n            </p>\n          </SectionCard>\n        )}\n\n        {isLoading && (\n          <SectionCard\n            title=\"Chargement\"\n            description=\"Récupération du triangle depuis les artefacts backend\"\n          >\n            <p className=\"text-sm text-muted-foreground\">Veuillez patienter...</p>\n          </SectionCard>\n        )}\n\n        {runId && hasData && !rowsQuery.isError && !artifactQuery.isError && !isLoading && (\n          <>\n            <div className=\"flex flex-wrap items-center gap-3\">\n              <Badge variant=\"info\">Branche : Toutes</Badge>\n              <Badge variant=\"default\">Devise : DZD (M)</Badge>\n              <Badge variant=\"default\">\n                Année inventaire : {String(summaryQuery.data?.domains?.ibnr?.finished_at ?? \"run\")}\n              </Badge>\n              <button\n                onClick={() => setCumulative(!cumulative)}\n                className=\"ml-auto inline-flex items-center gap-2 text-sm bg-card border border-border px-3 py-1.5 rounded-md hover:border-gold/40 transition-colors\"\n              >\n                {cumulative ? (\n                  <ToggleRight className=\"h-4 w-4 text-gold\" />\n                ) : (\n                  <ToggleLeft className=\"h-4 w-4 text-muted-foreground\" />\n                )}\n                {cumulative ? \"Cumulé\" : \"Incrémental\"}\n              </button>\n              <button className=\"inline-flex items-center gap-2 text-sm bg-gradient-primary text-white px-3 py-1.5 rounded-md hover:shadow-elegant transition-all\">\n                <Download className=\"h-4 w-4\" /> Export\n              </button>\n            </div>\n\n            <SectionCard\n              title=\"Triangle de développement\"\n              description={`${cumulative ? \"Cumulé\" : \"Incrémental\"} · ${occurrenceYears.length} années × ${maxDevelopmentYear + 1} développements`}\n            >\n              <div className=\"overflow-x-auto -mx-6 px-6\">\n                <table className=\"text-xs border-separate border-spacing-1\">\n                  <thead>\n                    <tr>\n                      <th className=\"px-3 py-2 text-left text-muted-foreground tracking-wider uppercase text-[10px] font-medium\">\n                        Origine\n                      </th>\n                      {Array.from({ length: maxDevelopmentYear + 1 }).map((_, j) => (\n                        <th\n                          key={j}\n                          className=\"px-3 py-2 text-center text-muted-foreground tracking-wider uppercase text-[10px] font-medium min-w-[80px]\"\n                        >\n                          Dév {j}\n                        </th>\n                      ))}\n                    </tr>\n                  </thead>\n                  <tbody>\n                    {matrix.map((row, i) => (\n                      <tr key={occurrenceYears[i]}>\n                        <td className=\"px-3 py-2 font-medium text-foreground\">\n                          {occurrenceYears[i]}\n                        </td>\n                        {row.map((v, j) => (\n                          <td\n                            key={j}\n                            className=\"px-3 py-2 text-center rounded-md font-mono\"\n                            style={\n                              v == null\n                                ? {\n                                    background: \"var(--muted)\",\n                                    color: \"var(--muted-foreground)\",\n                                    fontStyle: \"italic\",\n                                  }\n                                : { background: colorFor(v), color: \"var(--foreground)\" }\n                            }\n                          >\n                            {v == null ? \"—\" : v.toLocaleString(\"fr-FR\")}\n                          </td>\n                        ))}\n                      </tr>\n                    ))}\n                  </tbody>\n                  <tfoot>\n                    <tr className=\"border-t-2 border-border\">\n                      <td className=\"px-3 pt-3 font-medium text-gold-deep\">Facteurs</td>\n                      {Array.from({ length: maxDevelopmentYear + 1 }).map((_, j) => {\n                        const f = j === 0 ? null : (factorMap.get(j) ?? null);\n                        return (\n                          <td key={j} className=\"px-3 pt-3 text-center font-mono text-gold-deep\">\n                            {f == null ? \"—\" : f.toFixed(3)}\n                          </td>\n                        );\n                      })}\n                    </tr>\n                  </tfoot>\n                </table>\n              </div>\n            </SectionCard>\n\n            <SectionCard\n              title=\"Projection des ultimes\"\n              description=\"Charge ultime estimée par année d'origine (méthode Chain Ladder)\"\n            >\n              <div className=\"overflow-x-auto -mx-6\">\n                <table className=\"w-full text-sm\">\n                  <thead>\n                    <tr className=\"text-[11px] tracking-wider uppercase text-muted-foreground border-b border-border bg-muted/30\">\n                      <th className=\"text-left font-medium px-6 py-2\">Année</th>\n                      <th className=\"text-right font-medium px-6 py-2\">Cumulé observé</th>\n                      <th className=\"text-right font-medium px-6 py-2\">Ultime projeté</th>\n                      <th className=\"text-right font-medium px-6 py-2\">IBNR</th>\n                      <th className=\"text-right font-medium px-6 py-2\">% IBNR</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    {ultimates.map((u) => (\n                      <tr\n                        key={u.year}\n                        className=\"border-b border-border last:border-0 hover:bg-muted/30\"\n                      >\n                        <td className=\"px-6 py-3 font-medium text-foreground\">{u.year}</td>\n                        <td className=\"px-6 py-3 text-right font-mono text-foreground\">\n                          {fmtM(u.known)}\n                        </td>\n                        <td className=\"px-6 py-3 text-right font-mono font-semibold text-foreground\">\n                          {fmtM(u.ultimate)}\n                        </td>\n                        <td className=\"px-6 py-3 text-right font-mono text-gold-deep font-semibold\">\n                          {fmtM(u.ibnr)}\n                        </td>\n                        <td className=\"px-6 py-3 text-right text-muted-foreground\">\n                          {u.ultimate === 0 ? \"—\" : `${((u.ibnr / u.ultimate) * 100).toFixed(1)}%`}\n                        </td>\n                      </tr>\n                    ))}\n                    <tr className=\"bg-primary/5 border-t-2 border-border\">\n                      <td className=\"px-6 py-3 font-display text-base text-foreground\">Total</td>\n                      <td className=\"px-6 py-3 text-right font-mono text-foreground\">\n                        {fmtM(ultimates.reduce((s, u) => s + u.known, 0))}\n                      </td>\n                      <td className=\"px-6 py-3 text-right font-mono font-bold text-foreground\">\n                        {fmtM(ultimates.reduce((s, u) => s + u.ultimate, 0))}\n                      </td>\n                      <td className=\"px-6 py-3 text-right font-mono font-bold text-gold-deep\">\n                        {fmtM(ultimates.reduce((s, u) => s + u.ibnr, 0))}\n                      </td>\n                      <td className=\"px-6 py-3\"></td>\n                    </tr>\n                  </tbody>\n                </table>\n              </div>\n            </SectionCard>\n          </>\n        )}\n      </div>\n    </>\n  );\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\app.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\src\\routes\\index.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\oussa\\Desktop\\l-alg-rienne-vie-insights-final\\l-alg-rienne-vie-insights\\frontend\\vite.config.ts",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  }
+]
