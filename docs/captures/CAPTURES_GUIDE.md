@@ -11,13 +11,9 @@ Place README screenshots in this folder with the exact names below:
 
 ## Important
 
-README currently displays placeholder SVG files from [placeholders](placeholders)
-so the gallery always renders professionally.
+README uses the PNG files above directly in the screenshot gallery.
 
-To switch to real screenshots:
-
-1. Add PNG files using the exact names above.
-2. Update the captures section in [README.md](../../README.md) to use the PNG paths.
+If you replace any capture, keep the same filename so README keeps rendering correctly.
 
 ## Recommended format
 

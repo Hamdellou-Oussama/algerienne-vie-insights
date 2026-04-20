@@ -34,31 +34,26 @@ The platform centralizes import, run execution, validation, traceability, and re
 | PB | Profit participation reserve |
 | IBNR | Incurred but not reported reserve |
 
-## Captures (screenshots)
+## Product screenshots
 
-Store screenshots in [docs/captures](docs/captures) using the exact names below.
+Platform walkthrough captures are stored in [docs/captures](docs/captures).
 
 Guide: [docs/captures/CAPTURES_GUIDE.md](docs/captures/CAPTURES_GUIDE.md)
 
-| File | Page |
-| --- | --- |
-| docs/captures/01-dashboard.png | Main dashboard |
-| docs/captures/02-import.png | Import and run page |
-| docs/captures/03-ibnr.png | IBNR page |
-| docs/captures/04-bilan-history.png | Bilan history page |
-| docs/captures/05-audit.png | Audit page |
-| docs/captures/06-exports.png | Exports page |
-
-Current README gallery (working placeholders):
-
-![Dashboard Placeholder](docs/captures/placeholders/01-dashboard.svg)
-![Import Placeholder](docs/captures/placeholders/02-import.svg)
-![IBNR Placeholder](docs/captures/placeholders/03-ibnr.svg)
-![Bilan History Placeholder](docs/captures/placeholders/04-bilan-history.svg)
-![Audit Placeholder](docs/captures/placeholders/05-audit.svg)
-![Exports Placeholder](docs/captures/placeholders/06-exports.svg)
-
-When you add your real screenshots in [docs/captures](docs/captures), update this section to point to the PNG files.
+<table>
+	<tr>
+		<td width="50%" align="center"><strong>Dashboard</strong><br/><img src="docs/captures/01-dashboard.png" alt="Dashboard" width="100%"/></td>
+		<td width="50%" align="center"><strong>Import and run</strong><br/><img src="docs/captures/02-import.png" alt="Import and run" width="100%"/></td>
+	</tr>
+	<tr>
+		<td width="50%" align="center"><strong>IBNR</strong><br/><img src="docs/captures/03-ibnr.png" alt="IBNR" width="100%"/></td>
+		<td width="50%" align="center"><strong>Bilan history</strong><br/><img src="docs/captures/04-bilan-history.png" alt="Bilan history" width="100%"/></td>
+	</tr>
+	<tr>
+		<td width="50%" align="center"><strong>Audit</strong><br/><img src="docs/captures/05-audit.png" alt="Audit" width="100%"/></td>
+		<td width="50%" align="center"><strong>Exports</strong><br/><img src="docs/captures/06-exports.png" alt="Exports" width="100%"/></td>
+	</tr>
+</table>
 
 ## Tech stack
 
