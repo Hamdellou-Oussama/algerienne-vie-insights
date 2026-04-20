@@ -49,14 +49,16 @@ Guide: [docs/captures/CAPTURES_GUIDE.md](docs/captures/CAPTURES_GUIDE.md)
 | docs/captures/05-audit.png | Audit page |
 | docs/captures/06-exports.png | Exports page |
 
-Preview slots:
+Current README gallery (working placeholders):
 
-![Dashboard](docs/captures/01-dashboard.png)
-![Import](docs/captures/02-import.png)
-![IBNR](docs/captures/03-ibnr.png)
-![Bilan History](docs/captures/04-bilan-history.png)
-![Audit](docs/captures/05-audit.png)
-![Exports](docs/captures/06-exports.png)
+![Dashboard Placeholder](docs/captures/placeholders/01-dashboard.svg)
+![Import Placeholder](docs/captures/placeholders/02-import.svg)
+![IBNR Placeholder](docs/captures/placeholders/03-ibnr.svg)
+![Bilan History Placeholder](docs/captures/placeholders/04-bilan-history.svg)
+![Audit Placeholder](docs/captures/placeholders/05-audit.svg)
+![Exports Placeholder](docs/captures/placeholders/06-exports.svg)
+
+When you add your real screenshots in [docs/captures](docs/captures), update this section to point to the PNG files.
 
 ## Tech stack
 
