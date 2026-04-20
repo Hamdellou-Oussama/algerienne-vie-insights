@@ -79,9 +79,14 @@ Preview slots:
 
 ## Repository layout
 
+Root is intentionally minimal to keep the repository professional.
+Operational scripts, reports, and scenario files are grouped in dedicated folders.
+
 ```text
 .
 ├─ backend/
+│  ├─ data/
+│  │  └─ scenarios/ibnr/ # experimental IBNR scenario workbooks
 │  ├─ src/
 │  │  ├─ backend/         # FastAPI app, services, auth, DB
 │  │  ├─ preprocessing/   # workbook loaders and validators
@@ -100,7 +105,9 @@ Preview slots:
 │  ├─ package.json
 │  └─ .env.example
 ├─ docs/
-│  └─ captures/
+│  ├─ captures/
+│  └─ reports/            # audit and alignment reports
+├─ scripts/               # utility and e2e scripts
 └─ README.md
 ```
 
