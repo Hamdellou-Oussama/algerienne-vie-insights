@@ -1,0 +1,24 @@
+{
+  "datasets": {
+    "pe": {
+      "category_counts": {
+        "business_rule_validation": 124,
+        "type_coercion": 750
+      },
+      "event_count": 874,
+      "lineage_count": 2625,
+      "metrics": {
+        "blank_contract_year_count_rows": 124,
+        "event_count": 874,
+        "lineage_count": 2625,
+        "negative_technical_result_rows": 20,
+        "positive_equalization_provision_rows": 29,
+        "row_count": 125
+      },
+      "row_count": 125,
+      "severity_counts": {
+        "WARNING": 874
+      }
+    }
+  }
+}

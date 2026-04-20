@@ -1,0 +1,1803 @@
+{
+  "by_occurrence_year": [
+    {
+      "diagonal_cumulative": 175929504.7429632,
+      "last_known_development_year": 3,
+      "occurrence_year": 2023,
+      "reserve": 0.0,
+      "ultimate": 175929504.7429632
+    },
+    {
+      "diagonal_cumulative": 342106511.42809576,
+      "last_known_development_year": 2,
+      "occurrence_year": 2024,
+      "reserve": 0.0,
+      "ultimate": 342106511.42809576
+    },
+    {
+      "diagonal_cumulative": 204542282.77804482,
+      "last_known_development_year": 1,
+      "occurrence_year": 2025,
+      "reserve": 1791473.0274660587,
+      "ultimate": 206333755.80551088
+    },
+    {
+      "diagonal_cumulative": 0.0,
+      "last_known_development_year": 0,
+      "occurrence_year": 2026,
+      "reserve": 0.0,
+      "ultimate": 0.0
+    }
+  ],
+  "closing_year": 2026,
+  "development_factors": [
+    {
+      "contributing_occurrence_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "denominator": 585796291.2900126,
+      "development_year": 1,
+      "factor": 1.2258194728188063,
+      "numerator": 718080500.9683352
+    },
+    {
+      "contributing_occurrence_years": [
+        2023,
+        2024
+      ],
+      "denominator": 513538218.19029033,
+      "development_year": 2,
+      "factor": 1.0087584483908887,
+      "numerator": 518036016.17105895
+    },
+    {
+      "contributing_occurrence_years": [
+        2023
+      ],
+      "denominator": 175929504.7429632,
+      "development_year": 3,
+      "factor": 1.0,
+      "numerator": 175929504.7429632
+    }
+  ],
+  "excluded_rows": [
+    {
+      "claim_amount": 10800000.0,
+      "declaration_year": 2018,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 2
+    },
+    {
+      "claim_amount": 2033374.8,
+      "declaration_year": 2018,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 3
+    },
+    {
+      "claim_amount": 180671.24,
+      "declaration_year": 2018,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 4
+    },
+    {
+      "claim_amount": 1205771.62,
+      "declaration_year": 2018,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 5
+    },
+    {
+      "claim_amount": 1578249.39,
+      "declaration_year": 2018,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 6
+    },
+    {
+      "claim_amount": 298054.8,
+      "declaration_year": 2019,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 7
+    },
+    {
+      "claim_amount": 6788127.0,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 8
+    },
+    {
+      "claim_amount": 1176840.33,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 9
+    },
+    {
+      "claim_amount": 2031594.26,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 10
+    },
+    {
+      "claim_amount": 6177700.0,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 11
+    },
+    {
+      "claim_amount": 1000000.0,
+      "declaration_year": 2019,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 12
+    },
+    {
+      "claim_amount": 1564400.0,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 13
+    },
+    {
+      "claim_amount": 121467.83,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 14
+    },
+    {
+      "claim_amount": 1352081.52,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 15
+    },
+    {
+      "claim_amount": 262979.29,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 16
+    },
+    {
+      "claim_amount": 1755375.01,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 17
+    },
+    {
+      "claim_amount": 1842000.0,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 18
+    },
+    {
+      "claim_amount": 878282.58,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 19
+    },
+    {
+      "claim_amount": 257000.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 20
+    },
+    {
+      "claim_amount": 3400000.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 21
+    },
+    {
+      "claim_amount": 8800525.86,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 22
+    },
+    {
+      "claim_amount": 500000.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 23
+    },
+    {
+      "claim_amount": 1389837.78,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 24
+    },
+    {
+      "claim_amount": 235310.37,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 25
+    },
+    {
+      "claim_amount": 310000.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 26
+    },
+    {
+      "claim_amount": 1164492.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 27
+    },
+    {
+      "claim_amount": 629603.64,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 28
+    },
+    {
+      "claim_amount": 2742187.9,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 29
+    },
+    {
+      "claim_amount": 91446.89,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 30
+    },
+    {
+      "claim_amount": 87081.86,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 31
+    },
+    {
+      "claim_amount": 9567000.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 33
+    },
+    {
+      "claim_amount": 410160.0,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 34
+    },
+    {
+      "claim_amount": 1974033.79,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 35
+    },
+    {
+      "claim_amount": 235570.11,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 36
+    },
+    {
+      "claim_amount": 1020139.63,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 37
+    },
+    {
+      "claim_amount": 809500.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 38
+    },
+    {
+      "claim_amount": 689379.27,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 39
+    },
+    {
+      "claim_amount": 409936.01462522853,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 40
+    },
+    {
+      "claim_amount": 1062440.53,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 41
+    },
+    {
+      "claim_amount": 1949677.6263259472,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 42
+    },
+    {
+      "claim_amount": 95941.01,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 43
+    },
+    {
+      "claim_amount": 663804.69,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 44
+    },
+    {
+      "claim_amount": 1274674.82,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 45
+    },
+    {
+      "claim_amount": 1291159.21,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 46
+    },
+    {
+      "claim_amount": 756914.0,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 47
+    },
+    {
+      "claim_amount": 6442826.62,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 48
+    },
+    {
+      "claim_amount": 7227122.5,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 49
+    },
+    {
+      "claim_amount": 7739705.3785542995,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 50
+    },
+    {
+      "claim_amount": 1054255.4824561405,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 51
+    },
+    {
+      "claim_amount": 154448.52,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 52
+    },
+    {
+      "claim_amount": 527253.22,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 53
+    },
+    {
+      "claim_amount": 282615.89041095896,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 54
+    },
+    {
+      "claim_amount": 7570000.0,
+      "declaration_year": 2019,
+      "occurrence_year": 2019,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 55
+    },
+    {
+      "claim_amount": 2024300.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 56
+    },
+    {
+      "claim_amount": 1521444.43,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 57
+    },
+    {
+      "claim_amount": 1002668.29,
+      "declaration_year": 2021,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 58
+    },
+    {
+      "claim_amount": 8423326.38,
+      "declaration_year": 2021,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 59
+    },
+    {
+      "claim_amount": 1691032.95,
+      "declaration_year": 2021,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 60
+    },
+    {
+      "claim_amount": 441737.37,
+      "declaration_year": 2021,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 61
+    },
+    {
+      "claim_amount": 450396.67,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 62
+    },
+    {
+      "claim_amount": 909514.76,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 63
+    },
+    {
+      "claim_amount": 1134909.18,
+      "declaration_year": 2021,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 64
+    },
+    {
+      "claim_amount": 276288.8482632541,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 65
+    },
+    {
+      "claim_amount": 646701.45,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 66
+    },
+    {
+      "claim_amount": 351454.08906764165,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 67
+    },
+    {
+      "claim_amount": 3024747.42,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 68
+    },
+    {
+      "claim_amount": 320731.26142595976,
+      "declaration_year": 2021,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 69
+    },
+    {
+      "claim_amount": 160851.04,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 70
+    },
+    {
+      "claim_amount": 345063.64,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 71
+    },
+    {
+      "claim_amount": 957995.62,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 72
+    },
+    {
+      "claim_amount": 9745253.76,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 73
+    },
+    {
+      "claim_amount": 2684603.841009987,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 74
+    },
+    {
+      "claim_amount": 104843.6928702011,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 75
+    },
+    {
+      "claim_amount": 4720853.795836312,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 76
+    },
+    {
+      "claim_amount": 61905.85009140768,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 77
+    },
+    {
+      "claim_amount": 8773033.18618402,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 78
+    },
+    {
+      "claim_amount": 415859.23217550275,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 79
+    },
+    {
+      "claim_amount": 754976.39,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 80
+    },
+    {
+      "claim_amount": 819482.82,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 81
+    },
+    {
+      "claim_amount": 722337.24,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 82
+    },
+    {
+      "claim_amount": 5359919.15,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 83
+    },
+    {
+      "claim_amount": 754767.36,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 84
+    },
+    {
+      "claim_amount": 77107.93,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 85
+    },
+    {
+      "claim_amount": 415882.32,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 86
+    },
+    {
+      "claim_amount": 373297.76,
+      "declaration_year": 2021,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 87
+    },
+    {
+      "claim_amount": 7106374.9,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 88
+    },
+    {
+      "claim_amount": 6993716.56,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 89
+    },
+    {
+      "claim_amount": 251995.19,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 90
+    },
+    {
+      "claim_amount": 5321217.45,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 91
+    },
+    {
+      "claim_amount": 3274920.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 92
+    },
+    {
+      "claim_amount": 4647600.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 93
+    },
+    {
+      "claim_amount": 1358189.45,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 94
+    },
+    {
+      "claim_amount": 2250000.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 95
+    },
+    {
+      "claim_amount": 509843.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 96
+    },
+    {
+      "claim_amount": 985778.81,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 97
+    },
+    {
+      "claim_amount": 4111030.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 98
+    },
+    {
+      "claim_amount": 4640109.18,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 99
+    },
+    {
+      "claim_amount": 2060000.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 100
+    },
+    {
+      "claim_amount": 827516.54,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 101
+    },
+    {
+      "claim_amount": 4064050.85,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 102
+    },
+    {
+      "claim_amount": 139987.8,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 103
+    },
+    {
+      "claim_amount": 1436665.66,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 104
+    },
+    {
+      "claim_amount": 1178165.49,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 105
+    },
+    {
+      "claim_amount": 683963.59,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 106
+    },
+    {
+      "claim_amount": 3654683.33,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 107
+    },
+    {
+      "claim_amount": 398604.35,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 108
+    },
+    {
+      "claim_amount": 412889.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 109
+    },
+    {
+      "claim_amount": 510395.8904109589,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 110
+    },
+    {
+      "claim_amount": 964906.4236992782,
+      "declaration_year": 2021,
+      "occurrence_year": 2018,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 111
+    },
+    {
+      "claim_amount": 7200000.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 112
+    },
+    {
+      "claim_amount": 6340020.95,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 113
+    },
+    {
+      "claim_amount": 564965.95,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 114
+    },
+    {
+      "claim_amount": 1015268.6403508772,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 115
+    },
+    {
+      "claim_amount": 475916.68,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 116
+    },
+    {
+      "claim_amount": 433911.09,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 117
+    },
+    {
+      "claim_amount": 3246582.5348031493,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 118
+    },
+    {
+      "claim_amount": 319561.2431444241,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 119
+    },
+    {
+      "claim_amount": 35552.84,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 120
+    },
+    {
+      "claim_amount": 2113425.0,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 121
+    },
+    {
+      "claim_amount": 1123474.97,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 122
+    },
+    {
+      "claim_amount": 1339900.0,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 123
+    },
+    {
+      "claim_amount": 1535464.3122432209,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 124
+    },
+    {
+      "claim_amount": 3407362.26,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 125
+    },
+    {
+      "claim_amount": 942429.0,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 126
+    },
+    {
+      "claim_amount": 405479.45205479447,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 127
+    },
+    {
+      "claim_amount": 5626062.157721796,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 128
+    },
+    {
+      "claim_amount": 508363.76,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 129
+    },
+    {
+      "claim_amount": 226480.26,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 130
+    },
+    {
+      "claim_amount": 1175150.0,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 131
+    },
+    {
+      "claim_amount": 518272.39488117,
+      "declaration_year": 2023,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 132
+    },
+    {
+      "claim_amount": 343561.6438356164,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 133
+    },
+    {
+      "claim_amount": 8789206.77,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 134
+    },
+    {
+      "claim_amount": 328790.75,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 135
+    },
+    {
+      "claim_amount": 76412.76,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 136
+    },
+    {
+      "claim_amount": 319587.84,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 137
+    },
+    {
+      "claim_amount": 699616.4383561644,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 138
+    },
+    {
+      "claim_amount": 3658019.519832985,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 139
+    },
+    {
+      "claim_amount": 548853.52,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 140
+    },
+    {
+      "claim_amount": 877798.790430449,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 141
+    },
+    {
+      "claim_amount": 150497.05,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 142
+    },
+    {
+      "claim_amount": 125905.09,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 143
+    },
+    {
+      "claim_amount": 309936.53,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 144
+    },
+    {
+      "claim_amount": 211712.96,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 145
+    },
+    {
+      "claim_amount": 240329.21810699583,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 146
+    },
+    {
+      "claim_amount": 8372235.04,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 147
+    },
+    {
+      "claim_amount": 4775711.058537387,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 148
+    },
+    {
+      "claim_amount": 75987.23,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 149
+    },
+    {
+      "claim_amount": 487153.8,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 150
+    },
+    {
+      "claim_amount": 170559.94,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 151
+    },
+    {
+      "claim_amount": 321624.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 152
+    },
+    {
+      "claim_amount": 201162.98,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 153
+    },
+    {
+      "claim_amount": 50950.15,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 154
+    },
+    {
+      "claim_amount": 5162536.94,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 155
+    },
+    {
+      "claim_amount": 1060540.43,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 156
+    },
+    {
+      "claim_amount": 1408143.2,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 157
+    },
+    {
+      "claim_amount": 394347.5877192982,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 158
+    },
+    {
+      "claim_amount": 987313.54,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 159
+    },
+    {
+      "claim_amount": 3593675.56,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 160
+    },
+    {
+      "claim_amount": 8268369.42,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 161
+    },
+    {
+      "claim_amount": 37372.02925045703,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 162
+    },
+    {
+      "claim_amount": 380914.2138939671,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 163
+    },
+    {
+      "claim_amount": 258310.6,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 164
+    },
+    {
+      "claim_amount": 1010236.99,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 165
+    },
+    {
+      "claim_amount": 10674410.99,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 166
+    },
+    {
+      "claim_amount": 1153134.2,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 167
+    },
+    {
+      "claim_amount": 4927319.56,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 168
+    },
+    {
+      "claim_amount": 6305104.54,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 169
+    },
+    {
+      "claim_amount": 4575798.28,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 170
+    },
+    {
+      "claim_amount": 162090.81,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 171
+    },
+    {
+      "claim_amount": 947235.6301096057,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 172
+    },
+    {
+      "claim_amount": 343508.65,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 173
+    },
+    {
+      "claim_amount": 1000000.0,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 174
+    },
+    {
+      "claim_amount": 1430089.7516611903,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 175
+    },
+    {
+      "claim_amount": 179782.03,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 176
+    },
+    {
+      "claim_amount": 689938.86,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 177
+    },
+    {
+      "claim_amount": 1608275.71,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 178
+    },
+    {
+      "claim_amount": 385000.0,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 179
+    },
+    {
+      "claim_amount": 1609695.3523874723,
+      "declaration_year": 2025,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 180
+    },
+    {
+      "claim_amount": 356065.2065613609,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 181
+    },
+    {
+      "claim_amount": 418216.5,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 182
+    },
+    {
+      "claim_amount": 4511921.48,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 183
+    },
+    {
+      "claim_amount": 1392758.66,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 184
+    },
+    {
+      "claim_amount": 1090751.4450867053,
+      "declaration_year": 2022,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 185
+    },
+    {
+      "claim_amount": 60530.16453382085,
+      "declaration_year": 2023,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 186
+    },
+    {
+      "claim_amount": 377160.66,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 187
+    },
+    {
+      "claim_amount": 4637918.21,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 189
+    },
+    {
+      "claim_amount": 4743571.908658086,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 190
+    },
+    {
+      "claim_amount": 814942.4250080896,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 193
+    },
+    {
+      "claim_amount": 2731029.89,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 194
+    },
+    {
+      "claim_amount": 214473.48,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 195
+    },
+    {
+      "claim_amount": 777227.08,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 202
+    },
+    {
+      "claim_amount": 463470.3196347032,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 212
+    },
+    {
+      "claim_amount": 481944.42,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 213
+    },
+    {
+      "claim_amount": 357684.0821917808,
+      "declaration_year": 2024,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 254
+    },
+    {
+      "claim_amount": 209689.21389396707,
+      "declaration_year": 2024,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 260
+    },
+    {
+      "claim_amount": 8436225.680933852,
+      "declaration_year": 2024,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 283
+    },
+    {
+      "claim_amount": 323048.86643835617,
+      "declaration_year": 2024,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 314
+    },
+    {
+      "claim_amount": 409893.69863013696,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 325
+    },
+    {
+      "claim_amount": 398500.0,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 326
+    },
+    {
+      "claim_amount": 384707.00273972604,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 327
+    },
+    {
+      "claim_amount": 496488.7319342465,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 328
+    },
+    {
+      "claim_amount": 295726.02739726024,
+      "declaration_year": 2024,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 329
+    },
+    {
+      "claim_amount": 478890.9589041096,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 330
+    },
+    {
+      "claim_amount": 462955.2369534247,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 331
+    },
+    {
+      "claim_amount": 555554.794520548,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 332
+    },
+    {
+      "claim_amount": 297003.13424657536,
+      "declaration_year": 2025,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 333
+    },
+    {
+      "claim_amount": 528792.6350465753,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 334
+    },
+    {
+      "claim_amount": 605566.61,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 345
+    },
+    {
+      "claim_amount": 1138184.0745205479,
+      "declaration_year": 2023,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 350
+    },
+    {
+      "claim_amount": 1182343.311780822,
+      "declaration_year": 2024,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 355
+    },
+    {
+      "claim_amount": 455729.81,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 356
+    },
+    {
+      "claim_amount": 576490.2506963788,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 378
+    },
+    {
+      "claim_amount": 741058.23,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 379
+    },
+    {
+      "claim_amount": 779865.36,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 380
+    },
+    {
+      "claim_amount": 549948.97,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 381
+    },
+    {
+      "claim_amount": 884163.44,
+      "declaration_year": 2020,
+      "occurrence_year": 2020,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 382
+    },
+    {
+      "claim_amount": 349420.46,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 383
+    },
+    {
+      "claim_amount": 2390035.9,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 384
+    },
+    {
+      "claim_amount": 168095.89,
+      "declaration_year": 2021,
+      "occurrence_year": 2021,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 385
+    },
+    {
+      "claim_amount": 810613.8613861387,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 386
+    },
+    {
+      "claim_amount": 900000.0,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 387
+    },
+    {
+      "claim_amount": 437797.97,
+      "declaration_year": 2022,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 394
+    },
+    {
+      "claim_amount": 900000.0,
+      "declaration_year": 2025,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 481
+    },
+    {
+      "claim_amount": 590932.66,
+      "declaration_year": 2025,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 491
+    },
+    {
+      "claim_amount": 3919713.95,
+      "declaration_year": 2025,
+      "occurrence_year": 2022,
+      "reason": "occurrence_year_outside_window",
+      "source_row_number": 508
+    }
+  ],
+  "max_development_year": 3,
+  "method": "chain_ladder_volume_weighted",
+  "occurrence_year_window": [
+    2023,
+    2026
+  ],
+  "parameters": {
+    "closing_year": 2026,
+    "max_development_year": 3,
+    "occurrence_year_window": [
+      2023,
+      2026
+    ]
+  },
+  "total_ibnr": 1791473.0274660587,
+  "triangle_cells": [
+    {
+      "cumulative_amount": 134801938.09489977,
+      "development_year": 0,
+      "incremental_amount": 134801938.09489977,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2023,
+      "source_claim_count": 75
+    },
+    {
+      "cumulative_amount": 171431706.76219454,
+      "development_year": 1,
+      "incremental_amount": 36629768.66729478,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2023,
+      "source_claim_count": 34
+    },
+    {
+      "cumulative_amount": 175929504.7429632,
+      "development_year": 2,
+      "incremental_amount": 4497797.980768636,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2023,
+      "source_claim_count": 11
+    },
+    {
+      "cumulative_amount": 175929504.7429632,
+      "development_year": 3,
+      "incremental_amount": 0.0,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2023,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 246452070.417068,
+      "development_year": 0,
+      "incremental_amount": 246452070.417068,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2024,
+      "source_claim_count": 93
+    },
+    {
+      "cumulative_amount": 342106511.42809576,
+      "development_year": 1,
+      "incremental_amount": 95654441.01102777,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2024,
+      "source_claim_count": 39
+    },
+    {
+      "cumulative_amount": 342106511.42809576,
+      "development_year": 2,
+      "incremental_amount": 0.0,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2024,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 204542282.77804482,
+      "development_year": 0,
+      "incremental_amount": 204542282.77804482,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2025,
+      "source_claim_count": 119
+    },
+    {
+      "cumulative_amount": 204542282.77804482,
+      "development_year": 1,
+      "incremental_amount": 0.0,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2025,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 0.0,
+      "development_year": 0,
+      "incremental_amount": 0.0,
+      "is_known": true,
+      "is_projected": false,
+      "occurrence_year": 2026,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 342106511.42809576,
+      "development_year": 3,
+      "incremental_amount": 0.0,
+      "is_known": false,
+      "is_projected": true,
+      "occurrence_year": 2024,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 206333755.80551088,
+      "development_year": 2,
+      "incremental_amount": 1791473.0274660587,
+      "is_known": false,
+      "is_projected": true,
+      "occurrence_year": 2025,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 206333755.80551088,
+      "development_year": 3,
+      "incremental_amount": 0.0,
+      "is_known": false,
+      "is_projected": true,
+      "occurrence_year": 2025,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 0.0,
+      "development_year": 1,
+      "incremental_amount": 0.0,
+      "is_known": false,
+      "is_projected": true,
+      "occurrence_year": 2026,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 0.0,
+      "development_year": 2,
+      "incremental_amount": 0.0,
+      "is_known": false,
+      "is_projected": true,
+      "occurrence_year": 2026,
+      "source_claim_count": 0
+    },
+    {
+      "cumulative_amount": 0.0,
+      "development_year": 3,
+      "incremental_amount": 0.0,
+      "is_known": false,
+      "is_projected": true,
+      "occurrence_year": 2026,
+      "source_claim_count": 0
+    }
+  ]
+}

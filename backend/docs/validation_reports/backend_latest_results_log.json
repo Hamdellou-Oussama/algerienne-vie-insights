@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-04-19",
+  "source": "backend/storage/runs latest run per domain",
+  "domains": {
+    "ppna": {
+      "run_id": "run_81cc82f594fb429d8da499c8f2a20c75",
+      "run_timestamp": "2026-04-18 13:23:33",
+      "row_count": 21266,
+      "closing_date": "2025-05-31",
+      "parameters": {
+        "method": "prorata_temporis",
+        "contract_day_formula": "DATEDIF(\"Effet\",\"Echeance\",\"d\")+1",
+        "remaining_day_formula": "IF(OR(Date_cloture<\"Effet\",Date_cloture>\"Echeance\"),0,\"Echeance\"-Date_cloture)"
+      },
+      "total_amount": 3901156.3638584488,
+      "total_from_buckets": 3901156.3638584497,
+      "top_buckets": [
+        { "bucket": "('r1','ava')", "amount": 1306152.0645576429 },
+        { "bucket": "('r2','ava')", "amount": 927011.337978828 },
+        { "bucket": "('r4','ia')", "amount": 728823.6472975857 },
+        { "bucket": "('r5','ia')", "amount": 440344.805783866 },
+        { "bucket": "('r1','ia')", "amount": 410749.695385558 }
+      ]
+    },
+    "sap": {
+      "run_id": "run_1b76602147c34dbc9e219aeb4086c31e",
+      "run_timestamp": "2026-04-18 13:16:33",
+      "row_count": 234,
+      "closing_date": "2025-03-31",
+      "total_amount": 157200000,
+      "top_buckets": [
+        { "bucket": "('direct','prevoyance')", "amount": 157200000 }
+      ]
+    },
+    "pe": {
+      "run_id": "run_fb59facc3e43478bba1671bdee5c25ef",
+      "run_timestamp": "2026-04-18 13:16:35",
+      "row_count": 125,
+      "parameters": {
+        "historical_average_coefficient": 0.15,
+        "positive_result_coefficient": 0.72
+      },
+      "total_amount": 93561414.06179482,
+      "total_from_buckets": 93561414.06179483,
+      "top_buckets": [
+        { "bucket": "('c110','prevoyance')", "amount": 53460000 },
+        { "bucket": "('r1','ade')", "amount": 9547142.216 },
+        { "bucket": "('c73','prevoyance')", "amount": 7937499.999999999 },
+        { "bucket": "('c104','prevoyance')", "amount": 5685000 },
+        { "bucket": "('c33','prevoyance')", "amount": 5160000 }
+      ]
+    },
+    "pb": {
+      "run_id": "run_2f01feca513d4a79a0a2b4f2b4d584bf",
+      "run_timestamp": "2026-04-18 13:16:35",
+      "row_count": 5,
+      "parameters": {
+        "default_loss_ratio_threshold": 0.85,
+        "default_pb_rate": 0.0
+      },
+      "total_amount": 13951038.248920649,
+      "total_from_channels": 13951038.248920647,
+      "by_channel": [
+        { "channel": "R1", "amount": 10986318.2166001 },
+        { "channel": "R3", "amount": 1803117.6813205481 },
+        { "channel": "R5", "amount": 1161602.3509999996 },
+        { "channel": "R2", "amount": 0.0 },
+        { "channel": "R4", "amount": 0.0 }
+      ]
+    },
+    "ibnr": {
+      "run_id": "run_1673fd35654849fb919a0443c169210c",
+      "run_timestamp": "2026-04-18 13:16:35",
+      "row_count": 4,
+      "method": "chain_ladder_volume_weighted",
+      "closing_year": 2025,
+      "parameters": {
+        "closing_year": 2025,
+        "max_development_year": 3,
+        "occurrence_year_window": [2022, 2025]
+      },
+      "total_ibnr_chain_ladder": 135205244.46977875,
+      "by_occurrence_year": [
+        {
+          "occurrence_year": 2022,
+          "diagonal_cumulative": 115866962.38348004,
+          "ultimate": 115866962.38348004,
+          "reserve": 0.0
+        },
+        {
+          "occurrence_year": 2023,
+          "diagonal_cumulative": 175929504.7429632,
+          "ultimate": 187788937.6093394,
+          "reserve": 11859432.866376191
+        },
+        {
+          "occurrence_year": 2024,
+          "diagonal_cumulative": 342106511.42809576,
+          "ultimate": 372612834.13883805,
+          "reserve": 30506322.710742295
+        },
+        {
+          "occurrence_year": 2025,
+          "diagonal_cumulative": 204542282.77804482,
+          "ultimate": 297381771.6707051,
+          "reserve": 92839488.89266026
+        }
+      ],
+      "comparison": {
+        "mack_total_ibnr": 135205244.46977875,
+        "mack_total_se_naive": 18225115.239152741,
+        "bf_total_ibnr": 127822067.27802864,
+        "benktander_total_ibnr": 133533122.17820469,
+        "bootstrap_mean_total_ibnr": 135205244.46977875,
+        "bootstrap_p95": 135205244.4697789
+      }
+    }
+  }
+}

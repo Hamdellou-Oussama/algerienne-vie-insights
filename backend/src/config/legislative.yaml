@@ -1,0 +1,29 @@
+pe:
+  positive_result_coefficient: 0.72
+  historical_average_coefficient: 0.15
+
+pb:
+  default_loss_ratio_threshold: 0.85   # FACT per EIC PDF example; mentor-confirm regulatory vs commercial
+  default_pb_rate: 0.0                 # no universal default — must be set per contract
+  allow_row_level_override: true       # workbook carries per-contract T and V columns
+
+ibnr:
+  default_method: "chain_ladder_volume_weighted"
+  occurrence_year_window_size: 4
+  closing_year: 2025
+  segment_by_product: false
+  mack:
+    enabled: true
+  bornhuetter_ferguson:
+    enabled: true
+    prior_basis: "mature_ay_ratio"
+    prior_elr: null
+    mature_ay: 2022
+  benktander:
+    enabled: true
+    k: 2
+  bootstrap_odp:
+    enabled: true
+    n_sim: 1000
+    random_seed: 42
+    percentiles: [50, 75, 90, 95, 99]

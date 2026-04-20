@@ -1,0 +1,23 @@
+{
+  "datasets": {
+    "pb": {
+      "category_counts": {
+        "type_coercion": 25
+      },
+      "event_count": 25,
+      "lineage_count": 115,
+      "metrics": {
+        "event_count": 25,
+        "ineligible_loss_ratio_rows": 0,
+        "lineage_count": 115,
+        "non_positive_credit_balance_rows": 2,
+        "positive_pb_rows": 3,
+        "row_count": 5
+      },
+      "row_count": 5,
+      "severity_counts": {
+        "WARNING": 25
+      }
+    }
+  }
+}

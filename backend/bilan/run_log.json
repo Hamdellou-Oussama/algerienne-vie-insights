@@ -1,0 +1,66 @@
+{
+  "runner": "run_pipeline.py",
+  "audit_dir": "C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit",
+  "delivery_dir": "C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\final_delivery",
+  "scripts": [
+    {
+      "script": "01_extract_sap_formula_dictionary.py",
+      "command": "D:\\Anaconda3\\envs\\main_env\\python.exe C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\01_extract_sap_formula_dictionary.py",
+      "returncode": 0,
+      "status": "ok",
+      "stdout_tail": "Formula cells: 504\nUnique patterns: 504\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\sap_formula_dictionary.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "05_compare_sap_formula_vs_old_logic.py",
+      "command": "D:\\Anaconda3\\envs\\main_env\\python.exe C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\05_compare_sap_formula_vs_old_logic.py",
+      "returncode": 0,
+      "status": "ok",
+      "stdout_tail": "{\n  \"dataset_workbook\": \"C:\\\\Users\\\\oussa\\\\Desktop\\\\open data\\\\data\\\\level3-Bilan sinistres (2).xlsx\",\n  \"formula_source_workbook\": \"C:\\\\Users\\\\oussa\\\\Desktop\\\\open data\\\\data\\\\level 01-DATA SAP groupe (2).xlsx\",\n  \"rows_checked\": 234,\n  \"method_b_total\": 157200000.0,\n  \"method_a_total\": 563400000.0,\n  \"total_gap_old_minus_method_b\": 406200000.0,\n  \"method_a_matches_method_b_count\": 45,\n  \"method_a_differs_from_method_b_count\": 189,\n  \"method_b_matches_ac_column_count\": 234,\n  \"method_b_mismatch_vs_ac_column_count\": 0,\n  \"ref_ab1\": \"2025-06-30 00:00:00\",\n  \"ref_ac2\": \"2025-03-31 00:00:00\",\n  \"ab_total_expected_formula\": 33600000.0,\n  \"ac_total_at_ab1\": 222700000.0,\n  \"ab_minus_ac_total_at_ab1\": -189100000.0,\n  \"ab_actual_column_total\": 33600000.0,\n  \"formula_signature\": {\n    \"level3_ab3_formula\": \"=IF($AB$1<W3,0,IF($AB$1>Y3,0,T3))\",\n    \"level3_ac3_formula\": \"=IF($AC$2<U3,0,IF(AND($AC$2>U3,$AC$2<Y3),T3,IF(X3=\\\"REJET\\\",0,T3-Z3)))\",\n    \"source_ab3_formula\": \"=IF($AB$1<W3,0,IF($AB$1>Y3,0,T3))\",\n    \"source_ac3_formula\": \"=IF($AC$2<U3,0,IF(AND($AC$2>U3,$AC$2<Y3),T3,IF(X3=\\\"REJET\\\",0,T3-Z3)))\"\n  },\n  \"formula_signature_match_between_workbooks\": true,\n  \"etat_sortie_attendu_e5_formula\": \"=SUM('SAP GROUPE (2)'!AB3:AB236)\",\n  \"etat_sortie_attendu_d5_formula\": \"='SAP GROUPE (2)'!AB1\",\n  \"gap_by_status\": [\n    {\n      \"status\": \"REGLE\",\n      \"method_b_workbook_ac\": 85200000.0,\n      \"method_a_old_shortcut\": 5400000.0,\n      \"gap_old_minus_method_b\": -79800000.0\n    },\n    {\n      \"status\": \"REJET\",\n      \"method_b_workbook_ac\": 15600000.0,\n      \"method_a_old_shortcut\": 0.0,\n      \"gap_old_minus_method_b\": -15600000.0\n    },\n    {\n      \"status\": \"SAP\",\n      \"method_b_workbook_ac\": 56400000.0,\n      \"method_a_old_shortcut\": 558000000.0,\n      \"gap_old_minus_method_b\": 501600000.0\n    }\n  ],\n  \"gap_by_notification_year\": [\n    {\n      \"notification_year\": 2025,\n      \"method_b_workbook_ac\": 100800000.0,\n      \"method_a_old_shortcut\": 23400000.0,\n      \"gap_old_minus_method_b\": -77400000.0\n    },\n    {\n      \"notification_year\": \"NA\",\n      \"method_b_workbook_ac\": 56400000.0,\n      \"method_a_old_shortcut\": 540000000.0,\n      \"gap_old_minus_method_b\": 483600000.0\n    }\n  ],\n  \"gap_by_declaration_year\": [\n    {\n      \"declaration_year\": 2023,\n      \"method_b_workbook_ac\": 1200000.0,\n      \"method_a_old_shortcut\": 1200000.0,\n      \"gap_old_minus_method_b\": 0.0\n    },\n    {\n      \"declaration_year\": 2024,\n      \"method_b_workbook_ac\": 4600000.0,\n      \"method_a_old_shortcut\": 1000000.0,\n      \"gap_old_minus_method_b\": -3600000.0\n    },\n    {\n      \"declaration_year\": 2025,\n      \"method_b_workbook_ac\": 151400000.0,\n      \"method_a_old_shortcut\": 561200000.0,\n      \"gap_old_minus_method_b\": 409800000.0\n    }\n  ],\n  \"gap_by_logic_bucket\": [\n    {\n      \"logic_bucket_at_ac2\": \"before_declaration\",\n      \"method_b_workbook_ac\": 0.0,\n      \"method_a_old_shortcut\": 502800000.0,\n      \"gap_old_minus_method_b\": 502800000.0\n    },\n    {\n      \"logic_bucket_at_ac2\": \"between_declaration_and_notification\",\n      \"method_b_workbook_ac\": 99600000.0,\n      \"method_a_old_shortcut\": 3000000.0,\n      \"gap_old_minus_method_b\": -96600000.0\n    },\n    {\n      \"logic_bucket_at_ac2\": \"post_notification_or_missing_notification_non_rejet\",\n      \"method_b_workbook_ac\": 57600000.0,\n      \"method_a_old_shortcut\": 57600000.0,\n      \"gap_old_minus_method_b\": 0.0\n    }\n  ],\n  \"selected_method\": \"method_b_workbook_ac\"\n}\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\sap_formula_vs_old_logic_comparison.csv\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\sap_formula_vs_old_logic_summary.json\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\sap_formula_vs_old_logic_report.md\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "02_compute_bilan_from_sap.py",
+      "command": "D:\\Anaconda3\\envs\\main_env\\python.exe C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\02_compute_bilan_from_sap.py",
+      "returncode": 0,
+      "status": "ok",
+      "stdout_tail": " exercice  en_cours_nbre  en_cours_montant  repris_nbre  repris_montant  declares_nbre  declares_montant  reglements_nbre  reglements_montant  rejet_nbre  rejet_montant  reevaluation_pos  reevaluation_neg  reserves_nbre  reserves_montant  verif_diff  verif_ok\n     2023              0               0.0            0             0.0              1         1200000.0                0                 0.0           0            0.0               0.0               0.0              1         1200000.0         0.0      True\n     2024              1         1200000.0            0             0.0              4         4800000.0                0                 0.0           0            0.0               0.0               0.0              5         6000000.0         0.0      True\n     2025              5         6000000.0            0             0.0            229       723600000.0               34         137500000.0          26     31200000.0               0.0               0.0            180       560900000.0         0.0      True\n     2026            180       560900000.0            0             0.0              0               0.0                0                 0.0           0            0.0               0.0               0.0            180       560900000.0         0.0      True\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\bilan_2026_computed_from_sap.csv\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\bilan_2026_table.md\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\bilan_2026_summary.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "03_test_bilan_implementation.py",
+      "command": "D:\\Anaconda3\\envs\\main_env\\python.exe C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\03_test_bilan_implementation.py",
+      "returncode": 0,
+      "status": "ok",
+      "stdout_tail": "                                            test   ok                                                                                                                              details\n                            has_required_columns True                                                                                                                         schema check\n                       year_set_non_empty_sorted True                                                                                                       years=[2023, 2024, 2025, 2026]\n                             non_negative_counts True                                                     en_cours_nbre,repris_nbre,declares_nbre,reglements_nbre,rejet_nbre,reserves_nbre\n                            non_negative_amounts True en_cours_montant,repris_montant,declares_montant,reglements_montant,rejet_montant,reevaluation_pos,reevaluation_neg,reserves_montant\n                            reevaluation_is_zero True                                                                                                                     forced zero rule\n                          option_a_carry_forward True                                                                                                                                   ok\n                   declares_use_declaration_year True                                                                                                                                   ok\nreglements_use_notification_year_and_paid_amount True                                                                                                                                   ok\n rejet_use_notification_year_and_declared_amount True                                                                                                                                   ok\n              sap_closing_uses_workbook_ac_logic True                                                                                                                                   ok\n                       old_shortcut_not_selected True                                                                       max_year=2026;old_total=563400000.0;observed_close=560900000.0\n                   repris_supported_even_if_zero True                                                                                                                 repris columns exist\n{'total_tests': 12, 'passed': 12, 'failed': 0, 'all_passed': True, 'expected_tests': ['has_required_columns', 'year_set_non_empty_sorted', 'non_negative_counts', 'non_negative_amounts', 'reevaluation_is_zero', 'option_a_carry_forward', 'declares_use_declaration_year', 'reglements_use_notification_year_and_paid_amount', 'rejet_use_notification_year_and_declared_amount', 'sap_closing_uses_workbook_ac_logic', 'old_shortcut_not_selected', 'repris_supported_even_if_zero'], 'scope_mode': 'portfolio'}\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\bilan_tests_results.csv\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\bilan_tests_summary.json\n",
+      "stderr_tail": ""
+    },
+    {
+      "script": "04_test_sap_formula_reproduction.py",
+      "command": "D:\\Anaconda3\\envs\\main_env\\python.exe C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\04_test_sap_formula_reproduction.py",
+      "returncode": 0,
+      "status": "ok",
+      "stdout_tail": "{'rows_checked': 234, 'rows_all_ok': 234, 'rows_with_mismatch': 0, 'aa_formula_rows': 34, 'ab_formula_rows': 234, 'ac_formula_rows': 234, 'aa_pass': 34, 'ab_pass': 234, 'ac_pass': 234}\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\sap_formula_repro_checks.csv\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\sap_formula_repro_mismatches.csv\nWrote: C:\\Users\\oussa\\Desktop\\open data\\analysis_assets\\level3_bilan_audit\\sap_formula_repro_summary.json\n",
+      "stderr_tail": ""
+    }
+  ],
+  "copied_artifacts": [
+    "bilan_2026_computed_from_sap.csv",
+    "bilan_2026_summary.json",
+    "bilan_2026_table.md",
+    "bilan_tests_results.csv",
+    "bilan_tests_summary.json",
+    "sap_formula_dictionary.json",
+    "sap_formula_repro_checks.csv",
+    "sap_formula_repro_mismatches.csv",
+    "sap_formula_repro_summary.json",
+    "sap_formula_vs_old_logic_comparison.csv",
+    "sap_formula_vs_old_logic_summary.json",
+    "sap_formula_vs_old_logic_report.md",
+    "rules_for_bilan.md",
+    "level3_bilan_implementation_report.md",
+    "run_log.json"
+  ],
+  "missing_artifacts": [],
+  "all_ok": true
+}

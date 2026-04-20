@@ -1,0 +1,28 @@
+{
+  "datasets": {
+    "sap": {
+      "category_counts": {
+        "manual_review_required": 650
+      },
+      "event_count": 650,
+      "lineage_count": 6552,
+      "metrics": {
+        "event_count": 650,
+        "lineage_count": 6552,
+        "missing_beneficiary_birth_date_rows": 4,
+        "missing_insured_birth_date_rows": 4,
+        "row_count": 234,
+        "status_counts": {
+          "REGLE": 34,
+          "REJET": 26,
+          "SAP": 174
+        }
+      },
+      "row_count": 234,
+      "severity_counts": {
+        "ERROR": 642,
+        "WARNING": 8
+      }
+    }
+  }
+}

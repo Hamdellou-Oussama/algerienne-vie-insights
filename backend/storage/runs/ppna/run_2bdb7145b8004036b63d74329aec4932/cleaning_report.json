@@ -1,0 +1,27 @@
+{
+  "datasets": {
+    "ppna": {
+      "category_counts": {
+        "business_rule_validation": 4576,
+        "date_normalization": 18401,
+        "manual_review_required": 1335,
+        "range_validation": 1382
+      },
+      "event_count": 25694,
+      "lineage_count": 212660,
+      "metrics": {
+        "event_count": 25694,
+        "lineage_count": 212660,
+        "negative_premium_rows": 1382,
+        "row_count": 21266,
+        "string_date_rows": 18401,
+        "zero_premium_rows": 2267
+      },
+      "row_count": 21266,
+      "severity_counts": {
+        "ERROR": 1335,
+        "WARNING": 24359
+      }
+    }
+  }
+}

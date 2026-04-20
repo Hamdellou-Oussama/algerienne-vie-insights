@@ -1,0 +1,30 @@
+[
+  {
+    "diagonal_cumulative": 111947248.43348004,
+    "last_known_development_year": 3,
+    "occurrence_year": 2022,
+    "reserve": 0.0,
+    "ultimate": 111947248.43348004
+  },
+  {
+    "diagonal_cumulative": 175236759.68296316,
+    "last_known_development_year": 2,
+    "occurrence_year": 2023,
+    "reserve": 5484955.982486069,
+    "ultimate": 180721715.66544923
+  },
+  {
+    "diagonal_cumulative": 333555871.97754025,
+    "last_known_development_year": 1,
+    "occurrence_year": 2024,
+    "reserve": 16598865.16938901,
+    "ultimate": 350154737.14692926
+  },
+  {
+    "diagonal_cumulative": 55626130.205799565,
+    "last_known_development_year": 0,
+    "occurrence_year": 2025,
+    "reserve": 21248433.81962371,
+    "ultimate": 76874564.02542327
+  }
+]

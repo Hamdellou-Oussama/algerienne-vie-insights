@@ -1,0 +1,41 @@
+{
+  "datasets": {
+    "ibnr": {
+      "category_counts": {
+        "duplicate_detection": 7,
+        "manual_review_required": 6476,
+        "type_coercion": 596
+      },
+      "event_count": 7079,
+      "lineage_count": 18148,
+      "metrics": {
+        "event_count": 7079,
+        "impossible_lag_rows": 0,
+        "lag_mismatch_rows": 0,
+        "lineage_count": 18148,
+        "occurrence_year_counts": {
+          "2018": 8,
+          "2019": 15,
+          "2020": 48,
+          "2021": 74,
+          "2022": 80,
+          "2023": 120,
+          "2024": 132,
+          "2025": 119
+        },
+        "product_counts": {
+          "ac-elite": 219,
+          "conso": 525,
+          "immo": 466,
+          "warda": 186
+        },
+        "row_count": 1396
+      },
+      "row_count": 1396,
+      "severity_counts": {
+        "ERROR": 6476,
+        "WARNING": 603
+      }
+    }
+  }
+}

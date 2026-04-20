@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "abs_delta": 0.0,
+      "delta": 0.0,
+      "effective_loss_ratio_threshold": 0.5,
+      "effective_pb_rate": 0.5,
+      "eligibility_reason": "eligible_loss_ratio",
+      "recomputed_participation_beneficiaire": 10986318.216600101,
+      "source_row_number": 6,
+      "stored_participation_beneficiaire": 10986318.216600101,
+      "zero_reason": null
+    },
+    {
+      "abs_delta": 0.0,
+      "delta": 0.0,
+      "effective_loss_ratio_threshold": 0.7,
+      "effective_pb_rate": 0.2,
+      "eligibility_reason": "eligible_loss_ratio",
+      "recomputed_participation_beneficiaire": 0.0,
+      "source_row_number": 7,
+      "stored_participation_beneficiaire": 0.0,
+      "zero_reason": "non_positive_balance"
+    },
+    {
+      "abs_delta": 0.0,
+      "delta": 0.0,
+      "effective_loss_ratio_threshold": 0.7,
+      "effective_pb_rate": 0.27,
+      "eligibility_reason": "eligible_loss_ratio",
+      "recomputed_participation_beneficiaire": 1803117.6813205478,
+      "source_row_number": 8,
+      "stored_participation_beneficiaire": 1803117.6813205478,
+      "zero_reason": null
+    },
+    {
+      "abs_delta": 0.0,
+      "delta": 0.0,
+      "effective_loss_ratio_threshold": 0.6,
+      "effective_pb_rate": 0.3,
+      "eligibility_reason": "eligible_loss_ratio",
+      "recomputed_participation_beneficiaire": 0.0,
+      "source_row_number": 9,
+      "stored_participation_beneficiaire": 0.0,
+      "zero_reason": "non_positive_balance"
+    },
+    {
+      "abs_delta": 0.0,
+      "delta": 0.0,
+      "effective_loss_ratio_threshold": 1.6,
+      "effective_pb_rate": 1.3,
+      "eligibility_reason": "eligible_loss_ratio",
+      "recomputed_participation_beneficiaire": 1161602.3509999996,
+      "source_row_number": 10,
+      "stored_participation_beneficiaire": 1161602.3509999996,
+      "zero_reason": null
+    }
+  ],
+  "summary": {
+    "allow_row_level_override": true,
+    "default_loss_ratio_threshold": 0.85,
+    "default_pb_rate": 0.0,
+    "max_abs_delta": 0.0,
+    "mismatch_count": 0,
+    "recomputed_total": 13951038.24892065,
+    "row_count": 5,
+    "stored_total": 13951038.24892065,
+    "total_delta": 0.0,
+    "within_tolerance": true
+  }
+}
